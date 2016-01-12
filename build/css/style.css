@@ -41,7 +41,7 @@ html { font-size: 62.5%; }
 
 body { font-family: Arial, sans-serif; font-size: 1.5rem; line-height: 1.4; background: #fff; }
 
-a { color: #0086b3; cursor: pointer; }
+a { color: #0086b3; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 a:hover, a:focus, a:visited { text-decoration: none; }
 a:hover { color: #006b8f; }
 
@@ -60,8 +60,10 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .search-form__input:-ms-input-placeholder { color: #414950; }
 .search-form__input::placeholder { color: #414950; }
 .search-form__btn { position: absolute; left: 0; background: transparent; color: #414950; width: 4rem; text-align: center; }
+.search-form .more-search { display: inline-block; vertical-align: middle; margin-left: 0.7rem; }
 
-.more-search { color: #6c9444; }
+.more-search { color: #6c9444; font-size: 2rem; }
+.more-search:hover { color: #5a7c39; }
 
 .header { background: #30373c; padding: 10px 0; font-size: 0; }
 .header__item { display: inline-block; vertical-align: middle; font-size: 1.5rem; }
