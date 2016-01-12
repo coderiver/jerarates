@@ -34,8 +34,8 @@ gulp.task('font', function(){
                 glyphs: glyphs,
                 fontName: fontname,
                 fontPath: 'fonts/',
-                className: 'icon',
-                htmlBefore: '<i class="icon ',
+                className: 'i-icon',
+                htmlBefore: '<i class="i-icon ',
                 htmlAfter: '"></i>',
                 htmlBr: ''
             }))

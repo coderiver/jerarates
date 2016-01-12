@@ -27,10 +27,76 @@
 // and create mixin
 // =book
 // 	font-family: "book", Arial, sans-serif
++font(helioscondc, helioscondc)
+=helios
+	font-family: 'helioscondc', Arial, sans-serif
+	
++font(helioscondc-bold, helioscondc-bold)
+=heliosb
+	font-family: 'helioscondc-bold', Arial, sans-serif
 
+=roboto
+	font-family: 'Roboto', Arial, sans-serif
+=light
+	font-weight: 300
+=reg
+	font-weight: 400
+=sbold
+	font-weight: 600
+=bold
+	font-weight: 700
+
+html
+	font-size: 62.5% 
 body
 	font-family: Arial, sans-serif
-	font-size: 12px
+	font-size: 1.5rem
 	line-height: 1.4
+	background: #fff 
 	
 // common blocks
+a
+	color: $links
+	cursor: pointer
+	&:hover, &:focus, &:visited
+		text-decoration: none
+	&:hover
+		color: darken($links, 7)		
+input, button
+	border-radius: 2px
+		
+.logo
+	font-size: 0
+	&__text
+		color: #fff
+		font-size: 4.5rem 
+		+heliosb
+		span
+			+helios
+			color: $logo
+	&__img
+		margin-right: 1.5rem 
+	&__text, &__img
+		display: inline-block
+		vertical-align: middle
+
+.search-form
+	height: 4rem
+	line-height: 4rem
+	position: relative
+	&__input
+		background: #282d31
+		box-shadow: 0 0 0 1px #1e2225
+		color: #fff
+		padding-left: 4rem 
+		+placeholder
+			color: #414950
+	&__btn
+		position: absolute
+		left: 0
+		background: transparent
+		color: #414950
+		width: 4rem
+		text-align: center
+.more-search
+	color: #6c9444  

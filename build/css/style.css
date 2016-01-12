@@ -20,6 +20,12 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 
+.icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
+
+.icon-coderiver { width: 49px; height: 5px; background-image: url("../img/icons.png"); background-position: -46px 0px; }
+
+.icon-logo { width: 42px; height: 54px; background-image: url("../img/icons.png"); background-position: 0px 0px; }
+
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -29,8 +35,37 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: helioscondc; src: url("fonts/helioscondc.eot"); src: url("fonts/helioscondc.eot?#iefix") format("embedded-opentype"), url("fonts/helioscondc.woff2") format("woff2"), url("fonts/helioscondc.woff") format("woff"), url("fonts/helioscondc.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: helioscondc-bold; src: url("fonts/helioscondc-bold.eot"); src: url("fonts/helioscondc-bold.eot?#iefix") format("embedded-opentype"), url("fonts/helioscondc-bold.woff2") format("woff2"), url("fonts/helioscondc-bold.woff") format("woff"), url("fonts/helioscondc-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+html { font-size: 62.5%; }
 
+body { font-family: Arial, sans-serif; font-size: 1.5rem; line-height: 1.4; background: #fff; }
+
+a { color: #0086b3; cursor: pointer; }
+a:hover, a:focus, a:visited { text-decoration: none; }
+a:hover { color: #006b8f; }
+
+input, button { -webkit-border-radius: 2px; border-radius: 2px; }
+
+.logo { font-size: 0; }
+.logo__text { color: #fff; font-size: 4.5rem; font-family: "helioscondc-bold", Arial, sans-serif; }
+.logo__text span { font-family: "helioscondc", Arial, sans-serif; color: #a4eb4b; }
+.logo__img { margin-right: 1.5rem; }
+.logo__text, .logo__img { display: inline-block; vertical-align: middle; }
+
+.search-form { height: 4rem; line-height: 4rem; position: relative; }
+.search-form__input { background: #282d31; -webkit-box-shadow: 0 0 0 1px #1e2225; box-shadow: 0 0 0 1px #1e2225; color: #fff; padding-left: 4rem; }
+.search-form__input::-webkit-input-placeholder { color: #414950; }
+.search-form__input::-moz-placeholder { color: #414950; }
+.search-form__input:-ms-input-placeholder { color: #414950; }
+.search-form__input::placeholder { color: #414950; }
+.search-form__btn { position: absolute; left: 0; background: transparent; color: #414950; width: 4rem; text-align: center; }
+
+.more-search { color: #6c9444; }
+
+.header { background: #30373c; padding: 10px 0; font-size: 0; }
+.header__item { display: inline-block; vertical-align: middle; font-size: 1.5rem; }
+.header__item:first-child { width: 20%; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
