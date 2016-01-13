@@ -9,10 +9,78 @@
 		<div class="header__item">
 			<div class="search-form">
 				<form action="#">
-					<div class="field">
+					<div class="field dropdown">
 						<input class="search-form__input" type="text" placeholder="Search...">
 						<button type="submit" class="search-form__btn"><i class="fa fa-search"></i></button>
-						<a class="more-search"><i class="fa fa-plus-circle"></i></a>
+						<a class="more-search dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+
+						<div class="dropdown-menu" aria-labelledby="advanced-search">
+							<form action="#">
+								<div class="container-fluid">
+									<div class="form-group">
+										<label for="general-text">General Text Input</label>
+										<input type="text" class="form-control" id="general-text">
+									</div>
+									<div class="form-group">
+										<div class="form-inline">
+											<label>Select Actions</label>
+											<div class="row">
+												<div class="col-xs-4">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> Option 1
+														</label>
+													</div>
+												</div>
+												<div class="col-xs-4">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> Option 2
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="form-inline">
+											<label>Select Type</label>
+											<div class="row">
+												<div class="col-xs-4">
+													<div class="radio">
+														<label>
+															<input type="radio" name="type"> Option 1
+														</label>
+													</div>
+												</div>
+												<div class="col-xs-4">
+													<div class="radio">
+														<label>
+															<input type="radio" name="type"> Option 2
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label>Fill Range</label>
+										<div class="row form-range">
+											<div class="col-xs-4">
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-xs-4">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label>Enter Note</label>
+										<textarea rows="3" class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</form>
 			</div>
