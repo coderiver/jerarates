@@ -78,15 +78,16 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .menu { *zoom: 1; height: 100%; text-align: center; font-size: 0; }
 .menu:after { content: " "; display: table; clear: both; }
 .menu:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.menu li { display: inline-block; vertical-align: middle; margin-right: 3rem; position: relative; }
+.menu li { display: inline-block; vertical-align: middle; margin-right: 30px; position: relative; }
 .menu li:last-child { margin-right: 0; }
-.menu li a { color: #d1d2d3; opacity: 0.3; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; font-size: 3rem; }
+.menu li a { color: #d1d2d3; opacity: 0.3; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; font-size: 30px; }
 .menu li a:hover, .menu li a.is-active { opacity: 1; }
 .menu li .badge { position: absolute; top: -0.5em; left: -1em; }
 .menu li.is-user { margin-left: 15px; margin-right: 15px; }
+.menu li.is-user a { position: relative; z-index: 3; }
 .menu li.is-user:before { content: ""; position: absolute; top: -11px; left: -15px; width: 5.5rem; height: 5.5rem; background: #282d31; -webkit-border-radius: 50%; border-radius: 50%; }
 
-.badge { font-size: 1.3rem; -webkit-border-radius: 50%; border-radius: 50%; background: #ff340c; text-align: center; width: 25px; height: 25px; padding-top: 6px; z-index: 2; }
+.badge { font-size: 13px; -webkit-border-radius: 50%; border-radius: 50%; background: #ff340c; text-align: center; width: 25px; height: 25px; padding-top: 6px; z-index: 5; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
