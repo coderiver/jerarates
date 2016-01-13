@@ -45,7 +45,8 @@ $(document).ready(function() {
 			$(this).parent().siblings().find('.js-submenu').slideUp();
 			$(this).parent().find('.js-submenu').slideDown();
 		}
-
 	});
-
+	$('.dropdown-menu').on('click', function(e) {
+		e.stopPropagation();
+	});
 });
