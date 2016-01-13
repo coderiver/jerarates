@@ -15,6 +15,43 @@
 			height: 100% 
 			.menu
 				padding-top: 1.5rem 
+.search-form
+	height: 60px
+	line-height: 60px
+	position: relative
+	&__input
+		background: $dark
+		box-shadow: 0 0 0 1px #1e2225
+		color: #fff
+		padding-left: 66px
+		line-height: 60px
+		height: 60px
+		width: 490px 
+		font-size: 28px
+		+placeholder
+			color: #414950
+	&__btn
+		position: absolute
+		left: 0
+		background: transparent
+		color: #414950
+		width: 66px
+		text-align: center
+		font-size: 30px 
+	.more-search
+		display: inline-block
+		vertical-align: middle
+		margin-left: .7rem  
+	.field
+		> *
+			display: inline-block
+			vertical-align: middle
+.more-search
+	color: #6c9444 
+	font-size: 37px
+	&:hover
+		color: darken(#6c9444, 7) 
+		
 .menu
 	+clr
 	height: 100%
