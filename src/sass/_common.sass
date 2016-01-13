@@ -50,9 +50,10 @@ html
 	font-size: 62.5% 
 body
 	+os
-	font-size: 1.5rem
+	font-size: 15px
 	line-height: 1.4
-	background: #fff 
+	background: #fff
+	min-width: 320px 
 	
 // common blocks
 a
@@ -69,24 +70,42 @@ input, button
 		
 .logo
 	font-size: 0
+	display: inline-block
 	&__text
 		color: #fff
-		font-size: 4.5rem 
+		font-size: 23px 
 		+heliosb
 		span
 			+helios
 			color: $logo
 	&__img
-		margin-right: 1.5rem 
+		margin-right: 15px  
 	&__text, &__img
 		display: inline-block
 		vertical-align: middle
 
 .badge
-	font-size: 1.3rem
+	font-size: 13px
 	border-radius: 50%
 	background: #ff340c
 	text-align: center
 	width: 25px 
 	height: 25px
 	padding-top: 6px  
+	
+.checkbox
+	input[type="checkbox"]
+		top: 2px 
+
+.form-range
+	> div
+		&:first-child
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				right: -5px  
+				width: 10px 
+				height: 1px
+				background: #000 
