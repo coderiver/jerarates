@@ -94,21 +94,24 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .search-form__input:-ms-input-placeholder { color: #414950; }
 .search-form__input::placeholder { color: #414950; }
 .search-form__input:focus { border-color: #0f1112; }
-.search-form__btn { position: absolute; top: 0; left: 0; background: transparent; color: #414950; width: 33px; text-align: center; font-size: 15px; line-height: 30px; }
+.search-form__btn { position: absolute; top: 0; left: 0; background: transparent; color: #fff; opacity: 0.2; width: 33px; text-align: center; font-size: 15px; line-height: 30px; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+.search-form__btn:hover { opacity: 0.6; }
+.search-form .open .search-form__btn { opacity: 0.6; }
+.search-form .open .more-search { color: #6fa135; }
 .search-form .more-search { display: inline-block; vertical-align: middle; margin-left: 4px; }
 
 .advanced-search { width: 350px; -webkit-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; }
 .advanced-search textarea { resize: none; }
 .advanced-search .btn-line .btn { width: 90px; }
 
-.more-search { color: #6c9444; font-size: 22px; }
-.more-search:hover { color: #5a7c39; }
+.more-search { color: #89c247; font-size: 22px; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.more-search:hover { color: #6fa135; }
 
 .dropdown.open .create-menu { display: table; }
 
 .create-menu { *zoom: 1; width: 450px; -webkit-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; border-color: #d4d4d4; padding: 0; margin-top: 8px; }
 .create-menu:after { content: " "; display: table; clear: both; }
-.create-menu__box { width: 33.333%; -webkit-box-shadow: 1px 0 0 0 #e9e9e9; box-shadow: 1px 0 0 0 #e9e9e9; padding: 20px; display: table-cell; }
+.create-menu__box { width: 33.333%; -webkit-box-shadow: 1px 0 0 0 #e9e9e9; box-shadow: 1px 0 0 0 #e9e9e9; padding: 10px 15px; display: table-cell; }
 .create-menu__box:last-child { -webkit-box-shadow: none; box-shadow: none; }
 .create-menu__header { color: #999; font-weight: 600; margin-bottom: 5px; font-size: 15px; }
 .create-menu__list li { margin-bottom: 4px; }
