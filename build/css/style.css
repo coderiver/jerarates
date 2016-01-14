@@ -35,6 +35,49 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
+/* perfect-scrollbar v0.6.8 */
+.ps-container { -ms-touch-action: none; overflow: hidden !important; }
+
+.ps-container.ps-active-x > .ps-scrollbar-x-rail, .ps-container.ps-active-y > .ps-scrollbar-y-rail { display: block; }
+
+.ps-container.ps-in-scrolling { pointer-events: none; }
+
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail { background-color: #eee; opacity: 0.9; }
+
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x { background-color: #999; }
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail { background-color: #eee; opacity: 0.9; }
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { background-color: #999; }
+
+.ps-container > .ps-scrollbar-x-rail { display: none; position: absolute; /* please don't change 'position' */ -webkit-border-radius: 4px; border-radius: 4px; opacity: 0; -webkit-transition: background-color 0.2s linear, opacity 0.2s linear; transition: background-color 0.2s linear, opacity 0.2s linear; bottom: 3px; /* there must be 'bottom' for ps-scrollbar-x-rail */ height: 8px; }
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x { position: absolute; /* please don't change 'position' */ background-color: #aaa; -webkit-border-radius: 4px; border-radius: 4px; -webkit-transition: background-color 0.2s linear; transition: background-color 0.2s linear; bottom: 0; /* there must be 'bottom' for ps-scrollbar-x */ height: 8px; }
+
+.ps-container > .ps-scrollbar-y-rail { display: none; position: absolute; /* please don't change 'position' */ -webkit-border-radius: 4px; border-radius: 4px; opacity: 0; -webkit-transition: background-color 0.2s linear, opacity 0.2s linear; transition: background-color 0.2s linear, opacity 0.2s linear; right: 3px; /* there must be 'right' for ps-scrollbar-y-rail */ width: 8px; }
+
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y { position: absolute; /* please don't change 'position' */ background-color: #aaa; -webkit-border-radius: 4px; border-radius: 4px; -webkit-transition: background-color 0.2s linear; transition: background-color 0.2s linear; right: 0; /* there must be 'right' for ps-scrollbar-y */ width: 8px; }
+
+.ps-container:hover.ps-in-scrolling { pointer-events: none; }
+
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail { background-color: #eee; opacity: 0.9; }
+
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x { background-color: #999; }
+
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail { background-color: #eee; opacity: 0.9; }
+
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { background-color: #999; }
+
+.ps-container:hover > .ps-scrollbar-x-rail, .ps-container:hover > .ps-scrollbar-y-rail { opacity: 0.6; }
+
+.ps-container:hover > .ps-scrollbar-x-rail:hover { background-color: #eee; opacity: 0.9; }
+
+.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x { background-color: #999; }
+
+.ps-container:hover > .ps-scrollbar-y-rail:hover { background-color: #eee; opacity: 0.9; }
+
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y { background-color: #999; }
+
 @font-face { font-family: helioscondc; src: url("fonts/helioscondc.eot"); src: url("fonts/helioscondc.eot?#iefix") format("embedded-opentype"), url("fonts/helioscondc.woff2") format("woff2"), url("fonts/helioscondc.woff") format("woff"), url("fonts/helioscondc.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: helioscondc-bold; src: url("fonts/helioscondc-bold.eot"); src: url("fonts/helioscondc-bold.eot?#iefix") format("embedded-opentype"), url("fonts/helioscondc-bold.woff2") format("woff2"), url("fonts/helioscondc-bold.woff") format("woff"), url("fonts/helioscondc-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 html { font-size: 62.5%; }
@@ -95,26 +138,52 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .badge { font-size: 12px; -webkit-border-radius: 50%; border-radius: 50%; background: #ff340c; text-align: center; width: 16px; height: 16px; padding-top: 3px; z-index: 5; padding: 3px 0 0; }
 
-.sidebar { position: fixed; top: 45px; left: 0; width: 205px; height: 100%; background: #37424A; }
-.sidebar__in { position: relative; height: 100%; padding-top: 14px; }
-.sidebar__link { position: relative; display: block; padding: 6px 15px; font-size: 15px; color: #afb3b7; }
+.sidebar { position: absolute; top: 45px; left: 0; bottom: 0; width: 205px; background: #37424A; }
+.sidebar.is-collapsed { width: 55px; }
+.sidebar.is-collapsed .sidebar__in { overflow: inherit; }
+.sidebar.is-collapsed .sidebar__link.is-mobile { display: block; }
+.sidebar.is-collapsed .sidebar__link span { display: none; }
+.sidebar.is-collapsed .sidebar__collapse span { display: none; }
+.sidebar.is-collapsed .sidebar__sublist { position: absolute; top: 0; left: 100%; min-width: 120px; margin-left: -5px; -webkit-box-shadow: 2.1px 2.1px 3px rgba(0, 0, 0, 0.2); box-shadow: 2.1px 2.1px 3px rgba(0, 0, 0, 0.2); }
+.sidebar.is-collapsed .sidebar__sublist .sidebar__link { padding-left: 18px; }
+.sidebar.is-collapsed .fa-chevron-down { display: none; }
+.sidebar__list li { position: relative; }
+.sidebar__in { position: relative; height: 100%; padding-top: 14px; overflow: hidden; }
+.sidebar__link { position: relative; display: block; padding: 6px 18px; font-size: 15px; color: #afb3b7; }
 .sidebar__link:before { display: none; content: ""; position: absolute; top: 50%; right: 0; margin-top: -10px; width: 0px; height: 0px; border-style: solid; border-width: 10px 10px 10px 0; border-color: transparent #fff transparent transparent; }
 .sidebar__link:hover, .sidebar__link:focus { color: #FFF; background: #2f383f; }
 .sidebar__link.is-active { background: #78b641; color: #fff; }
 .sidebar__link.is-active:before { display: block; }
 .sidebar__link.is-expanded { background: #293137; }
 .sidebar__link.is-expanded .fa-chevron-down { -webkit-transform: rotateZ(-180deg); transform: rotateZ(-180deg); }
+.sidebar__link.is-mobile { display: none; background: #293137; cursor: pointer; }
 .sidebar__link span { padding-left: 14px; }
-.sidebar__sublist { display: none; background: #2f383f; }
-.sidebar__sublist .sidebar__link { padding-left: 45px; }
-.sidebar__collapse { display: none; position: absolute; left: 15px; color: #afb3b7; }
+.sidebar__sublist { display: none; background: #2f383f; -webkit-transition: 0.3s ease; transition: 0.3s ease; }
+.sidebar__sublist.is-active { display: block; }
+.sidebar__sublist .sidebar__link { padding-left: 50px; }
+.sidebar__collapse { position: absolute; display: block; left: 0; bottom: 10px; padding-left: 18px; color: #afb3b7; }
 .sidebar__collapse:hover { color: #FFF; }
-.sidebar__collapse span { padding-left: 14px; font-size: 15px; }
+.sidebar__collapse:hover span { opacity: 1; visibility: visible; }
+.sidebar__collapse:focus { color: #FFF; }
+.sidebar__collapse span { padding-left: 14px; font-size: 15px; opacity: 0; visibility: hidden; -webkit-transition: 0.3s; transition: 0.3s; }
 .sidebar__collapse .fa-arrow-circle-left { font-size: 20px; }
 .sidebar .fa { font-size: 17px; }
 .sidebar .fa-chevron-down { position: absolute; top: 50%; right: 15px; margin-top: -3.5px; font-size: 7px; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
+
+.scroll:hover > .ps-scrollbar-y-rail:hover { background-color: #afb3b7; }
+.scroll:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y { background-color: #282D31; }
+.scroll:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { background-color: #282D31; }
+.scroll.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { background-color: #282D31; }
+.scroll > .ps-scrollbar-y-rail { right: 0; width: 10px; background: none; -webkit-border-radius: 0; border-radius: 0; }
+.scroll > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 10px; -webkit-border-radius: 0; border-radius: 0; background-color: #282D31; opacity: 0.5; }
+
+.content { margin-left: 205px; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+
+@media only screen and (max-height: 500px){
+ .sidebar__collapse{ position: static; margin: 40px 0 15px; } }
 
 
 
