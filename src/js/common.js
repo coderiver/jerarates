@@ -18,6 +18,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).toggleClass('is-collapsed');
 		$(this).parents('.js-sidebar').toggleClass('is-collapsed');
+		$('.js-content').toggleClass('is-expanded');
 
 		if ( $(this).hasClass('is-collapsed') ) {
 			setTimeout(function() {
