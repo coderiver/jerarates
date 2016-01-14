@@ -89,8 +89,8 @@
 	margin-top: 8px
 	&__box
 		width: 33.333%
-		// border-left: 1px solid #e9e9e9 
-		box-shadow: 1px 0 0 0 #e9e9e9
+		// border-left: 1px solid $border 
+		box-shadow: 1px 0 0 0 $border
 		padding: 10px 15px
 		display: table-cell
 		&:last-child
@@ -164,14 +164,63 @@
 	border-top: 0 
 	li
 		&.is-border
-			border-top: 1px solid #e9e9e9
+			border-top: 1px solid $border
 			
 .notification-menu
 	width: 400px 
-	> &__header
+	margin-top: 0
+	.notification-hide
+		font-size: 15px
+		color #333
+		position: absolute
+		top: 5px
+		right: 10px 
+		opacity: 0
+		visibility: hidden
+		transition: opacity .3s, visibility .3s 
+		button  
+			background: transparent
+			opacity: .5
+			+tr(opacity .3s)
+			&:hover
+				opacity: 1
+	&__header
+		padding: 5px 10px 
+		border-bottom: 1px solid $border
+		font-size: 13px 
 		a
 			padding: 0
 			color: $links
 			&:hover
 				color: darken($links, 10)
+	&__list
+		> li
+			border-bottom: 1px solid $border
+			&:last-child
+				border-bottom: 0 
+			
+	&__item
+		display: table
+		width: 100% 
+		color: #333
+		+tr(background .3s)
+		position: relative
+		&:hover
+			color: #333
+			background: #f6f6f6 
+			.notification-hide
+				visibility: visible
+				opacity: 1
+	&__icon,&__text
+		display: table-cell
+		vertical-align: top
+	&__icon
+		text-align: center
+		font-size: 40px 
+		width: 80px
+	&__text
+		padding: 12px 10px 12px
+		font-size: 15px
+		.meta
+			font-size: 13px  
 

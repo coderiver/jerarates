@@ -116,13 +116,39 @@
 				</li>
 				<li class="dropdown">
 					<a href="#" class="fa fa-bell-o is-active dropdown-toggle" data-toggle="dropdown" id="notification-menu" aria-expanded="false"><div class="badge">3</div></a>
-					<ul class="dropdown-menu dropdown-menu-right no-pad notification-menu" aria-labelledby="notification-menu">
-						<li class="notification-menu__header clearfix">You have <strong>3 new</strong> messages<a href="#" class="pull-right">view all</a></li>
-						<li><a href="#">Take a Tour</a></li>
-						<li><a href="#">Webinar</a></li>
-						<li class="is-border"><a href="#">Feature Request</a></li>
-						<li><a href="#">Contact Support</a></li>
-					</ul>
+					<div class="dropdown-menu dropdown-menu-right no-pad notification-menu" aria-labelledby="notification-menu">
+						<div class="notification-menu__header clearfix meta">You have <strong>3 new</strong> messages<a href="#" class="pull-right">view all</a></div>
+						<ul class="notification-menu__list">
+							<li>
+								<a href="#" class="notification-menu__item">
+									<div class="notification-menu__icon">
+										<i class="fa fa-code-fork"></i>
+									</div>
+									<div class="notification-menu__text">
+										<p>New Version Releases</p>
+										<div class="meta">1 day ago</div>
+									</div>
+									<div class="notification-hide">
+										<button type=""><i class="fa fa-times"></i></button>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="notification-menu__item">
+									<div class="notification-menu__icon">
+										<i class="fa fa-bar-chart"></i>
+									</div>
+									<div class="notification-menu__text">
+										<p>Report is ready</p>
+										<div class="meta">5 minutes ago</div>
+									</div>
+									<div class="notification-hide">
+										<button type=""><i class="fa fa-times"></i></button>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="fa fa-question-circle dropdown-toggle" data-toggle="dropdown" id="help-menu" aria-expanded="false"></a>
