@@ -174,10 +174,7 @@
 		color #333
 		position: absolute
 		top: 5px
-		right: 10px 
-		opacity: 0
-		visibility: hidden
-		transition: opacity .3s, visibility .3s 
+		right: 10px
 		button  
 			background: transparent
 			opacity: .5
@@ -207,10 +204,7 @@
 		position: relative
 		&:hover
 			color: #333
-			background: #f6f6f6 
-			.notification-hide
-				visibility: visible
-				opacity: 1
+			background: #fafafa
 	&__icon,&__text
 		display: table-cell
 		vertical-align: top
@@ -222,5 +216,7 @@
 		padding: 12px 10px 12px
 		font-size: 15px
 		.meta
-			font-size: 13px  
+			font-size: 13px
+		&_pb
+			padding-bottom: 5px   
 
