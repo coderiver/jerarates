@@ -79,35 +79,39 @@
 	+tr(color .3s)
 	&:hover
 		color: darken(#89c247, 10) 
-.dropdown.open
-	.create-menu
-		display: table
 .create-menu
 	+clr
 	width: 420px 
 	padding: 0
 	margin-top: 8px
-	&__box
+	&__in
+		display: table
+		width: 100% 
+	.tag-box
 		width: 33.333%
-		// border-left: 1px solid $border 
 		box-shadow: 1px 0 0 0 $border
-		padding: 10px 15px
 		display: table-cell
 		&:last-child
 			box-shadow: none
+.tag-box
+	padding: 10px 0
 	&__header
 		color: #999
 		+sbold
 		margin-bottom: 5px
 		font-size: 15px 
+		padding: 0 15px 
+		&_sm
+			font-size: 13px
 	&__list
-		li
-			margin-bottom: 4px 
-			&:last-child
-				margin-bottom: 0
 		a
 			color: #333
-			font-size: 15px 
+			font-size: 15px
+			display: block
+			padding: 3px 15px
+			+tr(background .3s)
+			&:hover
+				background: #f6f6f6  
 			.fa
 				margin-right: 10px 
 .menu
@@ -220,3 +224,9 @@
 		&_pb
 			padding-bottom: 5px   
 
+.search-result
+	left: 0
+	right: 0
+	.tag-box
+		padding-top: 5px 
+		padding-bottom: 5px 
