@@ -1,5 +1,8 @@
 .tech
 	padding: 100px 0 0 300px 
+	&__row
+		+clr
+		padding: 5px 0 
 
 .btn-success
 	box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.75)
@@ -22,10 +25,12 @@ label
 	font-weight: normal 
 
 .pagination
+	margin: 0
 	li
 		&.disabled
 			a, span
 				color: #ccc
+				background: #fff 
 		&.active
 			a, span, a:hover, a:focus, span:hover, span:focus
 				box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.37)
@@ -43,8 +48,65 @@ label
 			padding: 4px 10px
 			min-width: 30px
 			text-align: center 
+			background: #fbfbfb 
 			&:hover
 				background: #ededed 
 			span
 				padding: 0
 				min-width: 0 
+				background: none
+
+.button
+	display: inline-block
+	vertical-align: top
+	font-size: 14px
+	position: relative
+	line-height: 1
+	box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.75)
+	background: #f4f4f4 
+	border-radius: 2px 
+	min-width: 30px
+	min-height: 30px
+	&:hover
+		background: darken(#f4f4f4, 10%) 
+	&:active
+		background: darken(#f4f4f4, 20%) 
+	i
+		font-size: 15px
+	&_row
+		padding: 8px 10px 8px 30px 
+		i
+			font-size: 13px
+			position: absolute
+			top: 50%
+			left: 10px
+			margin-top: -6px
+	&_add
+		padding: 8px 10px 8px 30px 
+		background: #61ce00 
+		color: #fff 
+		&:hover
+			background: darken(#61ce00, 5%) 
+		&:active
+			background: darken(#61ce00, 10%) 
+		i
+			font-size: 13px
+			position: absolute
+			top: 50%
+			left: 10px
+			margin-top: -6px
+	&_prev, &_next
+		i
+			font-size: 16px
+	&_prev
+		i
+			margin: 1px 2px 0 0
+	&_next
+		i
+			margin: 1px 0 0 2px
+	&_edit
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -7px 0 0 -6px

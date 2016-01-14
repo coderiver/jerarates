@@ -208,6 +208,8 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .sidebar .fa-chevron-down { position: absolute; top: 50%; right: 15px; margin-top: -3.5px; font-size: 7px; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 
 .tech { padding: 100px 0 0 300px; }
+.tech__row { *zoom: 1; padding: 5px 0; }
+.tech__row:after { content: " "; display: table; clear: both; }
 
 .btn-success { -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.75); box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.75); background: #61ce00; color: #fff; font-size: 14px; font-weight: 400; line-height: 30px; padding: 0 26px; border: none; }
 .btn-success:hover, .btn-success:active, .btn-success:focus { outline: none; }
@@ -216,17 +218,33 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 label { margin-bottom: 3px; font-weight: normal; }
 
-.pagination li.disabled a, .pagination li.disabled span { color: #ccc; }
+.pagination { margin: 0; }
+.pagination li.disabled a, .pagination li.disabled span { color: #ccc; background: #fff; }
 .pagination li.active a, .pagination li.active span, .pagination li.active a:hover, .pagination li.active a:focus, .pagination li.active span:hover, .pagination li.active span:focus { -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.37); box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.37); background: rgba(0, 153, 207, 0.5); border-color: rgba(0, 153, 207, 0.5); }
 .pagination li:first-child a, .pagination li:first-child span { -webkit-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
 .pagination li:last-child a, .pagination li:last-child span { -webkit-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
-.pagination li a, .pagination li span { font-size: 14px; color: #333; padding: 4px 10px; min-width: 30px; text-align: center; }
+.pagination li a, .pagination li span { font-size: 14px; color: #333; padding: 4px 10px; min-width: 30px; text-align: center; background: #fbfbfb; }
 .pagination li a:hover, .pagination li span:hover { background: #ededed; }
-.pagination li a span, .pagination li span span { padding: 0; min-width: 0; }
+.pagination li a span, .pagination li span span { padding: 0; min-width: 0; background: none; }
 
-.popup-wrapper { background: rgba(255, 255, 255, 0.9); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 2000; }
+.button { display: inline-block; vertical-align: top; font-size: 14px; position: relative; line-height: 1; -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.75); box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.75); background: #f4f4f4; -webkit-border-radius: 2px; border-radius: 2px; min-width: 30px; min-height: 30px; }
+.button:hover { background: #dbdbdb; }
+.button:active { background: #c1c1c1; }
+.button i { font-size: 15px; }
+.button_row { padding: 8px 10px 8px 30px; }
+.button_row i { font-size: 13px; position: absolute; top: 50%; left: 10px; margin-top: -6px; }
+.button_add { padding: 8px 10px 8px 30px; background: #61ce00; color: #fff; }
+.button_add:hover { background: #55b500; }
+.button_add:active { background: #499b00; }
+.button_add i { font-size: 13px; position: absolute; top: 50%; left: 10px; margin-top: -6px; }
+.button_prev i, .button_next i { font-size: 16px; }
+.button_prev i { margin: 1px 2px 0 0; }
+.button_next i { margin: 1px 0 0 2px; }
+.button_edit i { position: absolute; top: 50%; left: 50%; margin: -7px 0 0 -6px; }
 
-.popup { margin: 44px auto; max-width: 480px; color: #333; border: 1px solid #d4d4d4; -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); padding: 10px 15px; position: relative; }
+.popup-wrapper { background: rgba(255, 255, 255, 0.9); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 2000; min-width: 320px; padding: 0 10px; }
+
+.popup { margin: 44px auto; max-width: 480px; color: #333; border: 1px solid #d4d4d4; -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); padding: 10px 15px; position: relative; background: #fff; }
 .popup__title { font-weight: 300; font-size: 22px; line-height: 1; opacity: 0.75; margin-bottom: 15px; padding-right: 20px; }
 .popup__close { position: absolute; top: 10px; right: 15px; font-size: 20px; opacity: 0.15; line-height: 1; z-index: 10; background: none; }
 .popup__close:hover { opacity: 0.5; }
