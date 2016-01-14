@@ -1,6 +1,6 @@
 // sidebar
 .sidebar
-	position: absolute
+	position: fixed
 	top: 45px
 	left: 0
 	bottom: 0
@@ -111,30 +111,3 @@
 		&__collapse
 			position: static
 			margin: 40px 0 15px
-
-
-// styles for scroll
-.scroll
-	&:hover > .ps-scrollbar-y-rail:hover
-		background-color: #afb3b7
-		> .ps-scrollbar-y
-			background-color: #282D31
-	&:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y
-		background-color: #282D31
-	&.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y
-		background-color: #282D31
-	> .ps-scrollbar-y-rail
-		right: 0
-		width: 10px
-		background: none
-		border-radius: 0
-		> .ps-scrollbar-y
-			width: 10px
-			border-radius: 0
-			background-color: #282D31
-			opacity: 0.5
-
-
-// content
-.content
-	margin-left: 205px
