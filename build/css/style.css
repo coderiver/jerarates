@@ -39,7 +39,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 @font-face { font-family: helioscondc-bold; src: url("fonts/helioscondc-bold.eot"); src: url("fonts/helioscondc-bold.eot?#iefix") format("embedded-opentype"), url("fonts/helioscondc-bold.woff2") format("woff2"), url("fonts/helioscondc-bold.woff") format("woff"), url("fonts/helioscondc-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 html { font-size: 62.5%; }
 
-body { font-family: "Open Sans", serif; font-size: 15px; line-height: 1.4; background: #fff; min-width: 320px; }
+body { font-family: "Open Sans", serif; font-size: 15px; line-height: 1.4; background: #fff; min-width: 320px; padding-top: 45px; }
 
 a { color: #0086b3; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 a:hover, a:focus, a:visited { text-decoration: none; }
@@ -78,7 +78,7 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .btn-default { background: #f4f4f4; }
 
-.header { background: #30373c; font-size: 0; height: 45px; *zoom: 1; }
+.header { background: #30373c; font-size: 0; height: 45px; position: absolute; top: 0; left: 0; right: 0; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
 .header__item { display: inline-block; vertical-align: middle; font-size: 15px; }
 .header__item:first-child { width: 190px; }
@@ -109,7 +109,7 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .dropdown.open .create-menu { display: table; }
 
-.create-menu { *zoom: 1; width: 450px; -webkit-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; border-color: #d4d4d4; padding: 0; margin-top: 8px; }
+.create-menu { *zoom: 1; width: 420px; -webkit-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; border-color: #d4d4d4; padding: 0; margin-top: 8px; }
 .create-menu:after { content: " "; display: table; clear: both; }
 .create-menu__box { width: 33.333%; -webkit-box-shadow: 1px 0 0 0 #e9e9e9; box-shadow: 1px 0 0 0 #e9e9e9; padding: 10px 15px; display: table-cell; }
 .create-menu__box:last-child { -webkit-box-shadow: none; box-shadow: none; }
