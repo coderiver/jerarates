@@ -22,4 +22,41 @@
 
 // content
 .content
+	position: relative
 	margin-left: 205px
+	&.is-expanded
+		margin-left: 55px
+
+.title
+	padding: 13px 0 5px 10px
+	font-size: 22px
+	font-weight: 300
+
+// table
+.tabl
+	table-layout: fixed
+	&__bl
+		display: inline-block
+		vertical-align: middle
+		&:first-child
+			margin-right: 15px
+	th
+		color: #666
+		font-weight: 600
+	tr
+		border-bottom: 1px solid #F0F0F0
+		&:hover:not(.tabl__head)
+			background: #fafafa
+		&.is-active
+			background: #FFFDCD
+		&.tabl__head
+			border-width: 2px
+	.fa-check
+		color: #68bf1b
+	.fa-arrow-down
+		color: #9DDA19
+	.fa-arrow-up
+		color: #CE2323
+
+.cell-center
+	text-align: center
