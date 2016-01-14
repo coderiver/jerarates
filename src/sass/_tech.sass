@@ -67,6 +67,7 @@ label
 	border-radius: 2px 
 	min-width: 30px
 	min-height: 30px
+	color: #333 
 	&:hover
 		background: darken(#f4f4f4, 10%) 
 	&:active
@@ -96,6 +97,9 @@ label
 			left: 10px
 			margin-top: -6px
 	&_prev, &_next
+		color: #666 
+		&:hover
+			color: #333 
 		i
 			font-size: 16px
 	&_prev
@@ -110,3 +114,41 @@ label
 			top: 50%
 			left: 50%
 			margin: -7px 0 0 -6px 
+	span
+		letter-spacing: 0.01em 
+
+.growl
+	font-size: 16px
+	color: #fff 
+	line-height: 1
+	position: relative
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.75)
+	max-width: 330px
+	width: 100%
+	border-radius: 4px 
+	padding: 3px 0 
+	&_red
+		background: rgba(#e9291d, 0.95)
+	&_yellow
+		background: rgba(#fab10d, 0.95)
+	&_blue
+		background: rgba(#0da9ec, 0.95)
+	&_green
+		background: rgba(#6ad70d, 0.95)
+	div
+		padding: 10px 30px 10px 15px 
+		&:last-child
+			border-top: 1px solid rgba(#fff, 0.2) 
+	&__close
+		position: absolute
+		top: 7px
+		right: 10px
+		font-size: 14px
+		opacity: 0.5
+		line-height: 1
+		z-index: 10
+		background: none
+		&:hover
+			opacity: 0.7
+		&:active
+			opacity: 1

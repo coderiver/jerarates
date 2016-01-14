@@ -1,0 +1,52 @@
+.rates
+	&-header
+		padding: 8px 10px 0
+		border-bottom: 1px solid #f0f0f0 
+		.button_prev
+			float: left
+		.title
+			overflow: hidden
+			padding: 0 80px 0 10px
+			small
+				color: #999
+				font-size: 16px
+				+reg
+				line-height: 1
+	&-title
+		+clr
+		padding-bottom: 5px
+
+.top-buttons
+	position: absolute
+	top: 8px
+	right: 10px
+	font-size: 0
+	.button
+		margin-left: 6px
+
+.tabs
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		margin-right: 15px
+
+.tab
+	color: #999 
+	font-size: 14px
+	line-height: 1
+	display: inline-block
+	padding: 6px 15px 
+	position: relative
+	&.is-active
+		color: #333
+		&:before
+			display: block
+	&:before
+		content: "" 
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		border-bottom: 2px solid #61ce00 
+		display: none
