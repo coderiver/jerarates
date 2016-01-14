@@ -162,8 +162,16 @@
 .help-menu
 	margin-top: 0
 	border-top: 0 
-	p
 	li
 		&.is-border
 			border-top: 1px solid #e9e9e9
+			
+.notification-menu
+	width: 400px 
+	> &__header
+		a
+			padding: 0
+			color: $links
+			&:hover
+				color: darken($links, 10)
 

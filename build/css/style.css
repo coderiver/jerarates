@@ -100,7 +100,7 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .dropdown-menu { -webkit-border-radius: 0; border-radius: 0; border-color: #d4d4d4; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); }
 .dropdown-menu.no-pad { padding: 0; }
-.dropdown-menu > li > a { padding: 8px 12px; }
+.dropdown-menu > li a { padding: 8px 12px; }
 
 .form-range > div:first-child { position: relative; }
 .form-range > div:first-child:after { content: ""; position: absolute; top: 50%; right: -5px; width: 10px; height: 1px; background: #000; }
@@ -181,6 +181,10 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .help-menu { margin-top: 0; border-top: 0; }
 .help-menu li.is-border { border-top: 1px solid #e9e9e9; }
+
+.notification-menu { width: 400px; }
+> .notification-menu__header a { padding: 0; color: #0086b3; }
+> .notification-menu__header a:hover { color: #006080; }
 
 .sidebar { position: fixed; top: 45px; left: 0; bottom: 0; width: 205px; background: #37424A; }
 .sidebar.is-collapsed { width: 55px; }
