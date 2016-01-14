@@ -1,19 +1,44 @@
 // sidebar
 .sidebar
-	position: fixed
+	position: absolute
 	top: 45px
 	left: 0
+	bottom: 0
 	width: 205px
-	height: 100%
 	background: #37424A
+	&.is-collapsed
+		width: 55px
+		.sidebar__in
+			overflow: inherit
+		.sidebar__link
+			&.is-mobile
+				display: block
+			span
+				display: none
+		.sidebar__collapse span
+			display: none
+		.sidebar__sublist
+			position: absolute
+			top: 0
+			left: 100%
+			min-width: 120px
+			margin-left: -5px
+			box-shadow: 2.1px 2.1px 3px rgba(0, 0, 0, 0.2)
+			.sidebar__link
+				padding-left: 18px
+		.fa-chevron-down
+			display: none
+	&__list li
+		position: relative
 	&__in
 		position: relative
 		height: 100%
 		padding-top: 14px
+		overflow: hidden
 	&__link
 		position: relative
 		display: block
-		padding: 6px 15px
+		padding: 6px 18px
 		font-size: 15px
 		color: #afb3b7
 		&:before
@@ -37,24 +62,40 @@
 			background: #293137
 			.fa-chevron-down
 				transform: rotateZ(-180deg)
+		&.is-mobile
+			display: none
+			background: #293137
+			cursor: pointer
 		span
 			padding-left: 14px
 	&__sublist
 		display: none
 		background: #2f383f
+		+tr(0.3s ease)
+		&.is-active
+			display: block
 		.sidebar__link
-			padding-left: 45px
+			padding-left: 50px
 	&__collapse
-		display: none
 		position: absolute
-		left: 15px
-		//bottom: 10px
+		display: block
+		left: 0
+		bottom: 10px
+		padding-left: 18px
 		color: #afb3b7
 		&:hover
+			color: #FFF
+			span
+				opacity: 1
+				visibility: visible
+		&:focus
 			color: #FFF
 		span
 			padding-left: 14px
 			font-size: 15px
+			opacity: 0
+			visibility: hidden
+			+tr(0.3s)
 		.fa-arrow-circle-left
 			font-size: 20px
 	.fa
@@ -66,3 +107,34 @@
 		margin-top: -3.5px
 		font-size: 7px
 		+tr(transform 0.3s)
+	+rh(500)
+		&__collapse
+			position: static
+			margin: 40px 0 15px
+
+
+// styles for scroll
+.scroll
+	&:hover > .ps-scrollbar-y-rail:hover
+		background-color: #afb3b7
+		> .ps-scrollbar-y
+			background-color: #282D31
+	&:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y
+		background-color: #282D31
+	&.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y
+		background-color: #282D31
+	> .ps-scrollbar-y-rail
+		right: 0
+		width: 10px
+		background: none
+		border-radius: 0
+		> .ps-scrollbar-y
+			width: 10px
+			border-radius: 0
+			background-color: #282D31
+			opacity: 0.5
+
+
+// content
+.content
+	margin-left: 205px
