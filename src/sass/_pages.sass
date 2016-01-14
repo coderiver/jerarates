@@ -1,5 +1,9 @@
 // styles for scroll
 .scroll
+	position: relative
+	overflow: hidden
+	&.is-horz
+		padding-bottom: 10px
 	&:hover > .ps-scrollbar-y-rail:hover
 		background-color: #afb3b7
 		> .ps-scrollbar-y
@@ -18,7 +22,12 @@
 			border-radius: 0
 			background-color: #282D31
 			opacity: 0.5
-
+	> .ps-scrollbar-x-rail
+		height: 10px
+		border-radius: 0
+		> .ps-scrollbar-x
+			height: 10px
+			border-radius: 0
 
 // content
 .content
@@ -35,28 +44,90 @@
 // table
 .tabl
 	table-layout: fixed
+	font-size: 14px
 	&__bl
 		display: inline-block
 		vertical-align: middle
 		&:first-child
 			margin-right: 15px
-	th
+	&__action
+		display: inline-block
+		padding: 0 5px
 		color: #666
+		font-size: 16px
+		&.is-edit
+			vertical-align: -1px
+	&__note
+		font-size: 12px
+		color: #666
+	th
+		padding: 3px 0
 		font-weight: 600
+		color: #666
 	tr
 		border-bottom: 1px solid #F0F0F0
-		&:hover:not(.tabl__head)
+		&:hover
 			background: #fafafa
 		&.is-active
 			background: #FFFDCD
 		&.tabl__head
 			border-width: 2px
+			background: #fff
+		&.is-hidden
+			font-size: 0
+			border: 0
+			td
+				padding: 0
+	td
+		padding: 3px 0
+		vertical-align: middle
+	.checkbox
+		display: inline-block
+		margin: 0
+		padding: 2px
+		font-size: 0
+		background: #FFF
+		vertical-align: middle
+		label
+			min-height: auto
+			padding-left: 0
+			width: 15px
+			height: 15px
+		span
+			&:before
+				left: 2px
+			&:after
+				left: 3px
 	.fa-check
 		color: #68bf1b
 	.fa-arrow-down
 		color: #9DDA19
 	.fa-arrow-up
 		color: #CE2323
+	.fa-table
+		margin-right: 2px
+		color: #666
 
 .cell-center
 	text-align: center
+
+// action row
+.action
+	margin: 5px 14px 14px 6px
+	+clr
+	&__bl
+		float: right
+		font-size: 0
+		&:first-child
+			float: left
+	&__description
+		display: inline-block
+		margin-right: 10px
+		font-size: 15px
+		vertical-align: middle
+		span
+			font-weight: 300
+	.pagination,
+	.button
+		margin: 0 3px
+		vertical-align: middle
