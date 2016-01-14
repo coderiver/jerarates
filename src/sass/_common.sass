@@ -105,7 +105,7 @@ input, button
 	box-shadow: 0 6px 12px rgba(0,0,0,.1)
 	&.no-pad
 		padding: 0
-	>li a
+	>li>a
 		padding: 8px 12px 
 .form-range
 	> div
@@ -160,7 +160,6 @@ input, button
 			+ span
 				&:after
 					display: block
-					
 	span
 		&:before
 			content: ''
@@ -191,3 +190,27 @@ input, button
 		background: darken($btn-primary, 4) 
 .btn-default
 	background: $btn-default 
+	
+.meta
+	color: #999
+
+.progress-wrap
+	position: relative
+	padding-right: 45px 
+.progress
+	height: 10px
+	line-height: 10
+	border-radius: 0 
+	background: #F0F0F0 
+	margin-top: 15px
+	margin-bottom: 7px
+	box-shadow: inset 0 0 0 1px #e0e0e0
+	&-bar 
+		background: #0bcbfa
+		box-shadow: none
+	&-text
+		width: 40px
+		text-align: center
+		position: absolute  
+		right: 0
+		top: -5px
