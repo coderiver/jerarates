@@ -19,6 +19,9 @@
 		padding-top: 7px 
 .search-form
 	position: relative
+	.dropdown
+		display: inline-block
+		vertical-align: middle
 	&__input
 		background: $dark
 		border: 1px solid #1e2225
@@ -37,6 +40,7 @@
 			border-color: #0f1112
 	&__btn
 		position: absolute
+		top: 0
 		left: 0
 		background: transparent
 		color: #414950
@@ -48,14 +52,27 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 4px 
-	.dropdown-menu
-		max-width: 400px 
+		  
+.advanced-search
+	width: 310px
+	max-width: 100%
+	textarea
+		resize: none
+	.btn-line
+		.btn
+			width: 90px 
 .more-search
 	color: #6c9444 
 	font-size: 22px
 	&:hover
 		color: darken(#6c9444, 7) 
-		
+.create-menu
+	+clr
+	width: auto
+	&__box
+		width: 110px
+		border-left: 1px solid #eee 
+		float: left		
 .menu
 	+clr
 	height: 100%

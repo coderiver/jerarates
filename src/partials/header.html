@@ -10,79 +10,80 @@
 			<div class="search-form">
 				<form action="#">
 					<div class="field dropdown">
-						<input class="search-form__input" type="text" placeholder="Search...">
-						<button type="button" class="search-form__btn dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-search"></i></button>
-						<a class="more-search"><i class="fa fa-plus-circle"></i></a>
-						<div class="dropdown-menu" aria-labelledby="advanced-search">
-							<form action="#">
-								<div class="container-fluid">
-									<div class="form-group">
-										<label for="general-text">General Text Input</label>
-										<input type="text" class="form-control" id="general-text">
-									</div>
-									<div class="form-group">
-										<div class="form-inline">
-											<label>Select Actions</label>
-											<div class="row">
-												<div class="col-xs-4">
+						<div class="dropdown">
+							<input class="search-form__input" type="text" placeholder="Search...">
+							<button type="button" class="search-form__btn dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-search"></i></button>
+							<div class="dropdown-menu advanced-search" aria-labelledby="advanced-search">
+								<form action="#">
+									<div class="container-fluid">
+										<div class="form-group">
+											<label for="general-text">General Text Input</label>
+											<input type="text" class="form-control" id="general-text">
+										</div>
+										<div class="form-group">
+											<div class="form-inline">
+												<label>Select Actions</label>
+												<div class="field">
 													<div class="checkbox">
 														<label>
-															<input type="checkbox"> Option 1
+															<input type="checkbox"> <span>Option 1</span>
 														</label>
 													</div>
-												</div>
-												<div class="col-xs-4">
 													<div class="checkbox">
 														<label>
-															<input type="checkbox"> Option 2
+															<input type="checkbox"> <span>Option 2</span>
 														</label>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
-										<div class="form-inline">
-											<label>Select Type</label>
-											<div class="row">
-												<div class="col-xs-4">
+										<div class="form-group">
+											<div class="form-inline">
+												<label>Select Type</label>
+												<div class="field">
 													<div class="radio">
 														<label>
-															<input type="radio" name="type"> Option 1
+															<input type="radio" name="type"> <span>Option 1</span>
 														</label>
 													</div>
-												</div>
-												<div class="col-xs-4">
 													<div class="radio">
 														<label>
-															<input type="radio" name="type"> Option 2
+															<input type="radio" name="type"> <span>Option 2</span>
 														</label>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group">
-										<label>Fill Range</label>
-										<div class="row form-range">
-											<div class="col-xs-4">
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-xs-4">
-												<input type="text" class="form-control">
+										<div class="form-group">
+											<label>Fill Range</label>
+											<div class="row form-range">
+												<div class="col-xs-4">
+													<input type="text" class="form-control">
+												</div>
+												<div class="col-xs-4">
+													<input type="text" class="form-control">
+												</div>
 											</div>
 										</div>
+										<div class="form-group">
+											<label>Enter Note</label>
+											<textarea rows="3" class="form-control"></textarea>
+										</div>
+										<div class="form-group clearfix btn-line">
+											<button type="button" class="btn btn-default pull-left">Cancel</button>
+											<button type="sumbit" class="btn btn-primary pull-right">Search</button>
+										</div>
 									</div>
-									<div class="form-group">
-										<label>Enter Note</label>
-										<textarea rows="3" class="form-control"></textarea>
-									</div>
-									<div class="form-group">
-										<button type="button" class="btn btn-default pull-left">Cancel</button>
-										<button type="sumbit" class="btn btn-primary pull-right">Search</button>
-									</div>
-								</div>
-							</form>
+								</form>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a class="more-search dropdown-toggle" data-toggle="dropdown" id="create-menu" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+							<div class="dropdown-menu create-menu" aria-labelledby="create-menu">
+								<div class="create-menu__box"></div>
+								<div class="create-menu__box"></div>
+								<div class="create-menu__box"></div>
+							</div>
 						</div>
 					</div>
 				</form>

@@ -45,7 +45,13 @@
 	font-weight: 600
 =bold
 	font-weight: 700
-
+=fa
+	display: inline-block
+	font: normal normal normal 14px/1 FontAwesome
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 html
 	font-size: 62.5% 
 body
@@ -92,10 +98,6 @@ input, button
 	width: 25px 
 	height: 25px
 	padding-top: 6px  
-	
-.checkbox
-	input[type="checkbox"]
-		top: 2px 
 
 .form-range
 	> div
@@ -109,3 +111,77 @@ input, button
 				width: 10px 
 				height: 1px
 				background: #000 
+.form-inline
+	.checkbox, .radio
+		margin: 0 0 10px 10px
+		&:first-child
+			margin-left: 0
+.checkbox
+	position: relative
+	padding-left: 25px 
+	input
+		display: none
+		&:checked
+			+ span
+				&:after
+					display: block
+	span
+		&:before
+			content: ''
+			position: absolute
+			top: 2px
+			left: 0
+			width: 15px
+			height: 15px 
+			border: 2px solid #d0d0d0 
+		&:after
+			content: '\f00c'
+			+fa
+			display: none
+			position: absolute
+			top: 4px
+			left: 1px
+			color: #000
+			font-size: 12px 
+.radio
+	position: relative
+	padding-left: 25px
+	input
+		display: none
+		&:checked
+			+ span
+				&:after
+					display: block
+					
+	span
+		&:before
+			content: ''
+			position: absolute
+			top: 2px
+			left: 0
+			color:  #d0d0d0
+			width: 16px
+			height: 16px
+			border: 2px solid #d0d0d0  
+			border-radius: 50%
+		&:after
+			content: ''
+			display: none
+			position: absolute
+			top: 7px
+			left: 5px
+			font-size: 8px
+			width: 6px
+			height: 6px
+			background: #000   
+			border-radius: 50%
+			
+				   
+	 
+.btn-primary
+	background: $btn-primary
+	border-color: #087ea6 
+	&:hover
+		background: darken($btn-primary, 4) 
+.btn-default
+	background: $btn-default 
