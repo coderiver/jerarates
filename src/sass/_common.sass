@@ -99,7 +99,14 @@ input, button
 	width: 25px 
 	height: 25px
 	padding-top: 6px  
-
+.dropdown-menu
+	border-radius: 0
+	border-color: #d4d4d4
+	box-shadow: 0 6px 12px rgba(0,0,0,.1)
+	&.no-pad
+		padding: 0
+	>li>a
+		padding: 8px 12px 
 .form-range
 	> div
 		&:first-child
@@ -176,8 +183,6 @@ input, button
 			height: 6px
 			background: #000   
 			border-radius: 50%
-			
-				   
 	 
 .btn-primary
 	background: $btn-primary
