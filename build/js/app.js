@@ -58,6 +58,10 @@ $(document).ready(function() {
 		$(this).parents('.js-sidebar').toggleClass('is-collapsed');
 		$('.js-content').toggleClass('is-expanded');
 
+		if ( $('.js-scroll').length > 0 ) {
+			$('.js-scroll').perfectScrollbar('update');
+		}
+
 		if ( $(this).hasClass('is-collapsed') ) {
 			setTimeout(function() {
 				$('.js-collapse').parent().perfectScrollbar('destroy');
@@ -70,9 +74,18 @@ $(document).ready(function() {
 
 	});
 
-	// vertical scroll
+	// scroll
+	$('.js-scroll').perfectScrollbar();
+
 	$('.js-vert-scroll').perfectScrollbar({
-		wheelPropagation: true
+		suppressScrollX: true
+	});
+
+	$('.js-vert-scroll').width($(this).find('.js-inner').outerWidth());
+
+	// checkboxes in tabl
+	$('.js-check input').on('change', function() {
+		$(this).closest('tr').toggleClass('is-active');
 	});
 
 });
