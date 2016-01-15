@@ -86,8 +86,7 @@ $(document).ready(function() {
 
 		if ( val.length >= 3 ) {
 			$menu.addClass('is-open');
-		}
-		else if ( val.length < 3 ) {
+		} else if ( val.length < 3 ) {
 			$menu.removeClass('is-open');
 		}
 	});
@@ -95,8 +94,14 @@ $(document).ready(function() {
 	function detectHeight() {
 		$('.js-height').each(function() {
 			var _ = $(this),
-				position = _.offset().top;
-				_.outerHeight($(window).height() - position);
+				position = _.offset().top,
+				height = $(window).height() - position;
+
+			if ( _.hasClass('js-vert-scroll') ) {
+				_.css('max-height', height);
+			} else {
+				_.outerHeight(height);
+			}
 		});
 	}
 
@@ -105,6 +110,22 @@ $(document).ready(function() {
 	$('.js-tabl-detail').click(function() {
 		$(this).addClass('is-detail');
 		$(this).siblings().removeClass('is-detail');
+
+		if ( !$('.js-content').hasClass('is-sideinfo') ) {
+			$('.js-content').addClass('is-sideinfo');
+		}
+
+		$('.js-sideinfo').addClass('is-active');
+
+		measureTablWidth();
+	});
+
+	$('.js-close').click(function() {
+		$(this).parent().removeClass('is-active');
+		$('.js-content').removeClass('is-sideinfo');
+		$('.js-sideinfo').removeClass('is-active');
+
+		measureTablWidth();
 	});
 
 	// hide dropdown in collapsed in menu
@@ -118,5 +139,14 @@ $(document).ready(function() {
 		measureTablWidth();
 		detectHeight();
 		$('.js-scroll').perfectScrollbar('update');
+	});
+});
+$(document).ready(function() {
+	$('.js-toggle-rows').on('click', 'tr', function() {
+		$(this).siblings('tr').removeClass('is-chosen');
+		$(this).addClass('is-chosen');
+	});
+	$('.js-toggle-rows').on('click', '.js-check', function(e) {
+		e.stopPropagation();
 	});
 });
