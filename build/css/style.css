@@ -148,6 +148,10 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .row.no-pad { margin: 0; }
 .row.no-pad > div { padding: 0; }
 
+.content-body { overflow: hidden; }
+
+.content-sidebar { float: left; }
+
 .header { background: #30373c; font-size: 0; height: 45px; position: absolute; top: 0; left: 0; right: 0; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
 .header__item { display: inline-block; vertical-align: middle; font-size: 15px; }
@@ -421,11 +425,13 @@ label { margin-bottom: 3px; font-weight: normal; }
 
 .data-block { padding: 8px 10px 0; }
 
-.sidebar-list { border-right: 1px solid #e9e9e9; }
-
+.sidebar-list { border-right: 1px solid #e9e9e9; width: 320px; }
+.sidebar-list .action { margin: 0; border-bottom: 1px solid #e9e9e9; }
+.sidebar-list .action_no-bd { border-bottom: 0; }
+.sidebar-list .action__bl { float: none; padding: 9px 5px; *zoom: 1; }
+.sidebar-list .action__bl:after { content: " "; display: table; clear: both; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-
 @media only screen and (max-height: 500px){
  .sidebar__collapse{ position: static; margin: 40px 0 15px; } }
 

@@ -9,66 +9,88 @@
 <div class="out">
 	//=include partials/header.html
 	//=include partials/sidebar.html
-	<div class="content">
-		<div class="row no-pad">
-			<div class="col-md-2">
-				<div class="sidebar-list">
-					<div class="action">
-						<div class="action__bl">
-							<button class="button">
-								<i class="fa fa-download"></i>
-							</button>
-							<button class="button">
-								<i class="fa fa-trash-o"></i>
-							</button>
-							<button class="button button_add">
-								<i class="fa fa-plus-circle"></i>
-								<span>New...</span>
-							</button>
-						</div>
-					</div>
+	<div class="content ">
+		<div class="content-sidebar is-left sidebar-list">
+			<div class="action">
+				<div class="action__bl">
+					<button class="button">
+						<i class="fa fa-download"></i>
+					</button>
+					<button class="button">
+						<i class="fa fa-trash-o"></i>
+					</button>
+					<button class="button button_add">
+						<i class="fa fa-plus-circle"></i>
+						<span>New...</span>
+					</button>
 				</div>
 			</div>
-			<div class="col-md-10">
-				<div class="rates-header">
-					<div class="rates-title">
-						<button class="button button_prev">
-							<i class="fa fa-chevron-left"></i>
-						</button>
-						<div class="title">VoiceTec Premium <span class="label label-default">premium</span> <span class="label label-default">trusted</span></div>
-						<div class="top-buttons">
-							<button class="button button_edit">
-								<i class="fa fa-edit"></i> 
-							</button>
-							<button class="button">
-								<i class="fa fa-trash-o"></i>
-							</button>
-						</div>
-					</div>
-					<ul class="tabs">
-						<li><a href="#" class="tab is-active">Overview</a></li>
-						<li><a href="#" class="tab">Targets / Offers</a></li>
-						<li><a href="#" class="tab">Activity Log</a></li>
+			
+			<div class="action action_no-bd">
+				<div class="action__bl">
+					<button class="button button_row pull-left">
+						<i class="fa fa-align-justify"></i>
+						<span>50</span>
+					</button>
+					<ul class="pagination pull-right">
+						<li class="disabled">
+							<span aria-label="Previous">
+								<span class="fa fa-angle-left" aria-hidden="true"></span>
+							</span>
+							</li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span class="fa fa-angle-right" aria-hidden="true"></span>
+							</a>
+						</li>
 					</ul>
 				</div>
-				<div class="data-block">
-					<div class="row row_sm">
-						<div class="col-sm-6">
-							<div class="title-h2">Primary Data</div>
-							<ul class="right-aligned-list">
-								<li><span>Company Name:</span> VoiceTec UK</li>
-								<li><span>Type:</span> Vendor</li>
-								<li><span>Currency:</span> USD</li>
+			</div>
+		</div>
+		<div class="content-body">
+			<div class="rates-header">
+				<div class="rates-title">
+					<button class="button button_prev">
+						<i class="fa fa-chevron-left"></i>
+					</button>
+					<div class="title">VoiceTec Premium <span class="label label-default">premium</span> <span class="label label-default">trusted</span></div>
+					<div class="top-buttons">
+						<button class="button button_edit">
+							<i class="fa fa-edit"></i> 
+						</button>
+						<button class="button">
+							<i class="fa fa-trash-o"></i>
+						</button>
+					</div>
+				</div>
+				<ul class="tabs">
+					<li><a href="#" class="tab is-active">Overview</a></li>
+					<li><a href="#" class="tab">Targets / Offers</a></li>
+					<li><a href="#" class="tab">Activity Log</a></li>
+				</ul>
+			</div>
+			<div class="data-block">
+				<div class="row row_sm">
+					<div class="col-sm-6">
+						<div class="title-h2">Primary Data</div>
+						<ul class="right-aligned-list">
+							<li><span>Company Name:</span> VoiceTec UK</li>
+							<li><span>Type:</span> Vendor</li>
+							<li><span>Currency:</span> USD</li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="title-h2">Rate Tables</div>
+						<div class="tag-box no-pad tag-box_mod">
+							<ul class="tag-box__list">
+								<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a></li>
+								<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium General</a></li>
 							</ul>
-						</div>
-						<div class="col-sm-6">
-							<div class="title-h2">Rate Tables</div>
-							<div class="tag-box no-pad tag-box_mod">
-								<ul class="tag-box__list">
-									<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a></li>
-									<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium General</a></li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</div>
