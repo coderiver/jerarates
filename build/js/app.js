@@ -84,12 +84,27 @@ $(document).ready(function() {
 			$menu 	= $parent.find('.js-search-result'),
 			val 	= $(this).val();
 
-		if(val.length >= 3) {
+		if ( val.length >= 3 ) {
 			$menu.addClass('is-open');
 		}
-		else if(val.length < 3) {
+		else if ( val.length < 3 ) {
 			$menu.removeClass('is-open');
 		}
+	});
+
+	function detectHeight() {
+		$('.js-height').each(function() {
+			var _ = $(this),
+				position = _.offset().top;
+				_.outerHeight($(window).height() - position);
+		});
+	}
+
+	detectHeight();
+
+	$('.js-tabl-detail').click(function() {
+		$(this).addClass('is-detail');
+		$(this).siblings().removeClass('is-detail');
 	});
 
 	// hide dropdown in collapsed in menu
@@ -101,5 +116,7 @@ $(document).ready(function() {
 
 	$(window).resize(function() {
 		measureTablWidth();
+		detectHeight();
+		$('.js-scroll').perfectScrollbar('update');
 	});
 });
