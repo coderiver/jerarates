@@ -25,6 +25,7 @@
 	> .ps-scrollbar-x-rail
 		height: 10px
 		border-radius: 0
+		bottom: 0 !important
 		> .ps-scrollbar-x
 			height: 10px
 			border-radius: 0
@@ -61,7 +62,7 @@
 		font-size: 12px
 		color: #666
 	th
-		padding: 3px 0
+		padding: 3px 10px
 		font-weight: 600
 		color: #666
 	tr
@@ -70,16 +71,20 @@
 			background: #fafafa
 		&.is-active
 			background: #FFFDCD
+		&.is-detail
+			background: #E3FFC8
 		&.tabl__head
 			border-width: 2px
 			background: #fff
 		&.is-hidden
 			font-size: 0
 			border: 0
-			td
+			th
 				padding: 0
+		&.js-tabl-detail
+			cursor: pointer
 	td
-		padding: 3px 0
+		padding: 3px 10px
 		vertical-align: middle
 	.checkbox
 		display: inline-block
@@ -104,12 +109,19 @@
 		color: #9DDA19
 	.fa-arrow-up
 		color: #CE2323
-	.fa-table
+	.fa-table,
+	.fa-sign-in
 		margin-right: 2px
 		color: #666
 
 .cell-center
 	text-align: center
+
+.txt-bold
+	+sbold
+
+.txt-light
+	+light
 
 // action row
 .action

@@ -315,7 +315,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 .scroll.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { background-color: #282D31; }
 .scroll > .ps-scrollbar-y-rail { right: 0; width: 10px; background: none; -webkit-border-radius: 0; border-radius: 0; }
 .scroll > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 10px; -webkit-border-radius: 0; border-radius: 0; background-color: #282D31; opacity: 0.5; }
-.scroll > .ps-scrollbar-x-rail { height: 10px; -webkit-border-radius: 0; border-radius: 0; }
+.scroll > .ps-scrollbar-x-rail { height: 10px; -webkit-border-radius: 0; border-radius: 0; bottom: 0 !important; }
 .scroll > .ps-scrollbar-x-rail > .ps-scrollbar-x { height: 10px; -webkit-border-radius: 0; border-radius: 0; }
 
 .content { position: relative; margin-left: 205px; }
@@ -329,14 +329,16 @@ label { margin-bottom: 3px; font-weight: normal; }
 .tabl__action { display: inline-block; padding: 0 5px; color: #666; font-size: 16px; }
 .tabl__action.is-edit { vertical-align: -1px; }
 .tabl__note { font-size: 12px; color: #666; }
-.tabl th { padding: 3px 0; font-weight: 600; color: #666; }
+.tabl th { padding: 3px 10px; font-weight: 600; color: #666; }
 .tabl tr { border-bottom: 1px solid #F0F0F0; }
 .tabl tr:hover { background: #fafafa; }
 .tabl tr.is-active { background: #FFFDCD; }
+.tabl tr.is-detail { background: #E3FFC8; }
 .tabl tr.tabl__head { border-width: 2px; background: #fff; }
 .tabl tr.is-hidden { font-size: 0; border: 0; }
-.tabl tr.is-hidden td { padding: 0; }
-.tabl td { padding: 3px 0; vertical-align: middle; }
+.tabl tr.is-hidden th { padding: 0; }
+.tabl tr.js-tabl-detail { cursor: pointer; }
+.tabl td { padding: 3px 10px; vertical-align: middle; }
 .tabl .checkbox { display: inline-block; margin: 0; padding: 2px; font-size: 0; background: #FFF; vertical-align: middle; }
 .tabl .checkbox label { min-height: auto; padding-left: 0; width: 15px; height: 15px; }
 .tabl .checkbox span:before { left: 2px; }
@@ -344,9 +346,13 @@ label { margin-bottom: 3px; font-weight: normal; }
 .tabl .fa-check { color: #68bf1b; }
 .tabl .fa-arrow-down { color: #9DDA19; }
 .tabl .fa-arrow-up { color: #CE2323; }
-.tabl .fa-table { margin-right: 2px; color: #666; }
+.tabl .fa-table, .tabl .fa-sign-in { margin-right: 2px; color: #666; }
 
 .cell-center { text-align: center; }
+
+.txt-bold { font-weight: 600; }
+
+.txt-light { font-weight: 300; }
 
 .action { margin: 5px 14px 14px 6px; *zoom: 1; }
 .action:after { content: " "; display: table; clear: both; }
