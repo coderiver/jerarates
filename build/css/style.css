@@ -343,6 +343,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 
 .content { position: relative; margin-left: 205px; }
 .content.is-expanded { margin-left: 55px; }
+.content.is-sideinfo { margin-right: 290px; }
 
 .title { padding: 13px 0 5px 10px; font-size: 22px; font-weight: 300; }
 
@@ -384,6 +385,17 @@ label { margin-bottom: 3px; font-weight: normal; }
 .action__description { display: inline-block; margin-right: 10px; font-size: 15px; vertical-align: middle; }
 .action__description span { font-weight: 300; }
 .action .pagination, .action .button { margin: 0 3px; vertical-align: middle; }
+
+.sideinfo { display: none; position: absolute; top: 0; right: 0; width: 290px; padding-top: 55px; background: #fff; border-left: 2px solid #d8d8d8; }
+.sideinfo.is-active { display: block; }
+.sideinfo__list { margin-bottom: 10px; }
+.sideinfo__list li { *zoom: 1; }
+.sideinfo__list li:after { content: " "; display: table; clear: both; }
+.sideinfo__label { float: left; width: 88px; margin-right: 5px; text-align: right; }
+.sideinfo__txt { display: block; overflow: hidden; }
+.sideinfo__ttl { padding-left: 10px; font-size: 17px; color: #777; }
+.sideinfo .close { position: absolute; top: 55px; right: 10px; }
+.sideinfo .fa-table { margin-right: 4px; color: #666; }
 
 .rates-header { padding: 8px 10px 0; border-bottom: 1px solid #f0f0f0; }
 .rates-header .button_prev { float: left; }

@@ -37,6 +37,8 @@
 	margin-left: 205px
 	&.is-expanded
 		margin-left: 55px
+	&.is-sideinfo
+		margin-right: 290px
 
 .title
 	padding: 13px 0 5px 10px
@@ -144,3 +146,39 @@
 	.button
 		margin: 0 3px
 		vertical-align: middle
+
+// sideinfo
+.sideinfo
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	width: 290px
+	padding-top: 55px
+	background: #fff
+	border-left: 2px solid #d8d8d8
+	&.is-active
+		display: block
+	&__list
+		margin-bottom: 10px
+		li
+			+clr
+	&__label
+		float: left
+		width: 88px
+		margin-right: 5px
+		text-align: right
+	&__txt
+		display: block
+		overflow: hidden
+	&__ttl
+		padding-left: 10px
+		font-size: 17px
+		color: #777
+	.close
+		position: absolute
+		top: 55px
+		right: 10px
+	.fa-table
+		margin-right: 4px
+		color: #666
