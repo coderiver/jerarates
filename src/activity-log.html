@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+	//=include partials/head.html
+	<title>Activity Log</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//=include partials/header.html
+	//=include partials/sidebar.html
+	<div class="content js-content">
+		<p class="title">Activity Log</p>
+		<div class="action">
+			<div class="action__bl">
+				<button class="button">
+					<i class="fa fa-download"></i>
+				</button>
+			</div>
+			<div class="action__bl">
+				<button class="button button_row">
+					<i class="fa fa-align-justify"></i>
+					<span>50</span>
+				</button>
+				<ul class="pagination">
+					<li class="disabled">
+						<span aria-label="Previous">
+							<span class="fa fa-angle-left" aria-hidden="true"></span>
+						</span>
+						</li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+						<a href="#" aria-label="Next">
+							<span class="fa fa-angle-right" aria-hidden="true"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="scroll is-horz js-scroll">
+			<table class="tabl js-tabl-head">
+				<tr class="tabl__head">
+					<th width="147">Date</th>
+					<th width="149">Object</th>
+					<th width="352">Action</th>
+					<th width="119">User</th>
+				</tr>
+			</table>
+			<div class="scroll js-vert-scroll" style="height: 150px">
+				<table class="tabl">
+					<tr class="tabl__head is-hidden">
+						<th width="147">Date</th>
+						<th width="149">Object</th>
+						<th width="352">Action</th>
+						<th width="119">User</th>
+					</tr>
+					<tr class="js-tabl-detail">
+						<td>
+							15 Jun 2015 <span class="txt-light">10:25</span>
+						</td>
+						<td>
+							<i class="fa fa-table"></i>
+							SmartCom1 RT
+						</td>
+						<td>Offer <span class="txt-bold">#1242</span> sent to z@mailcom.ua</td>
+						<td>
+							Andrii Zinchenko
+						</td>
+					</tr>
+					<tr class="js-tabl-detail is-detail">
+						<td>
+							15 Jun 2015 <span class="txt-light">10:20</span>
+						</td>
+						<td>
+							<i class="fa fa-table"></i>
+							VoiceTec Premium
+						</td>
+						<td>RT <span class="txt-bold">"VoiceTec Premium"</span> imported</td>
+						<td>
+							Suren Dolgikh
+						</td>
+					</tr>
+					<tr class="js-tabl-detail">
+						<td>
+							14 Jun 2015 <span class="txt-light">17:12</span>
+						</td>
+						<td>
+							<i class="fa fa-sign-in"></i>
+							Voicetec UK
+						</td>
+						<td>Customer created</td>
+						<td>
+							Yurii Zaika
+						</td>
+					</tr>
+					<tr class="js-tabl-detail">
+						<td>
+							15 Feb 2015 <span class="txt-light">10:25</span>
+						</td>
+						<td>
+							<i class="fa fa-sign-in"></i>
+							SmartComTech
+						</td>
+						<td>Customer updated</td>
+						<td>
+							Andrii Zinchenko
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+</body>
+</html>

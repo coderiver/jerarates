@@ -27,8 +27,24 @@
 				<div class="search-form">
 					<form action="#">
 						<div class="field dropdown">
-							<div class="dropdown">
-								<input class="search-form__input" type="text" placeholder="Search...">
+							<div class="dropdown js-search">
+								<input class="search-form__input js-search-input" type="text" placeholder="Search...">
+								<div class="js-search-result search-result no-pad dropdown-menu">
+									<div class="tag-box">
+										<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
+										<ul class="tag-box__list">
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer A</a></li>
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer B</a></li>
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer C</a></li>
+										</ul>
+									</div>
+									<div class="tag-box">
+										<div class="tag-box__header tag-box__header_sm">VENDORS</div>
+										<ul class="tag-box__list">
+											<li><a href="#"><i class="fa fa-sign-out"></i>Vendor Cust1</a></li>
+										</ul>
+									</div>
+								</div>
 								<button type="button" class="search-form__btn dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-search"></i></button>
 								<div class="dropdown-menu advanced-search" aria-labelledby="advanced-search">
 									<form action="#">
@@ -97,28 +113,30 @@
 							<div class="dropdown">
 								<a class="more-search dropdown-toggle" data-toggle="dropdown" id="create-menu" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
 								<div class="dropdown-menu create-menu" aria-labelledby="create-menu">
-									<div class="create-menu__box">
-										<div class="create-menu__header">CUSTOMERS</div>
-										<ul class="create-menu__list">
-											<li><a href="#"><i class="fa fa-sign-in"></i>Customer</a></li>
-											<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
-											<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
-										</ul>
-									</div>
-									<div class="create-menu__box">
-										<div class="create-menu__header">VENDORS</div>
-										<ul class="create-menu__list">
-											<li><a href="#"><i class="fa fa-sign-out"></i>Vendor</a></li>
-											<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
-											<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
-										</ul>
-									</div>
-									<div class="create-menu__box">
-										<div class="create-menu__header">OURS</div>
-										<ul class="create-menu__list">
-											<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
-											<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
-										</ul>
+									<div class="create-menu__in">
+										<div class="tag-box">
+											<div class="tag-box__header">CUSTOMERS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-sign-in"></i>Customer</a></li>
+												<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
+												<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
+											</ul>
+										</div>
+										<div class="tag-box">
+											<div class="tag-box__header">VENDORS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-sign-out"></i>Vendor</a></li>
+												<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
+												<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
+											</ul>
+										</div>
+										<div class="tag-box">
+											<div class="tag-box__header">OURS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
+												<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -267,7 +285,7 @@
 		</div>
 	</div>
 	<!-- end sidebar -->
-	<div class="content">
+	<div class="content js-content">
 		<div class="rates-header">
 			<div class="rates-title">
 				<button class="button button_prev">
@@ -333,7 +351,7 @@
 					</div>
 				</div>
 				<div class="scroll is-horz js-scroll">
-					<table class="tabl js-inner">
+					<table class="tabl js-tabl-head">
 						<tr class="tabl__head">
 							<th width="100">Code</th>
 							<th width="180">Destination Name</th>
@@ -344,7 +362,7 @@
 							<th width="80"></th>
 						</tr>
 					</table>
-					<div class="scroll js-vert-scroll" style="height: 150px">
+					<div class="scroll js-vert-scroll">
 						<table class="tabl">
 							<tr class="tabl__head is-hidden">
 								<th width="100">Code</th>

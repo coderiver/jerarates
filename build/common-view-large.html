@@ -10,7 +10,7 @@
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<script src="js/app.js"></script>
-	<title>Common List</title>
+	<title>Common-view-large</title>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -285,277 +285,69 @@
 		</div>
 	</div>
 	<!-- end sidebar -->
-	<div class="content js-content">
-		<p class="title">Clients List</p>
-		<div class="action">
-			<div class="action__bl">
-				<button class="button">
-					<i class="fa fa-download"></i>
-				</button>
-				<button class="button">
-					<i class="fa fa-trash-o"></i>
-				</button>
-				<button class="button button_add">
-					<i class="fa fa-plus-circle"></i>
-					<span>New...</span>
-				</button>
+	<div class="content">
+		<div class="row no-pad">
+			<div class="col-md-2">
+				<div class="sidebar-list">
+					<div class="action">
+						<div class="action__bl">
+							<button class="button">
+								<i class="fa fa-download"></i>
+							</button>
+							<button class="button">
+								<i class="fa fa-trash-o"></i>
+							</button>
+							<button class="button button_add">
+								<i class="fa fa-plus-circle"></i>
+								<span>New...</span>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="action__bl">
-				<p class="action__description"><span>Rows</span> 1 – 50 <span>of</span> 145</p>
-				<button class="button button_row">
-					<i class="fa fa-align-justify"></i>
-					<span>50</span>
-				</button>
-				<ul class="pagination">
-					<li class="disabled">
-						<span aria-label="Previous">
-							<span class="fa fa-angle-left" aria-hidden="true"></span>
-						</span>
-						</li>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span class="fa fa-angle-right" aria-hidden="true"></span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="scroll is-horz js-scroll">
-			<table class="tabl js-tabl-head">
-				<tr class="tabl__head">
-					<th width="45" class="cell-center"><i class="fa fa-check"></i></th>
-					<th width="180">Name</th>
-					<th width="102">Currency</th>
-					<th width="138">Contract Terms</th>
-					<th width="100">Taxes</th>
-					<th width="205">Rate Tables</th>
-					<th width="225">Notes</th>
-					<th width="70">&nbsp;</th>
-				</tr>
-			</table>
-			<div class="scroll js-vert-scroll" style="height: 150px">
-				<table class="tabl">
-					<tr class="tabl__head is-hidden">
-						<th width="45" class="cell-center"><i class="fa fa-check"></i></th>
-						<th width="180">Name</th>
-						<th width="102">Currency</th>
-						<th width="138">Contract Terms</th>
-						<th width="100">Taxes</th>
-						<th width="205">Rate Tables</th>
-						<th width="225">Notes</th>
-						<th width="70">&nbsp;</th>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
+			<div class="col-md-10">
+				<div class="rates-header">
+					<div class="rates-title">
+						<button class="button button_prev">
+							<i class="fa fa-chevron-left"></i>
+						</button>
+						<div class="title">VoiceTec Premium <span class="label label-default">premium</span> <span class="label label-default">trusted</span></div>
+						<div class="top-buttons">
+							<button class="button button_edit">
+								<i class="fa fa-edit"></i> 
+							</button>
+							<button class="button">
+								<i class="fa fa-trash-o"></i>
+							</button>
+						</div>
+					</div>
+					<ul class="tabs">
+						<li><a href="#" class="tab is-active">Overview</a></li>
+						<li><a href="#" class="tab">Targets / Offers</a></li>
+						<li><a href="#" class="tab">Activity Log</a></li>
+					</ul>
+				</div>
+				<div class="data-block">
+					<div class="row row_sm">
+						<div class="col-sm-6">
+							<div class="title-h2">Primary Data</div>
+							<ul class="right-aligned-list">
+								<li><span>Company Name:</span> VoiceTec UK</li>
+								<li><span>Type:</span> Vendor</li>
+								<li><span>Currency:</span> USD</li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<div class="title-h2">Rate Tables</div>
+							<div class="tag-box no-pad tag-box_mod">
+								<ul class="tag-box__list">
+									<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a></li>
+									<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium General</a></li>
+								</ul>
 							</div>
-						</td>
-						<td>SmartComTech</td>
-						<td>USD</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>7d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>&nbsp;</td>
-						<td>
-							<i class="fa fa-table"></i>
-							SmartCom1 RT
-						</td>
-						<td>&nbsp;</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td>VoiceTec UK</td>
-						<td>GBP</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>3d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>VAT 0%</td>
-						<td>
-							<i class="fa fa-table"></i>
-							VoiceTec Premium
-						</td>
-						<td>&nbsp;</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td>CSC Telecom</td>
-						<td>EUR</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>3d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>VAT 0%</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td>Teqli Telecom</td>
-						<td>EUR</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>7d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>VAT 19%</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td>BHComm</td>
-						<td>USD</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>3d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>&nbsp;</td>
-						<td>
-							<i class="fa fa-table"></i>
-							Wholesale Traffic
-						</td>
-						<td>&nbsp;</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td>Genband Fring</td>
-						<td>EUR</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>1d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>VAT 0%</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-					<tr>
-						<td class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td>Hot Telecom</td>
-						<td>USD</td>
-						<td>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-up"></i>
-								<span>1d</span>
-							</div>
-							<div class="tabl__bl">
-								<i class="fa fa-arrow-down"></i>
-								<span>1d</span>
-							</div>
-						</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-						<td class="tabl__note">Our good customer, provide cheap rates have premium routes</td>
-						<td class="cell-center">
-							<a href="#" class="tabl__action is-edit"><i class="fa fa-pencil-square-o"></i></a>
-							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
-						</td>
-					</tr>
-				</table>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

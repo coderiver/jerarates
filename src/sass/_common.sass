@@ -105,6 +105,8 @@ input, button
 	box-shadow: 0 6px 12px rgba(0,0,0,.1)
 	&.no-pad
 		padding: 0
+	&.is-open
+		display: block
 	>li>a
 		padding: 8px 12px 
 .form-range
@@ -214,3 +216,37 @@ input, button
 		position: absolute  
 		right: 0
 		top: -5px
+		
+.title-h2
+	font-size: 18px
+	color: #777 
+	margin: 4px 0 4px
+	
+.label
+	font-size: 9px
+	background: #f9f9f9
+	color: #000
+	border: 1px solid #efefef
+	+reg
+	border-radius: .5em
+
+.right-aligned-list
+	font-size: 17px 
+	li
+		padding: 3px 0 
+		> span
+			width: 155px
+			text-align: right
+			+light
+			display: inline-block  
+			
+.row_sm
+	margin: 0 -10px
+	& > div
+		padding: 0 10px
+
+.row
+	&.no-pad
+		margin: 0
+		> div
+			padding: 0
