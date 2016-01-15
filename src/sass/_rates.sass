@@ -110,3 +110,38 @@
 		right: 0
 		border-bottom: 2px solid #61ce00 
 		display: none 
+
+.steps
+	&__list
+		+clr
+		padding: 0 15px 
+		margin: 10px 0 0
+		background: #fbfbfb  
+		font-size: 0
+		li
+			float: left
+			padding-right: 50px
+.step-link
+	display: inline-block
+	vertical-align: top
+	line-height: 1
+	padding: 6px 12px  
+	color: #999
+	&:hover
+		color: #666 
+	&.is-active
+		background: #00b2ce 
+		color: #fff 
+	&__number, &__info
+		display: inline-block
+		vertical-align: top
+	&__number
+		font-size: 36px
+		+bold
+		padding: 0 10px 0 0 
+		opacity: 0.3
+	&__title
+		font-size: 14px
+		padding: 4px 0 2px 
+	&__small
+		font-size: 12px

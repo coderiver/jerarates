@@ -155,3 +155,155 @@ label
 
 .form-control
 	padding: 4px 7px 
+
+.out, .content
+	height: 100%
+
+@keyframes rotatelg
+	from
+		transform: rotate(0)
+	to
+		transform: rotate(360deg)
+		
+@keyframes rotatemd
+	from
+		transform: rotate(0)
+	to
+		transform: rotate(-360deg)
+		
+@keyframes rotatesm
+	from
+		transform: rotate(0)
+	to
+		transform: rotate(360deg)
+
+.loader
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: -57px 0 0 -57px 
+	width: 115px
+	height: 115px
+	&__lg
+		animation: rotatelg 2s infinite linear
+	&__md
+		animation: rotatemd 1.5s infinite linear
+	&__sm
+		animation: rotatesm 1.7s infinite linear
+	&__lg, &__md, &__sm
+		position: absolute
+		.loader
+			&__part
+				&.is-first
+					top: 0
+					&:before
+						top: 0
+				&.is-third
+					bottom: 0
+					right: 0
+					&:before
+						bottom: 0
+						right: 0
+	&__md, &__sm
+		.loader
+			&__part
+				&.is-second
+					left: 0
+					bottom: 0
+					&:before
+						left: 0
+						bottom: 0
+	&__lg
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		.loader
+			&__part
+				&:before
+					width: 115px
+					height: 115px
+				&.is-first
+					left: 0
+					width: 45px
+					height: 70px
+					&:before
+						border-color: #2295e0
+						left: 0
+				&.is-second
+					top: 0
+					right: 0
+					width: 60px
+					height: 55px
+					&:before
+						border-color: #a3cdeb 
+						top: 0
+						right: 0
+				&.is-third
+					width: 80px
+					height: 40px
+					&:before
+						border-color: #cbe1f1
+	&__md
+		top: 6px
+		bottom: 6px
+		left: 6px
+		right: 6px
+		.loader
+			&__part
+				&:before
+					width: 103px
+					height: 103px
+				&.is-first
+					width: 70px
+					height: 23px
+					left: 10px
+					&:before
+						border-color: #f3d2cd
+						left: -10px 
+				&.is-second
+					width: 40px
+					height: 63px
+					&:before
+						border-color: #f0b1a9 
+				&.is-third
+					width: 57px
+					height: 48px
+					&:before
+						border-color: #ea482b
+	&__sm
+		top: 12px
+		bottom: 12px
+		left: 12px
+		right: 12px
+		.loader
+			&__part
+				&:before
+					width: 91px
+					height: 91px
+				&.is-first
+					width: 55px
+					height: 34px
+					right: 0
+					&:before
+						border-color: #faca00 
+						right: 0
+				&.is-second
+					width: 34px
+					height: 55px
+					&:before
+						border-color: #f5ecc6
+				&.is-third
+					width: 42px
+					height: 48px
+					&:before
+						border-color: #f6e496
+	&__part
+		position: absolute
+		overflow: hidden
+		&:before
+			content: "" 
+			position: absolute
+			border: 2px solid #2295e0
+			border-radius: 50%
+			
