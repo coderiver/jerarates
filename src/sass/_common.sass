@@ -102,6 +102,7 @@ input, button
 	width: 25px 
 	height: 25px
 	padding-top: 6px  
+	
 .dropdown-menu
 	border-radius: 0
 	border-color: #d4d4d4
@@ -112,6 +113,7 @@ input, button
 		display: block
 	>li>a
 		padding: 8px 12px 
+		
 .form-range
 	> div
 		&:first-child
@@ -124,11 +126,13 @@ input, button
 				width: 10px 
 				height: 1px
 				background: #000 
+				
 .form-inline
 	.checkbox, .radio
 		margin: 0 0 10px 10px
 		&:first-child
 			margin-left: 0
+			
 .checkbox
 	position: relative
 	padding-left: 25px 
@@ -169,7 +173,8 @@ input, button
 		&:before
 			content: ''
 			position: absolute
-			top: 2px
+			top: 50%
+			margin-top: -8px 
 			left: 0
 			color:  #d0d0d0
 			width: 16px
@@ -180,7 +185,8 @@ input, button
 			content: ''
 			display: none
 			position: absolute
-			top: 7px
+			top: 50%
+			margin-top: -3px
 			left: 5px
 			font-size: 8px
 			width: 6px
@@ -193,6 +199,7 @@ input, button
 	border-color: #087ea6 
 	&:hover
 		background: darken($btn-primary, 4) 
+		
 .btn-default
 	background: $btn-default 
 	
@@ -202,6 +209,7 @@ input, button
 .progress-wrap
 	position: relative
 	padding-right: 45px 
+	
 .progress
 	height: 10px
 	line-height: 10
@@ -224,6 +232,7 @@ input, button
 	font-size: 18px
 	color: #777 
 	margin: 4px 0 4px
+	+reg
 	
 .label
 	font-size: 9px
@@ -241,7 +250,16 @@ input, button
 			width: 155px
 			text-align: right
 			+light
-			display: inline-block  
+			display: inline-block 
+			&.pad-t
+				padding-top: 1px 
+	&__box
+		display: inline-block
+		vertical-align: top
+		> a
+			display: block 
+		.radio, .checkbox
+			margin-bottom: 0
 			
 .row_sm
 	margin: 0 -10px
@@ -256,5 +274,16 @@ input, button
 			
 .content-body
 	overflow: hidden
+	
 .content-sidebar
-	float: left
+	&.is-left
+		float: left
+
+.tel-link
+	color: #333
+	
+dl
+	margin-bottom: 20px 
+	dd
+		margin-left: 30px 
+
