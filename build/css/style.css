@@ -502,13 +502,18 @@ label { margin-bottom: 3px; font-weight: normal; }
 .steps__list { *zoom: 1; padding: 0 15px; margin: 10px 0 0; background: #fbfbfb; font-size: 0; }
 .steps__list:after { content: " "; display: table; clear: both; }
 .steps__list li { float: left; padding-right: 50px; }
+.steps__container .step-link { display: block; padding: 64px 12px 0; border-bottom: 1px solid #f0f0f0; }
+.steps__container .step-link.is-active { background: none; color: #666; }
+.steps__container .step-link.is-active .step-link__number { color: #52b900; opacity: 0.75; }
+.steps__container .step-link.is-active .step-link__title { color: #333; }
+.steps__container .step-link__number { font-weight: 400; }
 
 .step-link { display: inline-block; vertical-align: top; line-height: 1; padding: 6px 12px; color: #999; }
 .step-link:hover { color: #666; }
 .step-link.is-active { background: #00b2ce; color: #fff; }
 .step-link__number, .step-link__info { display: inline-block; vertical-align: top; }
 .step-link__number { font-size: 36px; font-weight: 700; padding: 0 10px 0 0; opacity: 0.3; }
-.step-link__title { font-size: 14px; padding: 4px 0 2px; }
+.step-link__title { font-size: 14px; padding: 4px 0 2px; font-weight: 600; }
 .step-link__small { font-size: 12px; }
 
 .data-block { padding: 8px 10px 0; *zoom: 1; }

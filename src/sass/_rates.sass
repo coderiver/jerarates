@@ -121,6 +121,23 @@
 		li
 			float: left
 			padding-right: 50px
+	&__container
+		.step-link
+			display: block
+			padding: 64px 12px 0 
+			border-bottom: 1px solid #f0f0f0 
+			&.is-active
+				background: none
+				color: #666 
+				.step-link
+					&__number
+						color: #52b900
+						opacity: 0.75
+					&__title
+						color: #333
+			&__number
+				+reg
+
 .step-link
 	display: inline-block
 	vertical-align: top
@@ -143,5 +160,6 @@
 	&__title
 		font-size: 14px
 		padding: 4px 0 2px 
+		+sbold
 	&__small
 		font-size: 12px 
