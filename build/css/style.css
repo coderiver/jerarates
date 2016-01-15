@@ -266,7 +266,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 .button_row { padding: 8px 10px 8px 30px; }
 .button_row i { font-size: 13px; position: absolute; top: 50%; left: 10px; margin-top: -6px; }
 .button_add { padding: 8px 10px 8px 30px; background: #61ce00; color: #fff; }
-.button_add:hover { background: #55b500; }
+.button_add:hover { background: #55b400; }
 .button_add:active { background: #499b00; }
 .button_add i { font-size: 13px; position: absolute; top: 50%; left: 10px; margin-top: -6px; }
 .button_prev, .button_next { color: #666; }
