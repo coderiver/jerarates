@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#37424a">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<title>Common-view-large</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<header class="header">
+		<div class="container-fluid">
+			<div class="header__item">
+				<a href="#" class="logo">
+					<div class="logo__img"><i class="icon-logo"></i></div>
+					<div class="logo__text">Rates<span>Analytics</span></div>
+				</a>
+			</div>
+			<div class="header__item">
+				<div class="search-form">
+					<form action="#">
+						<div class="field dropdown">
+							<div class="dropdown js-search">
+								<input class="search-form__input js-search-input" type="text" placeholder="Search...">
+								<div class="js-search-result search-result no-pad dropdown-menu">
+									<div class="tag-box">
+										<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
+										<ul class="tag-box__list">
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer A</a></li>
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer B</a></li>
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer C</a></li>
+										</ul>
+									</div>
+									<div class="tag-box">
+										<div class="tag-box__header tag-box__header_sm">VENDORS</div>
+										<ul class="tag-box__list">
+											<li><a href="#"><i class="fa fa-sign-out"></i>Vendor Cust1</a></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="search-form__btn dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-search"></i></button>
+								<div class="dropdown-menu advanced-search" aria-labelledby="advanced-search">
+									<form action="#">
+										<div class="container-fluid">
+											<div class="form-group">
+												<label for="general-text">General Text Input</label>
+												<input type="text" class="form-control" id="general-text">
+											</div>
+											<div class="form-group">
+												<div class="form-inline">
+													<label>Select Actions</label>
+													<div class="field">
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> <span>Option 1</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> <span>Option 2</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-inline">
+													<label>Select Type</label>
+													<div class="field">
+														<div class="radio">
+															<label>
+																<input type="radio" name="type"> <span>Option 1</span>
+															</label>
+														</div>
+														<div class="radio">
+															<label>
+																<input type="radio" name="type"> <span>Option 2</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Fill Range</label>
+												<div class="row form-range">
+													<div class="col-xs-4">
+														<input type="text" class="form-control">
+													</div>
+													<div class="col-xs-4">
+														<input type="text" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Enter Note</label>
+												<textarea rows="3" class="form-control"></textarea>
+											</div>
+											<div class="form-group clearfix btn-line">
+												<button type="button" class="btn btn-default pull-left">Cancel</button>
+												<button type="sumbit" class="btn btn-primary pull-right">Search</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="dropdown">
+								<a class="more-search dropdown-toggle" data-toggle="dropdown" id="create-menu" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+								<div class="dropdown-menu create-menu" aria-labelledby="create-menu">
+									<div class="create-menu__in">
+										<div class="tag-box">
+											<div class="tag-box__header">CUSTOMERS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-sign-in"></i>Customer</a></li>
+												<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
+												<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
+											</ul>
+										</div>
+										<div class="tag-box">
+											<div class="tag-box__header">VENDORS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-sign-out"></i>Vendor</a></li>
+												<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
+												<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
+											</ul>
+										</div>
+										<div class="tag-box">
+											<div class="tag-box__header">OURS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
+												<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="header__item is-right">
+				<ul class="menu">
+					<li class="dropdown">
+						<a href="#" class="fa fa-tasks is-active dropdown-toggle" data-toggle="dropdown" id="tasks-menu" aria-expanded="false"><div class="badge">2</div></a>
+						<div class="dropdown-menu dropdown-menu-right no-pad notification-menu" aria-labelledby="tasks-menu">
+							<div class="notification-menu__header meta"><strong>2 tasks</strong> running</div>
+							<ul class="notification-menu__list">
+								<li>
+									<a href="#" class="notification-menu__item">
+										<div class="notification-menu__text notification-menu__text_pb">
+											<p><strong>Import:</strong> SmartComTech Premium</p>
+											<div class="progress-wrap">
+												<div class="progress-text meta">34 %</div>
+												<div class="progress">
+													<div class="progress-bar" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" style="width: 34%;"></div>
+												</div>
+											</div>
+										</div>
+										<div class="notification-hide">
+											<button type=""><i class="fa fa-times"></i></button>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="notification-menu__item">
+										<div class="notification-menu__text notification-menu__text_pb">
+											<p><strong>Analysis:</strong> 32 rate tables</p>
+											<div class="progress-wrap">
+												<div class="progress-text meta">70 %</div>
+												<div class="progress">
+													<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+												</div>
+											</div>
+										</div>
+										<div class="notification-hide">
+											<button type=""><i class="fa fa-times"></i></button>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="fa fa-bell-o is-active dropdown-toggle" data-toggle="dropdown" id="notification-menu" aria-expanded="false"><div class="badge">3</div></a>
+						<div class="dropdown-menu dropdown-menu-right no-pad notification-menu" aria-labelledby="notification-menu">
+							<div class="notification-menu__header clearfix meta">You have <strong>3 new</strong> messages<a href="#" class="pull-right">view all</a></div>
+							<ul class="notification-menu__list">
+								<li>
+									<a href="#" class="notification-menu__item">
+										<div class="notification-menu__icon">
+											<i class="fa fa-code-fork"></i>
+										</div>
+										<div class="notification-menu__text">
+											<p>New Version Releases</p>
+											<div class="meta">1 day ago</div>
+										</div>
+										<div class="notification-hide">
+											<button type=""><i class="fa fa-times"></i></button>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="notification-menu__item">
+										<div class="notification-menu__icon">
+											<i class="fa fa-bar-chart"></i>
+										</div>
+										<div class="notification-menu__text">
+											<p>Report is ready</p>
+											<div class="meta">5 minutes ago</div>
+										</div>
+										<div class="notification-hide">
+											<button type=""><i class="fa fa-times"></i></button>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="fa fa-question-circle dropdown-toggle" data-toggle="dropdown" id="help-menu" aria-expanded="false"></a>
+						<ul class="dropdown-menu dropdown-menu-right no-pad help-menu" aria-labelledby="help-menu">
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Take a Tour</a></li>
+							<li><a href="#">Webinar</a></li>
+							<li class="is-border"><a href="#">Feature Request</a></li>
+							<li><a href="#">Contact Support</a></li>
+						</ul>
+					</li>
+					<li class="is-user"><a href="#" class="fa fa-user"></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- begin sidebar  -->
+	<div class="sidebar js-sidebar">
+		<div class="sidebar__in scroll js-scroll">
+			<ul class="sidebar__list">
+			 	<li><a href="#" class="sidebar__link is-active"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+			 	<li><a href="#" class="sidebar__link"><i class="fa fa-flask"></i><span>Rates Analysis</span></a></li>
+			 	<li><a href="#" class="sidebar__link"><i class="fa fa-history"></i><span>Activity Log</span></a></li>
+			 	<li>
+			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-sign-in"></i><span>Customers</span><i class="fa fa-chevron-down"></i></a>
+			 		<ul class="sidebar__sublist js-submenu">
+			 			<li><p class="sidebar__link is-mobile">Customers</p></li>
+			 			<li><a href="#" class="sidebar__link">List</a></li>
+			 			<li><a href="#" class="sidebar__link">Rate Tables</a></li>
+			 			<li><a href="#" class="sidebar__link">Targets</a></li>
+			 		</ul>
+			 	</li>
+			 	<li>
+			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-sign-out"></i><span>Vendors</span><i class="fa fa-chevron-down"></i></a>
+			 		<ul class="sidebar__sublist js-submenu">
+			 			<li><p class="sidebar__link is-mobile">Vendors</p></li>
+			 			<li><a href="#" class="sidebar__link">Lorem</a></li>
+			 			<li><a href="#" class="sidebar__link">Ipsum</a></li>
+			 			<li><a href="#" class="sidebar__link">Dolor</a></li>
+			 		</ul>
+			 	</li>
+			 	<li>
+			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-briefcase"></i><span>Ours</span><i class="fa fa-chevron-down"></i></a>
+			 		<ul class="sidebar__sublist js-submenu">
+			 			<li><p class="sidebar__link is-mobile">Ours</p></li>
+			 			<li><a href="#" class="sidebar__link">Sit</a></li>
+			 			<li><a href="#" class="sidebar__link">Amet</a></li>
+			 			<li><a href="#" class="sidebar__link">Consectetur</a></li>
+			 		</ul>
+			 	</li>
+			 	<li>
+			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-cogs"></i><span>Configuration</span><i class="fa fa-chevron-down"></i></a>
+			 		<ul class="sidebar__sublist js-submenu">
+			 			<li><p class="sidebar__link is-mobile">Configuration</p></li>
+			 			<li><a href="#" class="sidebar__link">Adipisicing</a></li>
+			 			<li><a href="#" class="sidebar__link">Elit</a></li>
+			 			<li><a href="#" class="sidebar__link">Voluptatum</a></li>
+			 		</ul>
+			 	</li>
+			</ul>
+			<a href="#" class="sidebar__collapse js-collapse"><i class="fa fa-arrow-circle-left"></i><span>Collapse Menu</span></a>
+		</div>
+	</div>
+	<!-- end sidebar -->
+	<div class="content">
+		<div class="row no-pad">
+			<div class="col-md-2">
+				<div class="sidebar-list">
+					<div class="action">
+						<div class="action__bl">
+							<button class="button">
+								<i class="fa fa-download"></i>
+							</button>
+							<button class="button">
+								<i class="fa fa-trash-o"></i>
+							</button>
+							<button class="button button_add">
+								<i class="fa fa-plus-circle"></i>
+								<span>New...</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="rates-header">
+					<div class="rates-title">
+						<button class="button button_prev">
+							<i class="fa fa-chevron-left"></i>
+						</button>
+						<div class="title">VoiceTec Premium <span class="label label-default">premium</span> <span class="label label-default">trusted</span></div>
+						<div class="top-buttons">
+							<button class="button button_edit">
+								<i class="fa fa-edit"></i> 
+							</button>
+							<button class="button">
+								<i class="fa fa-trash-o"></i>
+							</button>
+						</div>
+					</div>
+					<ul class="tabs">
+						<li><a href="#" class="tab is-active">Overview</a></li>
+						<li><a href="#" class="tab">Targets / Offers</a></li>
+						<li><a href="#" class="tab">Activity Log</a></li>
+					</ul>
+				</div>
+				<div class="data-block">
+					<div class="row row_sm">
+						<div class="col-sm-6">
+							<div class="title-h2">Primary Data</div>
+							<ul class="right-aligned-list">
+								<li><span>Company Name:</span> VoiceTec UK</li>
+								<li><span>Type:</span> Vendor</li>
+								<li><span>Currency:</span> USD</li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<div class="title-h2">Rate Tables</div>
+							<div class="tag-box no-pad tag-box_mod">
+								<ul class="tag-box__list">
+									<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a></li>
+									<li><a href="#"><i class="fa fa-table"></i>VoiceTec Premium General</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END out-->
+</body>
+</html>
