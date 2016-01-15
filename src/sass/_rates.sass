@@ -15,6 +15,66 @@
 	&-title
 		+clr
 		padding-bottom: 5px
+	&-content
+		float: left
+		width: 100%
+		padding-right: 250px	
+		.action
+			margin: 10px 7px 10px
+	&-container
+		.sidepanel
+			float: right
+			margin-left: -250px
+		.tabl
+			ul
+				font-size: 0
+				li
+					display: inline-block
+					vertical-align: bottom
+					font-size: 14px
+					margin-right: 4px
+					&.is-small
+						font-size: 10px
+						padding: 1px 0
+					&.is-red
+						color: #ac0000
+					&.is-green
+						color: #53c600
+					&.is-gray
+						color: #999
+			td
+				&.is-red
+					color: #760000
+				small
+					font-size: 12px
+.sidepanel
+	width: 250px
+	border-left: 1px solid #d8d8d8 
+	padding: 10px
+	&__row
+		margin: 0 -10px 0 0
+		+clr
+		.form-group
+			width: 50%
+			float: left
+			.form-control
+				width: 76px 
+				float: left
+				margin-right: 5px
+			span
+				font-size: 14px
+				line-height: 1
+				padding: 8px 0
+				color: #999 
+				display: block
+				overflow: hidden
+				-ms-text-overflow: ellipsis
+				text-overflow: ellipsis
+				white-space: nowrap
+	.form-group
+		margin-bottom: 10px
+	.btn
+		padding: 4px 26px 
 
 .top-buttons
 	position: absolute
