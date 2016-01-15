@@ -1,6 +1,12 @@
 // common-pages
 .data-block
 	padding: 8px 10px 0
+	+clr
+	&__col
+		float: left
+		width: 50%
+		&_pad-r
+			padding-right: 10% 
 	
 .sidebar-list
 	border-right: 1px solid $border
@@ -14,4 +20,24 @@
 			float: none
 			padding: 9px 5px
 			+clr
-
+.sidebar-table
+	tr
+		height: 47px 
+		cursor: pointer
+		&.is-chosen
+			background: #e3ffc8 
+	td
+		vertical-align: top
+		padding: 5px 4px  
+		a
+			display: block
+			font-size: 13px 
+			.fa
+				color: inherit
+				display: inline-block
+		.meta
+			font-size: 13px
+	
+.content-body
+	.right-aligned-list
+		margin-bottom: 20px 
