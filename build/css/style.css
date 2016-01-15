@@ -134,6 +134,17 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .progress-bar { background: #0bcbfa; -webkit-box-shadow: none; box-shadow: none; }
 .progress-text { width: 40px; text-align: center; position: absolute; right: 0; top: -5px; }
 
+.title-h2 { font-size: 18px; color: #777; margin: 4px 0 4px; }
+
+.label { font-size: 9px; background: #f9f9f9; color: #000; border: 1px solid #efefef; font-weight: 400; -webkit-border-radius: 0.5em; border-radius: 0.5em; }
+
+.right-aligned-list { font-size: 17px; }
+.right-aligned-list li { padding: 3px 0; }
+.right-aligned-list li > span { width: 155px; text-align: right; font-weight: 300; display: inline-block; }
+
+.row_sm { margin: 0 -10px; }
+.row_sm > div { padding: 0 10px; }
+
 .header { background: #30373c; font-size: 0; height: 45px; position: absolute; top: 0; left: 0; right: 0; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
 .header__item { display: inline-block; vertical-align: middle; font-size: 15px; }
@@ -170,11 +181,14 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .create-menu .tag-box:last-child { -webkit-box-shadow: none; box-shadow: none; }
 
 .tag-box { padding: 10px 0; }
+.tag-box.no-pad { padding: 0; }
 .tag-box__header { color: #999; font-weight: 600; margin-bottom: 5px; font-size: 15px; padding: 0 15px; }
 .tag-box__header_sm { font-size: 13px; }
 .tag-box__list a { color: #333; font-size: 15px; display: block; padding: 3px 15px; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .tag-box__list a:hover { background: #f6f6f6; }
 .tag-box__list a .fa { margin-right: 10px; }
+.tag-box_mod .tag-box__list a { font-size: 17px; }
+.tag-box_mod .tag-box__list a:hover { background: transparent; }
 
 .menu { *zoom: 1; height: 100%; text-align: center; font-size: 0; }
 .menu:after { content: " "; display: table; clear: both; }
@@ -373,8 +387,12 @@ label { margin-bottom: 3px; font-weight: normal; }
 .tab.is-active { color: #333; }
 .tab.is-active:before { display: block; }
 .tab:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; border-bottom: 2px solid #61ce00; display: none; }
+
+.data-block { padding: 8px 10px 0; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+
 @media only screen and (max-height: 500px){
  .sidebar__collapse{ position: static; margin: 40px 0 15px; } }
 

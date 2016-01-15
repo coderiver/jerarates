@@ -95,6 +95,8 @@
 			box-shadow: none
 .tag-box
 	padding: 10px 0
+	&.no-pad
+		padding: 0
 	&__header
 		color: #999
 		+sbold
@@ -114,6 +116,12 @@
 				background: #f6f6f6  
 			.fa
 				margin-right: 10px 
+	&_mod
+		.tag-box__list
+			a
+				font-size: 17px
+				&:hover
+					background: transparent 
 .menu
 	+clr
 	height: 100%
