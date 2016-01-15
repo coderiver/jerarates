@@ -84,6 +84,8 @@ html { font-size: 62.5%; }
 
 body { font-family: "Open Sans", serif; font-size: 15px; line-height: 1.4; background: #fff; min-width: 320px; padding-top: 45px; }
 
+.out { height: 100%; }
+
 a { color: #0086b3; cursor: pointer; -webkit-transition: color 0.3s; transition: color 0.3s; }
 a:hover, a:focus, a:visited { text-decoration: none; }
 a:hover { color: #006b8f; }
@@ -152,7 +154,7 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .content-sidebar { float: left; }
 
-.header { background: #30373c; font-size: 0; height: 45px; position: absolute; top: 0; left: 0; right: 0; *zoom: 1; }
+.header { background: #30373c; font-size: 0; height: 45px; position: absolute; top: 0; left: 0; right: 0; z-index: 10; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
 .header__item { display: inline-block; vertical-align: middle; font-size: 15px; }
 .header__item:first-child { width: 190px; }
@@ -292,7 +294,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 .button_row { padding: 8px 10px 8px 30px; }
 .button_row i { font-size: 13px; position: absolute; top: 50%; left: 10px; margin-top: -6px; }
 .button_add { padding: 8px 10px 8px 30px; background: #61ce00; color: #fff; }
-.button_add:hover { background: #55b400; }
+.button_add:hover { background: #55b500; }
 .button_add:active { background: #499b00; }
 .button_add i { font-size: 13px; position: absolute; top: 50%; left: 10px; margin-top: -6px; }
 .button_prev, .button_next { color: #666; }
@@ -430,6 +432,13 @@ label { margin-bottom: 3px; font-weight: normal; }
 .sidebar-list .action_no-bd { border-bottom: 0; }
 .sidebar-list .action__bl { float: none; padding: 9px 5px; *zoom: 1; }
 .sidebar-list .action__bl:after { content: " "; display: table; clear: both; }
+
+.sidebar-table tr { height: 47px; cursor: pointer; }
+.sidebar-table tr.is-chosen { background: #e3ffc8; }
+.sidebar-table td { vertical-align: top; padding: 5px 4px; }
+.sidebar-table td a { display: block; font-size: 13px; }
+.sidebar-table td a .fa { color: inherit; display: inline-block; }
+.sidebar-table td .meta { font-size: 13px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-height: 500px){
