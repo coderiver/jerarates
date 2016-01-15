@@ -88,4 +88,17 @@ $(document).ready(function() {
 		$(this).closest('tr').toggleClass('is-active');
 	});
 
+	//search-result 
+	$('.js-search-input').on('keyup', function() {
+		var $parent = $(this).parents('.js-search'),
+			$menu 	= $parent.find('.js-search-result'),
+			val 	= $(this).val();
+
+		if(val.length >= 3) {
+			$menu.addClass('is-open');
+		}
+		else if(val.length < 3) {
+			$menu.removeClass('is-open');
+		}
+	});
 });
