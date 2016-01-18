@@ -415,6 +415,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 .content.is-sideinfo { margin-right: 290px; }
 
 .title { padding: 13px 0 5px 10px; font-size: 22px; font-weight: 300; }
+.title_reg { font-weight: 400; }
 
 .tabl { table-layout: fixed; font-size: 14px; }
 .tabl__bl { display: inline-block; vertical-align: middle; }
@@ -440,6 +441,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 .tabl .fa-arrow-down { color: #9DDA19; }
 .tabl .fa-arrow-up { color: #CE2323; }
 .tabl .fa-table, .tabl .fa-sign-in { margin-right: 2px; color: #666; }
+.tabl .fa.is-red { color: #8b0000; }
 
 .cell-center { text-align: center; }
 
@@ -466,7 +468,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 .sideinfo .close { position: absolute; top: 55px; right: 10px; }
 .sideinfo .fa-table { margin-right: 4px; color: #666; }
 
-.rates-header { padding: 8px 10px 0; border-bottom: 1px solid #f0f0f0; }
+.rates-header { padding: 8px 10px 0; border-bottom: 1px solid #f0f0f0; position: relative; }
 .rates-header .button_prev { float: left; }
 .rates-header .title { overflow: hidden; padding: 0 80px 0 10px; }
 .rates-header .title small { color: #999; font-size: 16px; font-weight: 400; line-height: 1; }
@@ -542,9 +544,20 @@ label { margin-bottom: 3px; font-weight: normal; }
 
 .content-body .right-aligned-list { margin-bottom: 20px; }
 
+.import-header { position: relative; padding-right: 125px; }
+.import-header .title { font-size: 18px; padding-bottom: 0; line-height: 1; }
+.import-header .meta { padding-left: 10px; font-size: 13px; font-weight: 300; }
+.import-header .meta span { font-weight: 400; }
+
+.info { background: #fbfbfb; border: 1px solid #ccc; width: 100%; display: table; margin-bottom: 20px; }
+.info__block { display: table-cell; vertical-align: top; width: 25%; padding: 10px; }
+.info__block .right-aligned-list { margin-bottom: 0; }
+.info__block .right-aligned-list__box.is-red { color: #c90000; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-
+@media only screen and (max-width: 767px){
+ .info{ display: block; }
+ .info__block{ display: block; width: 100%; } }
 @media only screen and (max-height: 500px){
  .sidebar__collapse{ position: static; margin: 40px 0 15px; } }
 

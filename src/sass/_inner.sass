@@ -41,3 +41,41 @@
 .content-body
 	.right-aligned-list
 		margin-bottom: 20px 
+
+.import-header
+	position: relative
+	padding-right: 125px
+	.title
+		font-size: 18px
+		padding-bottom: 0
+		line-height: 1
+	.meta
+		padding-left: 10px
+		font-size: 13px
+		+light
+		span
+			+reg 
+
+.info
+	background: #fbfbfb
+	border: 1px solid #ccc 
+	width: 100% 
+	display: table
+	margin-bottom: 20px
+	+r(767)
+		display: block
+	&__block
+		display: table-cell
+		vertical-align: top
+		width: 25%
+		padding: 10px 
+		+r(767)
+			display: block
+			width: 100% 
+		.right-aligned-list
+			margin-bottom: 0
+			&__box
+				&.is-red
+					color: #c90000
+		
+
