@@ -105,11 +105,15 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 .dropdown-menu.is-open { display: block; }
 .dropdown-menu > li > a { padding: 8px 12px; }
 
+.form-control.is-sm { max-width: 77px; }
+.form-control.is-md { max-width: 250px; }
+
 .form-range > div:first-child { position: relative; }
 .form-range > div:first-child:after { content: ""; position: absolute; top: 50%; right: -5px; width: 10px; height: 1px; background: #000; }
 
 .form-inline .checkbox, .form-inline .radio { margin: 0 0 10px 10px; }
 .form-inline .checkbox:first-child, .form-inline .radio:first-child { margin-left: 0; }
+.form-inline .field_mb { margin-bottom: -10px; }
 
 .checkbox { position: relative; padding-left: 25px; }
 .checkbox input { display: none; }
@@ -142,10 +146,10 @@ input, button { -webkit-border-radius: 2px; border-radius: 2px; }
 
 .right-aligned-list { font-size: 17px; }
 .right-aligned-list li { padding: 3px 0; }
-.right-aligned-list li > span { width: 155px; text-align: right; font-weight: 300; display: inline-block; }
+.right-aligned-list li > span { width: 155px; text-align: right; font-weight: 300; display: inline-block; float: left; margin-right: 7px; }
 .right-aligned-list li > span.pad-t { padding-top: 1px; }
 .right-aligned-list_pad-t li { padding: 7px 0; }
-.right-aligned-list__box { display: inline-block; vertical-align: top; }
+.right-aligned-list__box { overflow: hidden; }
 .right-aligned-list__box > a { display: block; }
 .right-aligned-list__box .radio, .right-aligned-list__box .checkbox { margin-bottom: 0; }
 
@@ -491,6 +495,7 @@ label { margin-bottom: 3px; font-weight: normal; }
 
 .top-buttons { position: absolute; top: 8px; right: 10px; font-size: 0; }
 .top-buttons .button { margin-left: 6px; }
+.top-buttons .close { margin-left: 6px; padding: 4px 10px 5px; }
 
 .tabs { font-size: 0; }
 .tabs li { display: inline-block; vertical-align: top; margin-right: 15px; }

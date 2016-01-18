@@ -448,6 +448,9 @@
 						<button class="button">
 							<i class="fa fa-trash-o"></i>
 						</button>
+						<a href="#" class="close">
+							<i class="fa fa-times"></i>
+						</a>
 					</div>
 				</div>
 				<ul class="tabs">
@@ -455,6 +458,7 @@
 					<li><a href="#" class="tab">Targets / Offers</a></li>
 					<li><a href="#" class="tab">Activity Log</a></li>
 				</ul>
+
 			</div>
 			<div class="data-block">
 				<div class="data-block__col data-block__col_pad-r">
@@ -508,7 +512,7 @@
 							<li>
 								<span class="pad-t">Company Name:</span>
 								<div class="right-aligned-list__box">
-									<input type="text" class="form-control" value="VoiceTec UK">
+									<input type="text" class="form-control is-md" value="VoiceTec UK">
 								</div>
 							</li>
 							<li>
@@ -533,10 +537,38 @@
 							<li>
 								<span class="pad-t">Currency:</span>
 								<div class="right-aligned-list__box">
-									<input type="text" class="form-control" value="USD">
+									<input type="text" class="form-control is-sm" value="USD">
 								</div>
 							</li>
 						</ul>
+					</form>
+					<div class="title-h2">Test Vertical Form</div>
+					<form action="#">
+						<div class="form-group">
+							<label for="name-input">Company Name</label>
+							<input type="text" class="form-control is-md" id="name-input">
+						</div>
+						<div class="form-group">
+							<div class="form-inline">
+								<label>Select Type</label>
+								<div class="field field_mb">
+									<div class="radio">
+										<label>
+											<input type="radio" name="type"> <span>Option 1</span>
+										</label>
+									</div>
+									<div class="radio">
+										<label>
+											<input type="radio" name="type"> <span>Option 2</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="currency-input">Currency</label>
+							<input type="text" class="form-control is-sm" id="currency-input" value="USD">
+						</div>
 					</form>
 				</div>
 			</div>

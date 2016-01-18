@@ -114,6 +114,12 @@ input, button
 	>li>a
 		padding: 8px 12px
 
+.form-control
+	&.is-sm
+		max-width: 77px 
+	&.is-md
+		max-width: 250px 
+
 .form-range
 	> div
 		&:first-child
@@ -132,6 +138,9 @@ input, button
 		margin: 0 0 10px 10px
 		&:first-child
 			margin-left: 0
+	.field
+		&_mb
+			margin-bottom: -10px
 
 .checkbox
 	position: relative
@@ -251,14 +260,15 @@ input, button
 			text-align: right
 			+light
 			display: inline-block
+			float: left
+			margin-right: 7px 
 			&.pad-t
 				padding-top: 1px
 	&_pad-t
 		li
 			padding: 7px 0 
 	&__box
-		display: inline-block
-		vertical-align: top
+		overflow: hidden
 		> a
 			display: block
 		.radio, .checkbox
