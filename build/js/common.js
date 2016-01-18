@@ -114,10 +114,18 @@ $(document).ready(function() {
 			$('.js-submenu').removeClass('is-active');
 		}
 	});
+	function collapseSidebar() {
+		if($(window).width() < 767) {
+			$('.js-sidebar').addClass('is-collapsed');
+			$('.js-content').addClass('is-expanded');
+		}
+	}
+	collapseSidebar();
 
 	$(window).resize(function() {
 		measureTablWidth();
 		detectHeight();
+		collapseSidebar();
 		$('.js-scroll').perfectScrollbar('update');
 	});
 });

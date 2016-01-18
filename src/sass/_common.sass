@@ -88,6 +88,8 @@ input, button
 		span
 			+helios
 			color: $logo
+		+r(767)
+			display: none
 	&__img
 		margin-right: 15px
 	&__text, &__img
@@ -255,6 +257,7 @@ input, button
 	font-size: 17px
 	li
 		padding: 3px 0
+		clear: both
 		> span
 			width: 155px
 			text-align: right
@@ -264,6 +267,11 @@ input, button
 			margin-right: 7px 
 			&.pad-t
 				padding-top: 1px
+			+r(1165)
+				width: 92px 
+			+r(767)
+				// float: none
+				width: auto
 	&_pad-t
 		li
 			padding: 7px 0 

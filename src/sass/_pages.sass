@@ -139,6 +139,9 @@
 		font-size: 0
 		&:first-child
 			float: left
+		+r(767)
+		& + .action__bl
+			margin-top: 10px 
 	&__description
 		display: inline-block
 		margin-right: 10px
@@ -150,6 +153,11 @@
 	.button
 		margin: 0 3px
 		vertical-align: middle
+	.button
+		+ .pagination
+			+r(767)
+				margin-top: 10px 
+		
 
 // sideinfo
 .sideinfo

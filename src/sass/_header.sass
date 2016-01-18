@@ -7,7 +7,7 @@
 	top: 0
 	left: 0
 	right: 0
-	z-index: 10 
+	z-index: 1000 
 	+clr
 	&__item
 		display: inline-block
@@ -15,11 +15,17 @@
 		font-size: 15px 
 		&:first-child
 			width: 190px 
+			+r(767)
+				width: auto
 		&.is-right
 			float: right
 			height: 100%
 	.search-form
-		padding-top: 5px 
+		padding-top: 5px
+		+r(767)
+			display: none
+			&.is-open
+				display: block 
 	.logo
 		padding-top: 7px 
 .search-form
@@ -182,6 +188,11 @@
 .notification-menu
 	width: 400px 
 	margin-top: 0
+	+r(767)
+		left: -158px
+		width: 320px
+		&.tasks-menu
+			left: -105px 
 	.notification-hide
 		font-size: 15px
 		color #333
