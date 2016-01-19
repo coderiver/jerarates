@@ -260,6 +260,9 @@ dl dd { margin-left: 30px; }
 .sidebar.is-collapsed .sidebar__in { overflow: inherit; }
 .sidebar.is-collapsed .sidebar__link.is-mobile { display: block; }
 .sidebar.is-collapsed .sidebar__link span { display: none; }
+.sidebar.is-collapsed .sidebar__link:focus { background: transparent; color: #afb3b7; }
+.sidebar.is-collapsed .sidebar__link:hover { background: #2f383f; }
+.sidebar.is-collapsed li:hover .sidebar__sublist { display: block; }
 .sidebar.is-collapsed .sidebar__collapse span { display: none; }
 .sidebar.is-collapsed .sidebar__sublist { position: absolute; top: 0; left: 100%; min-width: 120px; margin-left: -5px; -webkit-box-shadow: 2.1px 2.1px 3px rgba(0, 0, 0, 0.2); box-shadow: 2.1px 2.1px 3px rgba(0, 0, 0, 0.2); }
 .sidebar.is-collapsed .sidebar__sublist .sidebar__link { padding-left: 18px; }

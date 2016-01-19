@@ -22,6 +22,7 @@ $(document).ready(function() {
 
 	// sidebar
 	$('.js-sublink').click(function(e) {
+		if($(this).parents('.is-collapsed').length > 0) return;
 		$(this).toggleClass('is-expanded');
 		$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
 		$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
@@ -36,6 +37,7 @@ $(document).ready(function() {
 	// collapse sidebar
 	$('.js-collapse').click(function(e) {
 		e.preventDefault();
+
 		$(this).toggleClass('is-collapsed');
 		$(this).parents('.js-sidebar').toggleClass('is-collapsed');
 		$('.js-content').toggleClass('is-expanded');
