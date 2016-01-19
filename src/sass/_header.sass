@@ -22,10 +22,8 @@
 			height: 100%
 	.search-form
 		padding-top: 5px
-		+r(767)
-			display: none
-			&.is-open
-				display: block 
+		+r(450)
+			padding-top: 0
 	.logo
 		padding-top: 7px 
 .search-form
@@ -33,6 +31,34 @@
 	.dropdown
 		display: inline-block
 		vertical-align: middle
+		+r(450)
+			display: block
+			&.create-menu-wrap
+				position: absolute
+				right: -25px
+				top: 0 
+	&__in
+		+r(450)
+			position: absolute
+			left: -55px
+			width: 100vw
+			padding: 5px 30px 5px 10px
+			background: $deep-blue
+			border-top: 1px solid rgba(#ccc, .4)
+			visibility: hidden
+			opacity: 0
+			transition: transform .3s, opacity .3s, visibility .3s
+			transform: translateY(-100%)
+			&.is-open
+				visibility: visible
+				opacity: 1
+				transform: translateY(0)
+			
+	&__mobile
+		display: none
+		+r(450)
+			display: block
+			
 	&__input
 		background: $dark
 		border: 1px solid #1e2225
@@ -49,6 +75,10 @@
 			color: #414950
 		&:focus
 			// border-color: #0f1112
+		+r(540)
+			width: 150px 
+		+r(450)
+			width: 100% 
 	&__btn
 		position: absolute
 		top: 0
@@ -71,7 +101,10 @@
 	.more-search
 		display: inline-block
 		vertical-align: middle
-		margin-left: 4px 
+		margin-left: 4px
+	+r(450)
+		.more-search-wrap
+
 		  
 .advanced-search
 	width: 300px
@@ -81,7 +114,6 @@
 		.btn
 			width: 75px
 			font-size: 13px
-			 
 .more-search
 	color: #89c247 
 	font-size: 22px
@@ -93,6 +125,9 @@
 	width: 420px 
 	padding: 0
 	margin-top: 8px
+	+r(450)
+		right: 0
+		left: auto
 	&__in
 		display: table
 		width: 100% 
@@ -193,7 +228,7 @@
 	width: 280px 
 	margin-top: 0
 	+r(767)
-		left: -158px
+		left: -167px
 		width: 320px
 		&.tasks-menu
 			left: -105px 

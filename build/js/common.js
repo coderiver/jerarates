@@ -130,4 +130,9 @@ $(document).ready(function() {
 		collapseSidebar();
 		$('.js-scroll').perfectScrollbar('update');
 	});
+	$('.js-find').on('click', function() {
+
+		$('.js-find-block').toggleClass('is-open');
+	
+	});
 });

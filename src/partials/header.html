@@ -8,123 +8,130 @@
 		</div>
 		<div class="header__item">
 			<div class="search-form">
-				<form action="#">
-					<div class="field dropdown">
-						<div class="dropdown js-search">
-							<input class="search-form__input js-search-input" type="text" placeholder="Search...">
-							<div class="js-search-result search-result no-pad dropdown-menu">
-								<div class="tag-box">
-									<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
-									<ul class="tag-box__list">
-										<li><a href="#"><i class="fa fa-sign-in"></i>Customer A</a></li>
-										<li><a href="#"><i class="fa fa-sign-in"></i>Customer B</a></li>
-										<li><a href="#"><i class="fa fa-sign-in"></i>Customer C</a></li>
-									</ul>
+				<div class="search-form__mobile">
+					<ul class="menu">
+						<li><a href="#" class="fa fa-search js-find"></a></li>
+					</ul>
+				</div>
+				<div class="search-form__in js-find-block">
+					<form action="#">
+						<div class="field dropdown">
+							<div class="dropdown js-search">
+								<input class="search-form__input js-search-input" type="text" placeholder="Search...">
+								<div class="js-search-result search-result no-pad dropdown-menu">
+									<div class="tag-box">
+										<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
+										<ul class="tag-box__list">
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer A</a></li>
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer B</a></li>
+											<li><a href="#"><i class="fa fa-sign-in"></i>Customer C</a></li>
+										</ul>
+									</div>
+									<div class="tag-box">
+										<div class="tag-box__header tag-box__header_sm">VENDORS</div>
+										<ul class="tag-box__list">
+											<li><a href="#"><i class="fa fa-sign-out"></i>Vendor Cust1</a></li>
+										</ul>
+									</div>
 								</div>
-								<div class="tag-box">
-									<div class="tag-box__header tag-box__header_sm">VENDORS</div>
-									<ul class="tag-box__list">
-										<li><a href="#"><i class="fa fa-sign-out"></i>Vendor Cust1</a></li>
-									</ul>
+								<button type="button" class="search-form__btn dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-search"></i></button>
+								<div class="dropdown-menu advanced-search" aria-labelledby="advanced-search">
+									<form action="#">
+										<div class="container-fluid">
+											<div class="form-group">
+												<label for="general-text">General Text Input</label>
+												<input type="text" class="form-control" id="general-text">
+											</div>
+											<div class="form-group">
+												<div class="form-inline">
+													<label>Select Actions</label>
+													<div class="field">
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> <span>Option 1</span>
+															</label>
+														</div>
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> <span>Option 2</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-inline">
+													<label>Select Type</label>
+													<div class="field">
+														<div class="radio">
+															<label>
+																<input type="radio" name="type"> <span>Option 1</span>
+															</label>
+														</div>
+														<div class="radio">
+															<label>
+																<input type="radio" name="type"> <span>Option 2</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Fill Range</label>
+												<div class="row form-range">
+													<div class="col-xs-4">
+														<input type="text" class="form-control">
+													</div>
+													<div class="col-xs-4">
+														<input type="text" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Enter Note</label>
+												<textarea rows="3" class="form-control"></textarea>
+											</div>
+											<div class="form-group clearfix btn-line">
+												<button type="button" class="btn btn-default pull-left">Cancel</button>
+												<button type="sumbit" class="btn btn-primary pull-right">Search</button>
+											</div>
+										</div>
+									</form>
 								</div>
 							</div>
-							<button type="button" class="search-form__btn dropdown-toggle" data-toggle="dropdown" id="advanced-search" aria-expanded="false"><i class="fa fa-search"></i></button>
-							<div class="dropdown-menu advanced-search" aria-labelledby="advanced-search">
-								<form action="#">
-									<div class="container-fluid">
-										<div class="form-group">
-											<label for="general-text">General Text Input</label>
-											<input type="text" class="form-control" id="general-text">
+							<div class="dropdown create-menu-wrap">
+								<a class="more-search dropdown-toggle" data-toggle="dropdown" id="create-menu" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
+								<div class="dropdown-menu create-menu" aria-labelledby="create-menu">
+									<div class="create-menu__in">
+										<div class="tag-box">
+											<div class="tag-box__header">CUSTOMERS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-sign-in"></i>Customer</a></li>
+												<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
+												<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
+											</ul>
 										</div>
-										<div class="form-group">
-											<div class="form-inline">
-												<label>Select Actions</label>
-												<div class="field">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox"> <span>Option 1</span>
-														</label>
-													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox"> <span>Option 2</span>
-														</label>
-													</div>
-												</div>
-											</div>
+										<div class="tag-box">
+											<div class="tag-box__header">VENDORS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-sign-out"></i>Vendor</a></li>
+												<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
+												<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
+											</ul>
 										</div>
-										<div class="form-group">
-											<div class="form-inline">
-												<label>Select Type</label>
-												<div class="field">
-													<div class="radio">
-														<label>
-															<input type="radio" name="type"> <span>Option 1</span>
-														</label>
-													</div>
-													<div class="radio">
-														<label>
-															<input type="radio" name="type"> <span>Option 2</span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="form-group">
-											<label>Fill Range</label>
-											<div class="row form-range">
-												<div class="col-xs-4">
-													<input type="text" class="form-control">
-												</div>
-												<div class="col-xs-4">
-													<input type="text" class="form-control">
-												</div>
-											</div>
-										</div>
-										<div class="form-group">
-											<label>Enter Note</label>
-											<textarea rows="3" class="form-control"></textarea>
-										</div>
-										<div class="form-group clearfix btn-line">
-											<button type="button" class="btn btn-default pull-left">Cancel</button>
-											<button type="sumbit" class="btn btn-primary pull-right">Search</button>
+										<div class="tag-box">
+											<div class="tag-box__header">OURS</div>
+											<ul class="tag-box__list">
+												<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
+												<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
+											</ul>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
-						<div class="dropdown">
-							<a class="more-search dropdown-toggle" data-toggle="dropdown" id="create-menu" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
-							<div class="dropdown-menu create-menu" aria-labelledby="create-menu">
-								<div class="create-menu__in">
-									<div class="tag-box">
-										<div class="tag-box__header">CUSTOMERS</div>
-										<ul class="tag-box__list">
-											<li><a href="#"><i class="fa fa-sign-in"></i>Customer</a></li>
-											<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
-											<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
-										</ul>
-									</div>
-									<div class="tag-box">
-										<div class="tag-box__header">VENDORS</div>
-										<ul class="tag-box__list">
-											<li><a href="#"><i class="fa fa-sign-out"></i>Vendor</a></li>
-											<li><a href="#"><i class="fa fa-table"></i>Rate Table</a></li>
-											<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
-										</ul>
-									</div>
-									<div class="tag-box">
-										<div class="tag-box__header">OURS</div>
-										<ul class="tag-box__list">
-											<li><a href="#"><i class="fa fa-bullseye"></i>Target</a></li>
-											<li><a href="#"><i class="fa fa-commenting-o"></i>Offer</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="header__item is-right">
