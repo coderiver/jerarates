@@ -56,7 +56,7 @@ html
 	font-size: 62.5%
 body
 	+os
-	font-size: 15px
+	font-size: 13px
 	line-height: 1.4
 	background: #fff
 	min-width: 320px
@@ -83,7 +83,7 @@ input, button
 	display: inline-block
 	&__text
 		color: #fff
-		font-size: 23px
+		font-size: 21px
 		+heliosb
 		span
 			+helios
@@ -114,8 +114,9 @@ input, button
 	&.is-open
 		display: block
 	>li>a
-		padding: 8px 12px
-
+		padding: 5px 12px
+.form-group
+	margin-bottom: 10px
 .form-control
 	&.is-sm
 		max-width: 77px 
@@ -137,7 +138,7 @@ input, button
 
 .form-inline
 	.checkbox, .radio
-		margin: 0 0 10px 10px
+		margin-right: 10px
 		&:first-child
 			margin-left: 0
 	.field
@@ -213,7 +214,8 @@ input, button
 
 .btn-default
 	background: $btn-default
-
+.btn
+	outline: 0
 .meta
 	color: #999
 
@@ -226,7 +228,7 @@ input, button
 	line-height: 10
 	border-radius: 0
 	background: #F0F0F0
-	margin-top: 15px
+	margin-top: 10px
 	margin-bottom: 7px
 	box-shadow: inset 0 0 0 1px #e0e0e0
 	&-bar
@@ -237,10 +239,11 @@ input, button
 		text-align: center
 		position: absolute
 		right: 0
-		top: -5px
+		top: -2px
+		line-height: 1
 
 .title-h2
-	font-size: 18px
+	font-size: 16px
 	color: #777
 	margin: 4px 0 4px
 	+reg
@@ -254,12 +257,12 @@ input, button
 	border-radius: .5em
 
 .right-aligned-list
-	font-size: 17px
+	font-size: 15px
 	li
 		padding: 3px 0
 		clear: both
 		> span
-			width: 155px
+			width: 130px
 			text-align: right
 			+light
 			display: inline-block

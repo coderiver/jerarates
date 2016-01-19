@@ -40,7 +40,7 @@
 		padding-left: 33px
 		line-height: 30px
 		height: 30px
-		width: 300px 
+		width: 250px 
 		font-size: 14px
 		+tr(border-color .3s)
 		display: inline-block
@@ -74,12 +74,14 @@
 		margin-left: 4px 
 		  
 .advanced-search
-	width: 350px
+	width: 300px
 	textarea
 		resize: none
 	.btn-line
 		.btn
-			width: 90px 
+			width: 75px
+			font-size: 13px
+			 
 .more-search
 	color: #89c247 
 	font-size: 22px
@@ -108,14 +110,14 @@
 		color: #999
 		+sbold
 		margin-bottom: 5px
-		font-size: 15px 
+		font-size: 12px 
 		padding: 0 15px 
 		&_sm
 			font-size: 13px
 	&__list
 		a
 			color: #333
-			font-size: 15px
+			font-size: 14px
 			display: block
 			padding: 3px 15px
 			+tr(background .3s)
@@ -126,7 +128,7 @@
 	&_mod
 		.tag-box__list
 			a
-				font-size: 17px
+				font-size: 15px
 				&:hover
 					background: transparent 
 .menu
@@ -141,8 +143,8 @@
 			color: #d1d2d3
 			opacity: .3
 			transition: opacity .3s, background .3s
-			font-size: 22px
-			padding: 13px 15px 10px
+			font-size: 18px
+			padding: 15px 15px 12px
 			position: relative
 			&:hover, &.is-active
 				opacity: 1
@@ -150,8 +152,8 @@
 				background: lighten($deep-blue, 4) 
 		.badge
 			position: absolute
-			top: 8px
-			left: 9px	
+			top: 11px
+			left: 11px	
 		&.is-user
 			a
 				position: relative
@@ -168,15 +170,17 @@
 				background: $dark
 				border-radius: 50%	
 .badge
-	font-size: 12px
+	font-size: 10px
 	border-radius: 50%
 	background: #ff340c
 	text-align: center
-	width: 16px 
-	height: 16px
-	padding-top: 3px 
+	width: 14px 
+	height: 14px
 	z-index: 5
-	padding: 3px 0 0
+	padding: 2px 0 0
+	span
+		margin-left: -.2em 
+
 	
 .help-menu
 	margin-top: 0
@@ -186,7 +190,7 @@
 			border-top: 1px solid $border
 			
 .notification-menu
-	width: 400px 
+	width: 280px 
 	margin-top: 0
 	+r(767)
 		left: -158px
@@ -194,7 +198,7 @@
 		&.tasks-menu
 			left: -105px 
 	.notification-hide
-		font-size: 15px
+		font-size: 13px
 		color #333
 		position: absolute
 		top: 5px
@@ -208,7 +212,7 @@
 	&__header
 		padding: 5px 10px 
 		border-bottom: 1px solid $border
-		font-size: 13px 
+		font-size: 11px 
 		a
 			padding: 0
 			color: $links
@@ -221,26 +225,32 @@
 				border-bottom: 0 
 			
 	&__item
-		display: table
+		display: block
 		width: 100% 
 		color: #333
 		+tr(background .3s)
 		position: relative
+		+clr
 		&:hover
 			color: #333
 			background: #fafafa
-	&__icon,&__text
-		display: table-cell
-		vertical-align: top
 	&__icon
 		text-align: center
-		font-size: 40px 
-		width: 80px
+		font-size: 24px 
+		width: 40px
+		padding: 12px 0
+		float: left
 	&__text
-		padding: 12px 10px 12px
-		font-size: 15px
+		overflow: hidden
+		padding: 12px 10px
+		font-size: 13px
+		> p
+			padding-right: 20px
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis  
 		.meta
-			font-size: 13px
+			font-size: 11px
 		&_pb
 			padding-bottom: 5px   
 
