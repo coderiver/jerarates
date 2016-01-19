@@ -187,7 +187,6 @@ dl dd { margin-left: 30px; }
 .search-form__input::-moz-placeholder { color: #414950; }
 .search-form__input:-ms-input-placeholder { color: #414950; }
 .search-form__input::placeholder { color: #414950; }
-.search-form__input:focus { border-color: #0f1112; }
 .search-form__btn { position: absolute; top: 0; left: 0; background: transparent; color: #fff; opacity: 0.2; width: 33px; text-align: center; font-size: 15px; line-height: 30px; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 .search-form__btn:hover { opacity: 0.6; }
 .search-form .open .search-form__btn { opacity: 0.6; }
@@ -462,7 +461,6 @@ label { margin-bottom: 3px; font-weight: normal; }
 .action:after { content: " "; display: table; clear: both; }
 .action__bl { float: right; font-size: 0; }
 .action__bl:first-child { float: left; }
-.action__bl + .action__bl { margin-top: 10px; }
 .action__description { display: inline-block; margin-right: 10px; font-size: 15px; vertical-align: middle; }
 .action__description span { font-weight: 300; }
 .action .pagination, .action .button { margin: 0 3px; vertical-align: middle; }
@@ -575,7 +573,6 @@ label { margin-bottom: 3px; font-weight: normal; }
  .header .search-form.is-open{ display: block; }
  .notification-menu{ left: -158px; width: 320px; }
  .notification-menu.tasks-menu{ left: -105px; }
- .action .button + .pagination{ margin-top: 10px; }
  .info{ display: block; }
  .info__block{ display: block; width: 100%; } }
 @media only screen and (max-height: 500px){
