@@ -139,6 +139,7 @@ input, button
 .form-inline
 	.checkbox, .radio
 		margin-right: 10px
+		display: inline-block
 		&:first-child
 			margin-left: 0
 	.field
@@ -147,7 +148,11 @@ input, button
 
 .checkbox
 	position: relative
-	padding-left: 25px
+	padding-left: 25px 
+	margin-top: 0
+	label
+		padding-left: 0 !important
+		font-size: 13px
 	input
 		display: none
 		&:checked
@@ -174,7 +179,11 @@ input, button
 			font-size: 12px
 .radio
 	position: relative
-	padding-left: 25px
+	padding-left: 25px 
+	margin-top: 0
+	label
+		padding-left: 0 !important
+		font-size: 13px
 	input
 		display: none
 		&:checked
@@ -264,12 +273,13 @@ input, button
 		> span
 			width: 130px
 			text-align: right
-			+light
+			+reg
 			display: inline-block
 			float: left
 			margin-right: 7px 
+			font-size: 13px
 			&.pad-t
-				padding-top: 1px
+				padding-top: 4px
 			+r(1165)
 				width: 92px 
 			+r(767)
@@ -302,12 +312,30 @@ input, button
 .content-sidebar
 	&.is-left
 		float: left
-
+		+r(767)
+			float: none
+	+r(767)
+		height: auto !important
+.content-body
+	overflow: hidden
+	display: block
 .tel-link
 	color: #333
 
 dl
 	margin-bottom: 20px
 	dd
-		margin-left: 30px
-
+		margin-left: 15px
+		+r(767)
+			margin-left: 10px
+.title-h2
+	+ .right-aligned-list,
+	+ .tag-box,
+		margin-left: 15px 
+		+r(767)
+			margin-left: 10px
+	+ .tag-box
+		.tag-box__list a
+			padding-left: 0
+			padding-right: 0
+		

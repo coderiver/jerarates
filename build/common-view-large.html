@@ -415,13 +415,13 @@
 					</tr>
 				</table>
 			</div>
-			<div class="action action_no-bd">
+			<div class="action action_btn action_no-bd">
 				<div class="action__bl">
-					<button class="button button_row pull-left">
+					<button class="button button_row">
 						<i class="fa fa-align-justify"></i>
 						<span>50</span>
 					</button>
-					<ul class="pagination pull-right">
+					<ul class="pagination">
 						<li class="disabled">
 							<span aria-label="Previous">
 								<span class="fa fa-angle-left" aria-hidden="true"></span>
@@ -514,69 +514,74 @@
 						</ul>
 					</div>
 					<div class="title-h2">Test Horizontal Form</div>
-					<form>
-						<ul class="right-aligned-list right-aligned-list_pad-t">
-							<li>
-								<span class="pad-t">Company Name:</span>
-								<div class="right-aligned-list__box">
-									<input type="text" class="form-control is-md" value="VoiceTec UK">
-								</div>
-							</li>
-							<li>
-								<span class="pad-t">Type:</span>
-								<div class="right-aligned-list__box">
-									<div class="form-inline">
-										<div class="field">
-											<div class="radio">
-												<label>
-													<input type="radio" name="name[type]"> <span>Customer</span>
-												</label>
-											</div>
-											<div class="radio">
-												<label>
-													<input type="radio" name="name[type]"> <span>Vendor</span>
-												</label>
+					<div class="form">
+						<form>
+							<ul class="right-aligned-list right-aligned-list_pad-t">
+								<li>
+									<span class="pad-t">Company Name:</span>
+									<div class="right-aligned-list__box">
+										<input type="text" class="form-control is-md" value="VoiceTec UK">
+									</div>
+								</li>
+								<li>
+									<span>Type:</span>
+									<div class="right-aligned-list__box">
+										<div class="form-inline">
+											<div class="field">
+												<div class="radio">
+													<label>
+														<input type="radio" name="name[type]"> <span>Customer</span>
+													</label>
+												</div>
+												<div class="radio">
+													<label>
+														<input type="radio" name="name[type]"> <span>Vendor</span>
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li>
-								<span class="pad-t">Currency:</span>
-								<div class="right-aligned-list__box">
-									<input type="text" class="form-control is-sm" value="USD">
-								</div>
-							</li>
-						</ul>
-					</form>
-					<div class="title-h2">Test Vertical Form</div>
-					<form action="#">
-						<div class="form-group">
-							<label for="name-input">Company Name</label>
-							<input type="text" class="form-control is-md" id="name-input">
-						</div>
-						<div class="form-group">
-							<div class="form-inline">
-								<label>Select Type</label>
-								<div class="field field_mb">
-									<div class="radio">
-										<label>
-											<input type="radio" name="type"> <span>Option 1</span>
-										</label>
+								</li>
+								<li>
+									<span class="pad-t">Currency:</span>
+									<div class="right-aligned-list__box">
+										<input type="text" class="form-control is-sm" value="USD">
 									</div>
-									<div class="radio">
-										<label>
-											<input type="radio" name="type"> <span>Option 2</span>
-										</label>
+								</li>
+							</ul>
+						</form>
+					</div>
+					
+					<div class="title-h2">Test Vertical Form</div>
+					<div class="form">
+						<form action="#">
+							<div class="form-group">
+								<label for="name-input">Company Name</label>
+								<input type="text" class="form-control is-md" id="name-input">
+							</div>
+							<div class="form-group">
+								<div class="form-inline">
+									<label>Select Type</label>
+									<div class="field">
+										<div class="radio">
+											<label>
+												<input type="radio" name="type"> <span>Option 1</span>
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="type"> <span>Option 2</span>
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="currency-input">Currency</label>
-							<input type="text" class="form-control is-sm" id="currency-input" value="USD">
-						</div>
-					</form>
+							<div class="form-group">
+								<label for="currency-input">Currency</label>
+								<input type="text" class="form-control is-sm" id="currency-input" value="USD">
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

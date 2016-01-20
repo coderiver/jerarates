@@ -131,15 +131,24 @@
 	+r(450)
 		right: 0
 		left: auto
+		width: 310px 
 	&__in
 		display: table
 		width: 100% 
+		+clr
 	.tag-box
 		width: 33.333%
 		box-shadow: 1px 0 0 0 $border
 		display: table-cell
 		&:last-child
 			box-shadow: none
+		+r(450)
+			width: 50%
+			float: left
+			display: block 
+			&:last-child
+				box-shadow: 1px 0 0 0 $border
+
 .tag-box
 	padding: 10px 0
 	&.no-pad
@@ -169,6 +178,8 @@
 				font-size: 15px
 				&:hover
 					background: transparent 
+				+r(767)
+					padding-left: 0
 .menu
 	+clr
 	height: 100%

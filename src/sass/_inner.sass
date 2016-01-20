@@ -13,6 +13,9 @@
 .sidebar-list
 	border-right: 1px solid $border
 	width: 300px 
+	+r(767)
+		width: 100% 
+		border: 0
 	.action
 		margin: 0
 		border-bottom: 1px solid $border
@@ -22,6 +25,18 @@
 			float: none
 			padding: 9px 5px
 			+clr
+		&_btn
+			.action__bl
+				+clr
+			.button
+				float: left
+			.pagination
+				float: right
+			+r(350)
+				.button,
+				.pagination
+					float: none
+					margin-bottom: 7px 
 .sidebar-table
 	tr
 		height: 47px 
