@@ -8,6 +8,7 @@
 	left: 0
 	right: 0
 	z-index: 1000 
+	min-width: 320px 
 	+clr
 	&__item
 		display: inline-block
@@ -26,6 +27,8 @@
 			padding-top: 0
 	.logo
 		padding-top: 7px 
+		+r(450)
+			padding-top: 4px
 .search-form
 	position: relative
 	.dropdown
@@ -231,7 +234,7 @@
 		left: -167px
 		width: 320px
 		&.tasks-menu
-			left: -105px 
+			left: -119px 
 	.notification-hide
 		font-size: 13px
 		color #333

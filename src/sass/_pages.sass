@@ -153,7 +153,21 @@
 	.button
 		margin: 0 3px
 		vertical-align: middle
-
+	&_full
+		+r(800)
+			.action__bl
+				float: none
+				margin-bottom: 10px
+		+r(484)
+			.pagination
+				margin-top: 10px
+	&_btns
+		+r(415)
+			.action__bl
+				float: none
+			.button,
+			.pagination
+				margin-bottom: 10px 
 // sideinfo
 .sideinfo
 	display: none
@@ -164,6 +178,8 @@
 	padding-top: 55px
 	background: #fff
 	border-left: 2px solid #d8d8d8
+	+r(767)
+		width: 265px 
 	&.is-active
 		display: block
 	&__list
