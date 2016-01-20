@@ -79,11 +79,18 @@ $(document).ready(function() {
 				position = _.offset().top,
 				height = $(window).height() - position;
 
+			if($(window).width() < 767) {
+				_.outerHeight('auto')
+				  .css('max-height', 'auto');
+				return;
+			}
+
 			if ( _.hasClass('js-vert-scroll') ) {
 				_.css('max-height', height);
 			} else {
 				_.outerHeight(height);
 			}
+
 		});
 	}
 
@@ -93,8 +100,8 @@ $(document).ready(function() {
 		$(this).addClass('is-detail');
 		$(this).siblings().removeClass('is-detail');
 
-		if ( !$('.js-content').hasClass('is-sideinfo') ) {
-			$('.js-content').addClass('is-sideinfo');
+		if ( !$('.js-content .content-body').hasClass('is-sideinfo') ) {
+			$('.js-content .content-body').addClass('is-sideinfo');
 		}
 
 		$('.js-sideinfo').addClass('is-active');
@@ -104,7 +111,7 @@ $(document).ready(function() {
 
 	$('.js-close').click(function() {
 		$(this).parent().removeClass('is-active');
-		$('.js-content').removeClass('is-sideinfo');
+		$('.js-content .content-body').removeClass('is-sideinfo');
 		$('.js-sideinfo').removeClass('is-active');
 
 		measureTablWidth();
@@ -117,7 +124,7 @@ $(document).ready(function() {
 		}
 	});
 	function collapseSidebar() {
-		if($(window).width() < 767) {
+		if($(window).width() < 1023) {
 			$('.js-sidebar').addClass('is-collapsed is-mobile');
 			$('.js-content').addClass('is-expanded');
 		}

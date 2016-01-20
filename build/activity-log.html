@@ -35,7 +35,7 @@
 							<div class="field dropdown">
 								<div class="dropdown js-search">
 									<input class="search-form__input js-search-input" type="text" placeholder="Search...">
-									<div class="js-search-result search-result no-pad dropdown-menu">
+									<div class="js-search-result search-result no-pad">
 										<div class="tag-box">
 											<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
 											<ul class="tag-box__list">
@@ -293,110 +293,111 @@
 	</div>
 	<!-- end sidebar -->
 	<div class="content js-content">
-		<p class="title">Activity Log</p>
-		<div class="action action_btns">
-			<div class="action__bl">
-				<button class="button">
-					<i class="fa fa-download"></i>
-				</button>
-			</div>
-			<div class="action__bl">
-				<button class="button button_row">
-					<i class="fa fa-align-justify"></i>
-					<span>50</span>
-				</button>
-				<ul class="pagination">
-					<li class="disabled">
-						<span aria-label="Previous">
-							<span class="fa fa-angle-left" aria-hidden="true"></span>
-						</span>
+		<div class="content-body">
+			<p class="title">Activity Log</p>
+			<div class="action action_btns">
+				<div class="action__bl">
+					<button class="button">
+						<i class="fa fa-download"></i>
+					</button>
+				</div>
+				<div class="action__bl">
+					<button class="button button_row">
+						<i class="fa fa-align-justify"></i>
+						<span>50</span>
+					</button>
+					<ul class="pagination">
+						<li class="disabled">
+							<span aria-label="Previous">
+								<span class="fa fa-angle-left" aria-hidden="true"></span>
+							</span>
+							</li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span class="fa fa-angle-right" aria-hidden="true"></span>
+							</a>
 						</li>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span class="fa fa-angle-right" aria-hidden="true"></span>
-						</a>
-					</li>
-				</ul>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="scroll is-horz js-scroll">
-			<table class="tabl js-tabl-head">
-				<tr class="tabl__head">
-					<th width="167">Date</th>
-					<th width="169">Object</th>
-					<th width="372">Action</th>
-					<th width="139">User</th>
-				</tr>
-			</table>
-			<div class="scroll js-vert-scroll js-height">
-				<table class="tabl">
-					<tr class="tabl__head is-hidden">
+			<div class="scroll is-horz js-scroll">
+				<table class="tabl js-tabl-head">
+					<tr class="tabl__head">
 						<th width="167">Date</th>
 						<th width="169">Object</th>
 						<th width="372">Action</th>
 						<th width="139">User</th>
 					</tr>
-					<tr class="js-tabl-detail">
-						<td>
-							15 Jun 2015 <span class="txt-light">10:25</span>
-						</td>
-						<td>
-							<i class="fa fa-table"></i>
-							SmartCom1 RT
-						</td>
-						<td>Offer <span class="txt-bold">#1242</span> sent to z@mailcom.ua</td>
-						<td>
-							Andrii Zinchenko
-						</td>
-					</tr>
-					<tr class="js-tabl-detail is-detail">
-						<td>
-							15 Jun 2015 <span class="txt-light">10:20</span>
-						</td>
-						<td>
-							<i class="fa fa-table"></i>
-							VoiceTec Premium
-						</td>
-						<td>RT <span class="txt-bold">"VoiceTec Premium"</span> imported</td>
-						<td>
-							Suren Dolgikh
-						</td>
-					</tr>
-					<tr class="js-tabl-detail">
-						<td>
-							14 Jun 2015 <span class="txt-light">17:12</span>
-						</td>
-						<td>
-							<i class="fa fa-sign-in"></i>
-							Voicetec UK
-						</td>
-						<td>Customer created</td>
-						<td>
-							Yurii Zaika
-						</td>
-					</tr>
-					<tr class="js-tabl-detail">
-						<td>
-							15 Feb 2015 <span class="txt-light">10:25</span>
-						</td>
-						<td>
-							<i class="fa fa-sign-in"></i>
-							SmartComTech
-						</td>
-						<td>Customer updated</td>
-						<td>
-							Andrii Zinchenko
-						</td>
-					</tr>
 				</table>
+				<div class="scroll js-vert-scroll js-height">
+					<table class="tabl">
+						<tr class="tabl__head is-hidden">
+							<th width="167">Date</th>
+							<th width="169">Object</th>
+							<th width="372">Action</th>
+							<th width="139">User</th>
+						</tr>
+						<tr class="js-tabl-detail">
+							<td>
+								15 Jun 2015 <span class="txt-light">10:25</span>
+							</td>
+							<td>
+								<i class="fa fa-table"></i>
+								SmartCom1 RT
+							</td>
+							<td>Offer <span class="txt-bold">#1242</span> sent to z@mailcom.ua</td>
+							<td>
+								Andrii Zinchenko
+							</td>
+						</tr>
+						<tr class="js-tabl-detail is-detail">
+							<td>
+								15 Jun 2015 <span class="txt-light">10:20</span>
+							</td>
+							<td>
+								<i class="fa fa-table"></i>
+								VoiceTec Premium
+							</td>
+							<td>RT <span class="txt-bold">"VoiceTec Premium"</span> imported</td>
+							<td>
+								Suren Dolgikh
+							</td>
+						</tr>
+						<tr class="js-tabl-detail">
+							<td>
+								14 Jun 2015 <span class="txt-light">17:12</span>
+							</td>
+							<td>
+								<i class="fa fa-sign-in"></i>
+								Voicetec UK
+							</td>
+							<td>Customer created</td>
+							<td>
+								Yurii Zaika
+							</td>
+						</tr>
+						<tr class="js-tabl-detail">
+							<td>
+								15 Feb 2015 <span class="txt-light">10:25</span>
+							</td>
+							<td>
+								<i class="fa fa-sign-in"></i>
+								SmartComTech
+							</td>
+							<td>Customer updated</td>
+							<td>
+								Andrii Zinchenko
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
-	</div>
 		<aside class="sideinfo scroll js-sideinfo js-scroll js-height">
 			<div class="sideinfo__in">
 				<a href="#" class="close js-close"><i class="fa fa-times"></i></a>
@@ -435,6 +436,7 @@
 				</ul>
 			</div>
 		</aside>
+	</div>
 </div>
 <!-- END out-->
 </body>

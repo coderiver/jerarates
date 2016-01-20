@@ -3,7 +3,7 @@
 	background: $deep-blue
 	font-size: 0
 	height: 45px 
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
@@ -26,9 +26,9 @@
 		+r(450)
 			padding-top: 0
 	.logo
-		padding-top: 7px 
+		padding-top: 9px 
 		+r(450)
-			padding-top: 4px
+			padding-top: 6px
 .search-form
 	position: relative
 	.dropdown
@@ -306,6 +306,14 @@
 .search-result
 	left: 0
 	right: 0
+	position: absolute
+	background: #fff
+	display: none
+	border: 1px solid #d4d4d4
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1)
+	&.is-open 
+		display: block 
+		
 	.tag-box
 		padding-top: 5px 
 		padding-bottom: 5px 

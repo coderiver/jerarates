@@ -76,23 +76,29 @@
 .info
 	background: #fbfbfb
 	border: 1px solid #ccc 
-	width: 100% 
-	display: table
 	margin-bottom: 20px
+	font-size: 0
 	+r(767)
 		display: block
+
 	&__block
-		display: table-cell
+		display: inline-block
 		vertical-align: top
 		width: 25%
 		padding: 10px 
-		+r(767)
-			display: block
+		font-size: 13px
+		+r(1255)
+			width: 50% 
+		+r(550)
+			// display: block
 			width: 100% 
 		.right-aligned-list
 			margin-bottom: 0
 			&__box
 				&.is-red
 					color: #c90000
+			+r(1313)
+				li > span
+					width: auto 
 		
 

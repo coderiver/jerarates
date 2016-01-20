@@ -63,8 +63,12 @@ body
 	padding-top: 45px
 
 // common blocks
+.icon-logo
+	+sr(logo_x2)
 .out
 	height: 100%
+	+r(1023)
+		overflow-x: hidden
 
 a
 	color: $links
@@ -277,7 +281,7 @@ input, button
 			display: inline-block
 			float: left
 			margin-right: 7px 
-			font-size: 13px
+			font-size: 15px
 			&.pad-t
 				padding-top: 4px
 			+r(1165)
@@ -314,8 +318,6 @@ input, button
 		float: left
 		+r(767)
 			float: none
-	+r(767)
-		height: auto !important
 .content-body
 	overflow: hidden
 	display: block

@@ -35,10 +35,24 @@
 .content
 	position: relative
 	margin-left: 205px
+	+clr
+	+r(1023)
+		margin-left: 0
+		transform: translateX(205px)
 	&.is-expanded
 		margin-left: 55px
+		+r(1023)
+			transform: translateX(0)
+			// margin-left: 0
+.content-body
 	&.is-sideinfo
-		margin-right: 290px
+		padding-right: 290px
+		width: 100% 
+		float: left
+		+r(767)
+			margin-right: 0
+			padding-right: 0
+			float: none
 
 .title
 	padding: 13px 0 5px 10px
@@ -153,6 +167,10 @@
 	.button
 		margin: 0 3px
 		vertical-align: middle
+	.pagination
+		+r(550)
+			display: block
+			margin-top: 10px
 	&_full
 		+r(800)
 			.action__bl
@@ -168,20 +186,32 @@
 			.button,
 			.pagination
 				margin-bottom: 10px 
+			.pagination
+				margin-top: 0 
 // sideinfo
 .sideinfo
-	display: none
+	// display: none
+	opacity: 0
+	visibility: hidden
 	position: absolute
 	top: 0
 	right: 0
 	width: 290px
-	padding-top: 55px
+	padding-top: 15px
 	background: #fff
 	border-left: 2px solid #d8d8d8
+	z-index: 4 
+	margin-left: -290px 
+	float: right
 	+r(767)
-		width: 265px 
+		width: 100%
+		position: relative
+		margin-left: 0
+		float: none
 	&.is-active
-		display: block
+		// display: block
+		opacity: 1
+		visibility: visible
 	&__list
 		margin-bottom: 10px
 		li
@@ -200,8 +230,10 @@
 		color: #777
 	.close
 		position: absolute
-		top: 55px
+		top: 15px
 		right: 10px
+		+r(767)
+			top: 0
 	.fa-table
 		margin-right: 4px
 		color: #666
