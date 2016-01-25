@@ -8,7 +8,7 @@
 	background: #37424A
 	z-index: 100
 	&.is-collapsed
-		width: 55px
+		width: 51px
 		.sidebar__in
 			overflow: inherit
 		&.is-mobile
@@ -27,10 +27,14 @@
 		&:not([class*=" is-mobile"])
 			li
 				&:hover
+					background: #2f383f
 					.sidebar__sublist
 						display: block
-		.sidebar__collapse span
-			display: none
+		.sidebar__collapse
+			span
+				display: none
+			.fa
+				transform: rotateY(-180deg)
 		.sidebar__sublist
 			position: absolute
 			top: 0
@@ -44,6 +48,7 @@
 			display: none
 	&__list li
 		position: relative
+		
 	&__in
 		height: 100%
 		padding-top: 14px
@@ -51,8 +56,9 @@
 		position: relative
 		display: block
 		padding: 6px 18px
-		font-size: 13px
+		font-size: 15px
 		color: #afb3b7
+		+light
 		&:before
 			display: none
 			content: ""
@@ -88,6 +94,11 @@
 			display: block
 		.sidebar__link
 			padding-left: 50px
+			&.is-active
+				opacity: 1
+				background: none
+				&:before
+					content: none 
 	&__collapse
 		position: absolute
 		display: block

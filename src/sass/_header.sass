@@ -64,7 +64,7 @@
 			
 	&__input
 		background: $dark
-		border: 1px solid #1e2225
+		box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3)
 		color: #fff
 		padding-left: 33px
 		line-height: 30px
@@ -72,12 +72,16 @@
 		width: 250px 
 		font-size: 14px
 		+tr(border-color .3s)
+		transition: border-color .3s, background .3s ease
 		display: inline-block
 		vertical-align: middle
 		+placeholder
 			color: #414950
+		&:hover
+			box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7)
 		&:focus
-			// border-color: #0f1112
+			box-shadow: none
+			background: darken($dark, 2)
 		+r(540)
 			width: 150px 
 		+r(450)
@@ -91,7 +95,7 @@
 		opacity: .2 
 		width: 33px
 		text-align: center
-		font-size: 15px 
+		font-size: 17px 
 		line-height: 30px
 		+tr(opacity .3s)
 		&:hover
@@ -105,29 +109,29 @@
 		display: inline-block
 		vertical-align: middle
 		margin-left: 4px
-	+r(450)
-		.more-search-wrap
-
 		  
 .advanced-search
 	width: 300px
 	textarea
 		resize: none
+	label
+		+reg
 	.btn-line
 		.btn
-			width: 75px
+			padding: 6px 23px
 			font-size: 13px
+			border-radius: 2px
 .more-search
-	color: #89c247 
 	font-size: 22px
 	+tr(color .3s)
+	color: darken(#89c247, 10) 
 	&:hover
-		color: darken(#89c247, 10) 
+		color: #89c247 
 .create-menu
 	+clr
 	width: 420px 
 	padding: 0
-	margin-top: 8px
+	margin-top: 3px
 	+r(450)
 		right: 0
 		left: auto
@@ -168,6 +172,7 @@
 			display: block
 			padding: 3px 15px
 			+tr(background .3s)
+			+reg
 			&:hover
 				background: #f6f6f6  
 			.fa
@@ -219,20 +224,21 @@
 				background: $dark
 				border-radius: 50%	
 .badge
-	font-size: 10px
-	border-radius: 50%
+	font-size: 9px
+	border-radius: 7px
 	background: #ff340c
 	text-align: center
-	width: 14px 
+	width: auto
+	display: inline-block 
 	height: 14px
 	z-index: 5
-	padding: 2px 0 0
+	padding: 2px 5px 0 
 	span
 		margin-left: -.2em 
 
 	
 .help-menu
-	margin-top: 0
+	margin-top: -3px
 	border-top: 0 
 	li
 		&.is-border
@@ -240,12 +246,16 @@
 			
 .notification-menu
 	width: 280px 
-	margin-top: 0
+	margin-top: -3px
+	&.tasks-menu
+		.notification-menu__text
+			padding: 6px 10px 2px
 	+r(767)
 		left: -167px
 		width: 320px
 		&.tasks-menu
-			left: -119px 
+			left: -119px
+			 
 	.notification-hide
 		font-size: 13px
 		color #333
@@ -254,10 +264,10 @@
 		right: 10px
 		button  
 			background: transparent
-			opacity: .5
+			opacity: .3
 			+tr(opacity .3s)
 			&:hover
-				opacity: 1
+				opacity: .6
 	&__header
 		padding: 5px 10px 
 		border-bottom: 1px solid $border
@@ -265,8 +275,9 @@
 		a
 			padding: 0
 			color: $links
+			+
 			&:hover
-				color: darken($links, 10)
+				color: #00536F
 	&__list
 		> li
 			border-bottom: 1px solid $border
@@ -287,12 +298,13 @@
 		text-align: center
 		font-size: 24px 
 		width: 40px
-		padding: 12px 0
+		padding: 10px 0 9px
 		float: left
 	&__text
 		overflow: hidden
-		padding: 12px 10px
+		padding: 10px 20px 9px 5px
 		font-size: 13px
+		+reg
 		> p
 			padding-right: 20px
 			overflow: hidden
@@ -310,10 +322,21 @@
 	background: #fff
 	display: none
 	border: 1px solid #d4d4d4
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1)
+	border-top: 0
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+	padding-top: 3px 
+	margin-top: 3px 
 	&.is-open 
 		display: block 
 		
 	.tag-box
 		padding-top: 5px 
 		padding-bottom: 5px 
+		&__header
+			font-size: 12px
+			color: #666
+			padding: 0 9px
+			margin-bottom: 0
+		&__list
+			a
+				padding: 3px 11px

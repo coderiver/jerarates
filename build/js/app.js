@@ -39,7 +39,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		$(this).toggleClass('is-collapsed');
-		$(this).parents('.js-sidebar').toggleClass('is-collapsed');
+		$(this).parents('.js-sidebar').toggleClass('is-collapsed is-clicked');
 		$('.js-content').toggleClass('is-expanded');
 
 		if ( $('.js-scroll').length > 0 ) {
@@ -58,7 +58,12 @@ $(document).ready(function() {
 
 		measureTablWidth();
 	});
-
+	$('.js-sublink').on('mouseover', function() {
+		if($('.js-sidebar').hasClass('is-collapsed')) {
+			$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
+			$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
+		} else return;
+	});
 	// scroll
 	$('.js-scroll').perfectScrollbar();
 
@@ -147,6 +152,9 @@ $(document).ready(function() {
 		if($(window).width() < 1023) {
 			$('.js-sidebar').addClass('is-collapsed is-mobile');
 			$('.js-content').addClass('is-expanded');
+		} else if($(window).width() > 1023 && (!$('.js-sidebar').hasClass('is-clicked'))) {
+			$('.js-sidebar').removeClass('is-collapsed is-mobile');
+			$('.js-content').removeClass('is-expanded');
 		}
 	}
 	collapseSidebar();

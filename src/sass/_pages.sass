@@ -57,9 +57,9 @@
 .title
 	padding: 13px 0 5px 10px
 	font-size: 22px
-	font-weight: 300
+	+light
 	&_reg
-		font-weight: 400 
+		+reg
 
 // table
 .tabl
@@ -82,7 +82,7 @@
 		color: #666
 	th
 		padding: 3px 10px
-		font-weight: 600
+		+sbold
 		color: #666
 	tr
 		border-bottom: 1px solid #F0F0F0
@@ -159,10 +159,10 @@
 	&__description
 		display: inline-block
 		margin-right: 10px
-		font-size: 15px
+		font-size: 13px
 		vertical-align: middle
 		span
-			font-weight: 300
+			+light
 	.pagination,
 	.button
 		margin: 0 3px
@@ -199,7 +199,7 @@
 	width: 290px
 	padding-top: 15px
 	background: #fff
-	border-left: 2px solid #d8d8d8
+	border-left: 1px solid #d8d8d8
 	z-index: 4 
 	margin-left: -290px 
 	float: right
@@ -216,6 +216,7 @@
 		margin-bottom: 10px
 		li
 			+clr
+			margin-bottom: 5px 
 	&__label
 		float: left
 		width: 88px
