@@ -1,6 +1,8 @@
 $icons: (0:0)
-$icons: map-merge($icons,(coderiver: (X: -29px, Y:0px, W: 49px, H: 5px, TW: 78px, TH: 32px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 25px, H: 32px, TW: 78px, TH: 32px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -75px, Y:-42px, W: 49px, H: 5px, TW: 230px, TH: 96px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo-text: (X: 0px, Y:0px, W: 230px, H: 38px, TW: 230px, TH: 96px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo: (X: -46px, Y:-42px, W: 25px, H: 32px, TW: 230px, TH: 96px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo_x2: (X: 0px, Y:-42px, W: 42px, H: 54px, TW: 230px, TH: 96px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -43,9 +45,19 @@ $icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 25px, H: 32px, TW: 78px, TH: 
 	width: 49px
 	height: 5px
 	background-image: url('../img/icons.png')
-	background-position: -29px 0px
+	background-position: -75px -42px
+.icon-logo-text
+	width: 230px
+	height: 38px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
 .icon-logo
 	width: 25px
 	height: 32px
 	background-image: url('../img/icons.png')
-	background-position: 0px 0px
+	background-position: -46px -42px
+.icon-logo_x2
+	width: 42px
+	height: 54px
+	background-image: url('../img/icons.png')
+	background-position: 0px -42px

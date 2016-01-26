@@ -6,7 +6,7 @@
 	left: 0
 	right: 0
 	z-index: 2000
-	min-width: 320px
+	min-width: 265px
 	padding: 0 10px 
 
 .popup
@@ -49,9 +49,14 @@
 			bottom: 0
 			left: 50%
 			border-right: 1px solid #f2f2f2 
+			+r(767)
+				border: 0
 	&__col
 		padding: 0 15px
 		width: 50%
-		float: left 
+		float: left
+		+r(767)
+			width: 100%
+			float: none  
 	&__bottom
 		+clr

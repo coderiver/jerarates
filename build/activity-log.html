@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#37424a">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" media="all" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
@@ -20,7 +20,7 @@
 			<div class="header__item">
 				<a href="#" class="logo">
 					<div class="logo__img"><i class="icon-logo"></i></div>
-					<div class="logo__text">Rates<span>Analytics</span></div>
+					<div class="logo__text"><i class="icon-logo-text"></i>Rates Analytics</div>
 				</a>
 			</div>
 			<div class="header__item">
@@ -35,9 +35,9 @@
 							<div class="field dropdown">
 								<div class="dropdown js-search">
 									<input class="search-form__input js-search-input" type="text" placeholder="Search...">
-									<div class="js-search-result search-result no-pad dropdown-menu">
+									<div class="js-search-result search-result no-pad">
 										<div class="tag-box">
-											<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
+											<div class="tag-box__header">CUSTOMERS</div>
 											<ul class="tag-box__list">
 												<li><a href="#"><i class="fa fa-sign-in"></i>Customer A</a></li>
 												<li><a href="#"><i class="fa fa-sign-in"></i>Customer B</a></li>
@@ -45,7 +45,7 @@
 											</ul>
 										</div>
 										<div class="tag-box">
-											<div class="tag-box__header tag-box__header_sm">VENDORS</div>
+											<div class="tag-box__header">VENDORS</div>
 											<ul class="tag-box__list">
 												<li><a href="#"><i class="fa fa-sign-out"></i>Vendor Cust1</a></li>
 											</ul>
@@ -255,7 +255,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-sign-in"></i><span>Customers</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Customers</p></li>
-			 			<li><a href="#" class="sidebar__link">List</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">List</a></li>
 			 			<li><a href="#" class="sidebar__link">Rate Tables</a></li>
 			 			<li><a href="#" class="sidebar__link">Targets</a></li>
 			 		</ul>
@@ -264,7 +264,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-sign-out"></i><span>Vendors</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Vendors</p></li>
-			 			<li><a href="#" class="sidebar__link">Lorem</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">Lorem</a></li>
 			 			<li><a href="#" class="sidebar__link">Ipsum</a></li>
 			 			<li><a href="#" class="sidebar__link">Dolor</a></li>
 			 		</ul>
@@ -273,7 +273,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-briefcase"></i><span>Ours</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Ours</p></li>
-			 			<li><a href="#" class="sidebar__link">Sit</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">Sit</a></li>
 			 			<li><a href="#" class="sidebar__link">Amet</a></li>
 			 			<li><a href="#" class="sidebar__link">Consectetur</a></li>
 			 		</ul>
@@ -282,7 +282,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-cogs"></i><span>Configuration</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Configuration</p></li>
-			 			<li><a href="#" class="sidebar__link">Adipisicing</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">Adipisicing</a></li>
 			 			<li><a href="#" class="sidebar__link">Elit</a></li>
 			 			<li><a href="#" class="sidebar__link">Voluptatum</a></li>
 			 		</ul>
@@ -293,148 +293,150 @@
 	</div>
 	<!-- end sidebar -->
 	<div class="content js-content">
-		<p class="title">Activity Log</p>
-		<div class="action">
-			<div class="action__bl">
-				<button class="button">
-					<i class="fa fa-download"></i>
-				</button>
-			</div>
-			<div class="action__bl">
-				<button class="button button_row">
-					<i class="fa fa-align-justify"></i>
-					<span>50</span>
-				</button>
-				<ul class="pagination">
-					<li class="disabled">
-						<span aria-label="Previous">
-							<span class="fa fa-angle-left" aria-hidden="true"></span>
-						</span>
+		<div class="content-body">
+			<p class="title">Activity Log</p>
+			<div class="action action_btns">
+				<div class="action__bl">
+					<button class="button">
+						<i class="fa fa-download"></i>
+					</button>
+				</div>
+				<div class="action__bl">
+					<button class="button button_row">
+						<i class="fa fa-align-justify"></i>
+						<span>50</span>
+					</button>
+					<ul class="pagination">
+						<li class="disabled">
+							<span aria-label="Previous">
+								<span class="fa fa-angle-left" aria-hidden="true"></span>
+							</span>
+							</li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span class="fa fa-angle-right" aria-hidden="true"></span>
+							</a>
 						</li>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span class="fa fa-angle-right" aria-hidden="true"></span>
-						</a>
-					</li>
-				</ul>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="scroll is-horz js-scroll">
-			<table class="tabl js-tabl-head">
-				<tr class="tabl__head">
-					<th width="167">Date</th>
-					<th width="169">Object</th>
-					<th width="372">Action</th>
-					<th width="139">User</th>
-				</tr>
-			</table>
-			<div class="scroll js-vert-scroll js-height">
-				<table class="tabl">
-					<tr class="tabl__head is-hidden">
+			<div class="scroll is-horz js-scroll">
+				<table class="tabl js-tabl-head">
+					<tr class="tabl__head">
 						<th width="167">Date</th>
 						<th width="169">Object</th>
 						<th width="372">Action</th>
 						<th width="139">User</th>
 					</tr>
-					<tr class="js-tabl-detail">
-						<td>
-							15 Jun 2015 <span class="txt-light">10:25</span>
-						</td>
-						<td>
-							<i class="fa fa-table"></i>
-							SmartCom1 RT
-						</td>
-						<td>Offer <span class="txt-bold">#1242</span> sent to z@mailcom.ua</td>
-						<td>
-							Andrii Zinchenko
-						</td>
-					</tr>
-					<tr class="js-tabl-detail is-detail">
-						<td>
-							15 Jun 2015 <span class="txt-light">10:20</span>
-						</td>
-						<td>
-							<i class="fa fa-table"></i>
-							VoiceTec Premium
-						</td>
-						<td>RT <span class="txt-bold">"VoiceTec Premium"</span> imported</td>
-						<td>
-							Suren Dolgikh
-						</td>
-					</tr>
-					<tr class="js-tabl-detail">
-						<td>
-							14 Jun 2015 <span class="txt-light">17:12</span>
-						</td>
-						<td>
-							<i class="fa fa-sign-in"></i>
-							Voicetec UK
-						</td>
-						<td>Customer created</td>
-						<td>
-							Yurii Zaika
-						</td>
-					</tr>
-					<tr class="js-tabl-detail">
-						<td>
-							15 Feb 2015 <span class="txt-light">10:25</span>
-						</td>
-						<td>
-							<i class="fa fa-sign-in"></i>
-							SmartComTech
-						</td>
-						<td>Customer updated</td>
-						<td>
-							Andrii Zinchenko
-						</td>
-					</tr>
 				</table>
+				<div class="scroll js-vert-scroll js-height">
+					<table class="tabl">
+						<tr class="tabl__head is-hidden">
+							<th width="167">Date</th>
+							<th width="169">Object</th>
+							<th width="372">Action</th>
+							<th width="139">User</th>
+						</tr>
+						<tr class="js-tabl-detail">
+							<td>
+								15 Jun 2015 <span class="txt-light">10:25</span>
+							</td>
+							<td>
+								<i class="fa fa-table"></i>
+								SmartCom1 RT
+							</td>
+							<td>Offer <span class="txt-bold">#1242</span> sent to z@mailcom.ua</td>
+							<td>
+								Andrii Zinchenko
+							</td>
+						</tr>
+						<tr class="js-tabl-detail is-detail">
+							<td>
+								15 Jun 2015 <span class="txt-light">10:20</span>
+							</td>
+							<td>
+								<i class="fa fa-table"></i>
+								VoiceTec Premium
+							</td>
+							<td>RT <span class="txt-bold">"VoiceTec Premium"</span> imported</td>
+							<td>
+								Suren Dolgikh
+							</td>
+						</tr>
+						<tr class="js-tabl-detail">
+							<td>
+								14 Jun 2015 <span class="txt-light">17:12</span>
+							</td>
+							<td>
+								<i class="fa fa-sign-in"></i>
+								Voicetec UK
+							</td>
+							<td>Customer created</td>
+							<td>
+								Yurii Zaika
+							</td>
+						</tr>
+						<tr class="js-tabl-detail">
+							<td>
+								15 Feb 2015 <span class="txt-light">10:25</span>
+							</td>
+							<td>
+								<i class="fa fa-sign-in"></i>
+								SmartComTech
+							</td>
+							<td>Customer updated</td>
+							<td>
+								Andrii Zinchenko
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
+		<aside class="sideinfo scroll js-sideinfo js-scroll js-height">
+			<div class="sideinfo__in">
+				<a href="#" class="close js-close"><i class="fa fa-times"></i></a>
+				<ul class="sideinfo__list">
+					<li>
+						<span class="sideinfo__label txt-light">Date: </span>
+						<span class="sideinfo__txt">15 Jun 2015 10:20</span>
+					</li>
+					<li>
+						<span class="sideinfo__label txt-light">User: </span>
+						<span class="sideinfo__txt">Suren Dolgikh</span>
+					</li>
+					<li>
+						<span class="sideinfo__label txt-light">Object: </span>
+						<span class="sideinfo__txt"><i class="fa fa-table"></i>VoiceTec Premium</span>
+					</li>
+					<li>
+						<span class="sideinfo__label txt-light">Action: </span>
+						<span class="sideinfo__txt">RT <span class="txt-bold">“VoiceTecPremium”</span> imported</span>
+					</li>
+				</ul>
+				<p class="sideinfo__ttl">Action Details</p>
+				<ul class="sideinfo__list">
+					<li>
+						<span class="sideinfo__label txt-light">Filed 1: </span>
+						<span class="sideinfo__txt">VoiceTec UK</span>
+					</li>
+					<li>
+						<span class="sideinfo__label txt-light">Filed 2: </span>
+						<span class="sideinfo__txt">Vendor</span>
+					</li>
+					<li>
+						<span class="sideinfo__label txt-light">Filed 3: </span>
+						<span class="sideinfo__txt"><i class="fa fa-table"></i>USD</span>
+					</li>
+				</ul>
+			</div>
+		</aside>
 	</div>
-	<aside class="sideinfo scroll js-sideinfo js-scroll js-height">
-		<div class="sideinfo__in">
-			<a href="#" class="close js-close"><i class="fa fa-times"></i></a>
-			<ul class="sideinfo__list">
-				<li>
-					<span class="sideinfo__label txt-light">Date: </span>
-					<span class="sideinfo__txt">15 Jun 2015 10:20</span>
-				</li>
-				<li>
-					<span class="sideinfo__label txt-light">User: </span>
-					<span class="sideinfo__txt">Suren Dolgikh</span>
-				</li>
-				<li>
-					<span class="sideinfo__label txt-light">Object: </span>
-					<span class="sideinfo__txt"><i class="fa fa-table"></i>VoiceTec Premium</span>
-				</li>
-				<li>
-					<span class="sideinfo__label txt-light">Action: </span>
-					<span class="sideinfo__txt">RT <span class="txt-bold">“VoiceTecPremium”</span> imported</span>
-				</li>
-			</ul>
-			<p class="sideinfo__ttl">Action Details</p>
-			<ul class="sideinfo__list">
-				<li>
-					<span class="sideinfo__label txt-light">Filed 1: </span>
-					<span class="sideinfo__txt">VoiceTec UK</span>
-				</li>
-				<li>
-					<span class="sideinfo__label txt-light">Filed 2: </span>
-					<span class="sideinfo__txt">Vendor</span>
-				</li>
-				<li>
-					<span class="sideinfo__label txt-light">Filed 3: </span>
-					<span class="sideinfo__txt"><i class="fa fa-table"></i>USD</span>
-				</li>
-			</ul>
-		</div>
-	</aside>
 </div>
 <!-- END out-->
 </body>

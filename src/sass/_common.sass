@@ -27,24 +27,24 @@
 // and create mixin
 // =book
 // 	font-family: "book", Arial, sans-serif
-+font(helioscondc, helioscondc)
-=helios
-	font-family: 'helioscondc', Arial, sans-serif
 
-+font(helioscondc-bold, helioscondc-bold)
-=heliosb
-	font-family: 'helioscondc-bold', Arial, sans-serif
+// Open-Sans
++font(opensans-bold, opensans-bold)
++font(opensans-light, opensans-light)
++font(opensans-regular, opensans-regular)
++font(opensans-semibold, opensans-semibold)
 
 =os
-	font-family: 'Open Sans', serif
+	font-family: 'opensans-regular', Arial, sans-serif
 =light
-	font-weight: 300
+	font-family: 'opensans-light', Arial, sans-serif
 =reg
-	font-weight: 400
+	font-family: 'opensans-regular', Arial, sans-serif
 =sbold
-	font-weight: 600
+	font-family: 'opensans-semibold', Arial, sans-serif
 =bold
-	font-weight: 700
+	font-family: 'opensans-bold', Arial, sans-serif
+	
 =fa
 	display: inline-block
 	font: normal normal normal 14px/1 FontAwesome
@@ -55,7 +55,7 @@
 html
 	font-size: 62.5%
 body
-	+os
+	+light
 	font-size: 13px
 	line-height: 1.4
 	background: #fff
@@ -63,8 +63,14 @@ body
 	padding-top: 45px
 
 // common blocks
+.icon-logo
+	+sr(logo_x2)
+.icon-logo-text
+	+sr(logo-text)
 .out
 	height: 100%
+	+r(1023)
+		overflow-x: hidden
 
 a
 	color: $links
@@ -73,10 +79,14 @@ a
 	&:hover, &:focus, &:visited
 		text-decoration: none
 	&:hover
-		color: darken($links, 7)
+		color: #00536F
 
 input, button
 	border-radius: 2px
+
+.close
+	color: #333
+	opacity: .15
 
 .logo
 	font-size: 0
@@ -84,10 +94,8 @@ input, button
 	&__text
 		color: #fff
 		font-size: 21px
-		+heliosb
-		span
-			+helios
-			color: $logo
+		+hide-text
+		padding-top: 3px
 		+r(767)
 			display: none
 	&__img
@@ -96,25 +104,18 @@ input, button
 		display: inline-block
 		vertical-align: middle
 
-.badge
-	font-size: 13px
-	border-radius: 50%
-	background: #ff340c
-	text-align: center
-	width: 25px
-	height: 25px
-	padding-top: 6px
-
 .dropdown-menu
 	border-radius: 0
 	border-color: #d4d4d4
-	box-shadow: 0 6px 12px rgba(0,0,0,.1)
+	border-top: 0
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 	&.no-pad
 		padding: 0
 	&.is-open
 		display: block
 	>li>a
-		padding: 5px 12px
+		padding: 4px 12px
+		+reg
 .form-group
 	margin-bottom: 10px
 .form-control
@@ -139,6 +140,7 @@ input, button
 .form-inline
 	.checkbox, .radio
 		margin-right: 10px
+		display: inline-block
 		&:first-child
 			margin-left: 0
 	.field
@@ -147,7 +149,11 @@ input, button
 
 .checkbox
 	position: relative
-	padding-left: 25px
+	padding-left: 25px 
+	margin-top: 0
+	label
+		padding-left: 0 !important
+		font-size: 13px
 	input
 		display: none
 		&:checked
@@ -162,7 +168,7 @@ input, button
 			left: 0
 			width: 15px
 			height: 15px
-			border: 2px solid #d0d0d0
+			border: 1px solid #d0d0d0
 		&:after
 			content: '\f00c'
 			+fa
@@ -174,7 +180,11 @@ input, button
 			font-size: 12px
 .radio
 	position: relative
-	padding-left: 25px
+	padding-left: 25px 
+	margin-top: 0
+	label
+		padding-left: 0 !important
+		font-size: 13px
 	input
 		display: none
 		&:checked
@@ -191,7 +201,7 @@ input, button
 			color:  #d0d0d0
 			width: 16px
 			height: 16px
-			border: 2px solid #d0d0d0
+			border: 1px solid #d0d0d0
 			border-radius: 50%
 		&:after
 			content: ''
@@ -216,12 +226,13 @@ input, button
 	background: $btn-default
 .btn
 	outline: 0
+	+tr(background .3s)
 .meta
 	color: #999
 
 .progress-wrap
 	position: relative
-	padding-right: 45px
+	padding-right: 35px
 
 .progress
 	height: 10px
@@ -235,8 +246,8 @@ input, button
 		background: #0bcbfa
 		box-shadow: none
 	&-text
-		width: 40px
-		text-align: center
+		width: 35px
+		text-align: right
 		position: absolute
 		right: 0
 		top: -2px
@@ -247,7 +258,10 @@ input, button
 	color: #777
 	margin: 4px 0 4px
 	+reg
-
+label
+	font-size: 13px
+	margin-bottom: 13px
+	+light 
 .label
 	font-size: 9px
 	background: #f9f9f9
@@ -264,12 +278,13 @@ input, button
 		> span
 			width: 130px
 			text-align: right
-			+light
+			+reg
 			display: inline-block
 			float: left
 			margin-right: 7px 
+			font-size: 15px
 			&.pad-t
-				padding-top: 1px
+				padding-top: 4px
 			+r(1165)
 				width: 92px 
 			+r(767)
@@ -302,12 +317,28 @@ input, button
 .content-sidebar
 	&.is-left
 		float: left
-
+		+r(767)
+			float: none
+.content-body
+	overflow: hidden
+	display: block
 .tel-link
 	color: #333
 
 dl
 	margin-bottom: 20px
 	dd
-		margin-left: 30px
-
+		margin-left: 15px
+		+r(767)
+			margin-left: 10px
+.title-h2
+	+ .right-aligned-list,
+	+ .tag-box,
+		margin-left: 15px 
+		+r(767)
+			margin-left: 10px
+	+ .tag-box
+		.tag-box__list a
+			padding-left: 0
+			padding-right: 0
+		

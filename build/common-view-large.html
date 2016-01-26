@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#37424a">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" media="all" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
@@ -20,7 +20,7 @@
 			<div class="header__item">
 				<a href="#" class="logo">
 					<div class="logo__img"><i class="icon-logo"></i></div>
-					<div class="logo__text">Rates<span>Analytics</span></div>
+					<div class="logo__text"><i class="icon-logo-text"></i>Rates Analytics</div>
 				</a>
 			</div>
 			<div class="header__item">
@@ -35,9 +35,9 @@
 							<div class="field dropdown">
 								<div class="dropdown js-search">
 									<input class="search-form__input js-search-input" type="text" placeholder="Search...">
-									<div class="js-search-result search-result no-pad dropdown-menu">
+									<div class="js-search-result search-result no-pad">
 										<div class="tag-box">
-											<div class="tag-box__header tag-box__header_sm">CUSTOMERS</div>
+											<div class="tag-box__header">CUSTOMERS</div>
 											<ul class="tag-box__list">
 												<li><a href="#"><i class="fa fa-sign-in"></i>Customer A</a></li>
 												<li><a href="#"><i class="fa fa-sign-in"></i>Customer B</a></li>
@@ -45,7 +45,7 @@
 											</ul>
 										</div>
 										<div class="tag-box">
-											<div class="tag-box__header tag-box__header_sm">VENDORS</div>
+											<div class="tag-box__header">VENDORS</div>
 											<ul class="tag-box__list">
 												<li><a href="#"><i class="fa fa-sign-out"></i>Vendor Cust1</a></li>
 											</ul>
@@ -255,7 +255,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-sign-in"></i><span>Customers</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Customers</p></li>
-			 			<li><a href="#" class="sidebar__link">List</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">List</a></li>
 			 			<li><a href="#" class="sidebar__link">Rate Tables</a></li>
 			 			<li><a href="#" class="sidebar__link">Targets</a></li>
 			 		</ul>
@@ -264,7 +264,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-sign-out"></i><span>Vendors</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Vendors</p></li>
-			 			<li><a href="#" class="sidebar__link">Lorem</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">Lorem</a></li>
 			 			<li><a href="#" class="sidebar__link">Ipsum</a></li>
 			 			<li><a href="#" class="sidebar__link">Dolor</a></li>
 			 		</ul>
@@ -273,7 +273,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-briefcase"></i><span>Ours</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Ours</p></li>
-			 			<li><a href="#" class="sidebar__link">Sit</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">Sit</a></li>
 			 			<li><a href="#" class="sidebar__link">Amet</a></li>
 			 			<li><a href="#" class="sidebar__link">Consectetur</a></li>
 			 		</ul>
@@ -282,7 +282,7 @@
 			 		<a href="#" class="sidebar__link js-sublink"><i class="fa fa-cogs"></i><span>Configuration</span><i class="fa fa-chevron-down"></i></a>
 			 		<ul class="sidebar__sublist js-submenu">
 			 			<li><p class="sidebar__link is-mobile">Configuration</p></li>
-			 			<li><a href="#" class="sidebar__link">Adipisicing</a></li>
+			 			<li><a href="#" class="sidebar__link is-active">Adipisicing</a></li>
 			 			<li><a href="#" class="sidebar__link">Elit</a></li>
 			 			<li><a href="#" class="sidebar__link">Voluptatum</a></li>
 			 		</ul>
@@ -308,136 +308,138 @@
 					</button>
 				</div>
 			</div>
-			<div class="scroll is-horz js-scroll">
-				<table class="tabl sidebar-table js-toggle-rows">
-					<tr>
-						<td width="45" class="cell-center">&nbsp;</td>
-						<td width="180">
-							VoiceTec UK
-							<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
-						</td>
-						<td width="74" class="text-right">
-							USD
-						</td>
-					</tr>
-					<tr class="is-chosen">
-						<td width="45" class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td width="180">
-							VoiceTec UK
-						</td>
-						<td width="74" class="text-right">
-							USD
-							<div class="meta">VAT 0%</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="45" class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td width="180">
-							CSC Telecom
-							<a href="#"><i class="fa fa-table"></i>Wholesale Traffic</a>
-						</td>
-						<td width="74" class="text-right">
-							USD
-							<div class="meta">VAT 20%</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="45" class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td width="180">
-							Teqli Telecom
-							<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
-						</td>
-						<td width="74" class="text-right">
-							USD
-							<div class="meta">VAT 0%</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="45" class="cell-center">&nbsp;</td>
-						<td width="180">
-							VoiceTec UK
-							<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
-						</td>
-						<td width="74" class="text-right">
-							USD
-						</td>
-					</tr>
-					<tr>
-						<td width="45" class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td width="180">
-							Hot Telecom
-						</td>
-						<td width="74" class="text-right">
-							USD
-							<div class="meta">VAT 0%</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="45" class="cell-center">
-							<div class="checkbox js-check">
-								<label>
-									<input type="checkbox"><span></span>
-								</label>
-							</div>
-						</td>
-						<td width="180">
-							Teqli Telecom
-							<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
-						</td>
-						<td width="74" class="text-right">
-							USD
-							<div class="meta">VAT 0%</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="action action_no-bd">
-				<div class="action__bl">
-					<button class="button button_row pull-left">
-						<i class="fa fa-align-justify"></i>
-						<span>50</span>
-					</button>
-					<ul class="pagination pull-right">
-						<li class="disabled">
-							<span aria-label="Previous">
-								<span class="fa fa-angle-left" aria-hidden="true"></span>
-							</span>
+			<div class="js-height scroll js-scroll js-vert-scroll">
+				<div class="scroll is-horz js-scroll">
+					<table class="tabl sidebar-table js-toggle-rows">
+						<tr>
+							<td width="45" class="cell-center">&nbsp;</td>
+							<td width="180">
+								VoiceTec UK
+								<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
+							</td>
+							<td width="74" class="text-right">
+								USD
+							</td>
+						</tr>
+						<tr class="is-chosen">
+							<td width="45" class="cell-center">
+								<div class="checkbox js-check">
+									<label>
+										<input type="checkbox"><span></span>
+									</label>
+								</div>
+							</td>
+							<td width="180">
+								VoiceTec UK
+							</td>
+							<td width="74" class="text-right">
+								USD
+								<div class="meta">VAT 0%</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="45" class="cell-center">
+								<div class="checkbox js-check">
+									<label>
+										<input type="checkbox"><span></span>
+									</label>
+								</div>
+							</td>
+							<td width="180">
+								CSC Telecom
+								<a href="#"><i class="fa fa-table"></i>Wholesale Traffic</a>
+							</td>
+							<td width="74" class="text-right">
+								USD
+								<div class="meta">VAT 20%</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="45" class="cell-center">
+								<div class="checkbox js-check">
+									<label>
+										<input type="checkbox"><span></span>
+									</label>
+								</div>
+							</td>
+							<td width="180">
+								Teqli Telecom
+								<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
+							</td>
+							<td width="74" class="text-right">
+								USD
+								<div class="meta">VAT 0%</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="45" class="cell-center">&nbsp;</td>
+							<td width="180">
+								VoiceTec UK
+								<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
+							</td>
+							<td width="74" class="text-right">
+								USD
+							</td>
+						</tr>
+						<tr>
+							<td width="45" class="cell-center">
+								<div class="checkbox js-check">
+									<label>
+										<input type="checkbox"><span></span>
+									</label>
+								</div>
+							</td>
+							<td width="180">
+								Hot Telecom
+							</td>
+							<td width="74" class="text-right">
+								USD
+								<div class="meta">VAT 0%</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="45" class="cell-center">
+								<div class="checkbox js-check">
+									<label>
+										<input type="checkbox"><span></span>
+									</label>
+								</div>
+							</td>
+							<td width="180">
+								Teqli Telecom
+								<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
+							</td>
+							<td width="74" class="text-right">
+								USD
+								<div class="meta">VAT 0%</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="action action_btn action_no-bd">
+					<div class="action__bl">
+						<button class="button button_row">
+							<i class="fa fa-align-justify"></i>
+							<span>50</span>
+						</button>
+						<ul class="pagination">
+							<li class="disabled">
+								<span aria-label="Previous">
+									<span class="fa fa-angle-left" aria-hidden="true"></span>
+								</span>
+								</li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span class="fa fa-angle-right" aria-hidden="true"></span>
+								</a>
 							</li>
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li>
-							<a href="#" aria-label="Next">
-								<span class="fa fa-angle-right" aria-hidden="true"></span>
-							</a>
-						</li>
-					</ul>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -514,69 +516,74 @@
 						</ul>
 					</div>
 					<div class="title-h2">Test Horizontal Form</div>
-					<form>
-						<ul class="right-aligned-list right-aligned-list_pad-t">
-							<li>
-								<span class="pad-t">Company Name:</span>
-								<div class="right-aligned-list__box">
-									<input type="text" class="form-control is-md" value="VoiceTec UK">
-								</div>
-							</li>
-							<li>
-								<span class="pad-t">Type:</span>
-								<div class="right-aligned-list__box">
-									<div class="form-inline">
-										<div class="field">
-											<div class="radio">
-												<label>
-													<input type="radio" name="name[type]"> <span>Customer</span>
-												</label>
-											</div>
-											<div class="radio">
-												<label>
-													<input type="radio" name="name[type]"> <span>Vendor</span>
-												</label>
+					<div class="form">
+						<form>
+							<ul class="right-aligned-list right-aligned-list_pad-t">
+								<li>
+									<span class="pad-t">Company Name:</span>
+									<div class="right-aligned-list__box">
+										<input type="text" class="form-control is-md" value="VoiceTec UK">
+									</div>
+								</li>
+								<li>
+									<span>Type:</span>
+									<div class="right-aligned-list__box">
+										<div class="form-inline">
+											<div class="field">
+												<div class="radio">
+													<label>
+														<input type="radio" name="name[type]"> <span>Customer</span>
+													</label>
+												</div>
+												<div class="radio">
+													<label>
+														<input type="radio" name="name[type]"> <span>Vendor</span>
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li>
-								<span class="pad-t">Currency:</span>
-								<div class="right-aligned-list__box">
-									<input type="text" class="form-control is-sm" value="USD">
-								</div>
-							</li>
-						</ul>
-					</form>
-					<div class="title-h2">Test Vertical Form</div>
-					<form action="#">
-						<div class="form-group">
-							<label for="name-input">Company Name</label>
-							<input type="text" class="form-control is-md" id="name-input">
-						</div>
-						<div class="form-group">
-							<div class="form-inline">
-								<label>Select Type</label>
-								<div class="field field_mb">
-									<div class="radio">
-										<label>
-											<input type="radio" name="type"> <span>Option 1</span>
-										</label>
+								</li>
+								<li>
+									<span class="pad-t">Currency:</span>
+									<div class="right-aligned-list__box">
+										<input type="text" class="form-control is-sm" value="USD">
 									</div>
-									<div class="radio">
-										<label>
-											<input type="radio" name="type"> <span>Option 2</span>
-										</label>
+								</li>
+							</ul>
+						</form>
+					</div>
+					
+					<div class="title-h2">Test Vertical Form</div>
+					<div class="form">
+						<form action="#">
+							<div class="form-group">
+								<label for="name-input">Company Name</label>
+								<input type="text" class="form-control is-md" id="name-input">
+							</div>
+							<div class="form-group">
+								<div class="form-inline">
+									<label>Select Type</label>
+									<div class="field">
+										<div class="radio">
+											<label>
+												<input type="radio" name="type"> <span>Option 1</span>
+											</label>
+										</div>
+										<div class="radio">
+											<label>
+												<input type="radio" name="type"> <span>Option 2</span>
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="currency-input">Currency</label>
-							<input type="text" class="form-control is-sm" id="currency-input" value="USD">
-						</div>
-					</form>
+							<div class="form-group">
+								<label for="currency-input">Currency</label>
+								<input type="text" class="form-control is-sm" id="currency-input" value="USD">
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
