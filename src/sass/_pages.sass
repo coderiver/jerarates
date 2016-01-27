@@ -61,13 +61,14 @@
 	&_reg
 		+reg
 
+	
 // table
 .tabl
 	table-layout: fixed
 	font-size: 14px
 	&__bl
 		display: inline-block
-		vertical-align: middle
+		vertical-align: top
 		&:first-child
 			margin-right: 15px
 	&__action
@@ -77,7 +78,8 @@
 		font-size: 16px
 		&.is-edit
 			vertical-align: -1px
-	&__note
+	&__note,
+	small
 		font-size: 12px
 		color: #666
 	th
@@ -104,14 +106,14 @@
 			cursor: pointer
 	td
 		padding: 3px 10px
-		vertical-align: middle
+		vertical-align: top
 	.checkbox
 		display: inline-block
 		margin: 0
-		padding: 2px
+		padding: 0
 		font-size: 0
 		background: #FFF
-		vertical-align: middle
+		vertical-align: top
 		label
 			min-height: auto
 			padding-left: 0
@@ -119,9 +121,11 @@
 			height: 15px
 		span
 			&:before
-				left: 2px
+				left: 0px
+				top: 0
 			&:after
-				left: 3px
+				left: 1px
+				top: 2px
 	.fa-check
 		color: #68bf1b
 	.fa-arrow-down
@@ -197,7 +201,7 @@
 	top: 0
 	right: 0
 	width: 290px
-	padding-top: 15px
+	padding-top: 10px
 	background: #fff
 	border-left: 1px solid #d8d8d8
 	z-index: 4 
@@ -231,7 +235,7 @@
 		color: #777
 	.close
 		position: absolute
-		top: 15px
+		top: 8px
 		right: 10px
 		+r(767)
 			top: 0

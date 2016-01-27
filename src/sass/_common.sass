@@ -84,6 +84,14 @@ a
 input, button
 	border-radius: 2px
 
+input
+	&:disabled
+		background: #f6f6f6 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+	+light
+h1, .h1
+	padding: 13px 0 5px 10px
+	font-size: 22px
 .close
 	color: #333
 	opacity: .15
@@ -263,11 +271,12 @@ label
 	margin-bottom: 13px
 	+light 
 .label
-	font-size: 9px
+	font-size: 10px
 	background: #f9f9f9
-	color: #000
+	color: #666
 	border: 1px solid #efefef
 	+reg
+	font-weight: 300 
 	border-radius: .5em
 
 .right-aligned-list
@@ -324,9 +333,12 @@ label
 	display: block
 .tel-link
 	color: #333
-
+.input-group-addon
+	padding: 5px 6px
 dl
 	margin-bottom: 20px
+	dt
+		font-weight: 300
 	dd
 		margin-left: 15px
 		+r(767)
