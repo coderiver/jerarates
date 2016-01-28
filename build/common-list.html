@@ -333,22 +333,16 @@
 			</div>
 		</div>
 		<div class="scroll is-horz js-scroll">
-			<table class="tabl js-tabl-head">
-				<tr class="tabl__head">
-					<th width="65" class="cell-center"><i class="fa fa-check"></i></th>
-					<th width="200">Name</th>
-					<th width="122">Currency</th>
-					<th width="158">Contract Terms</th>
-					<th width="120">Taxes</th>
-					<th width="225">Rate Tables</th>
-					<th width="245">Notes</th>
-					<th width="90">&nbsp;</th>
-				</tr>
-			</table>
-			<div class="scroll js-height js-vert-scroll">
-				<table class="tabl">
-					<tr class="tabl__head is-hidden">
-						<th width="65" class="cell-center"><i class="fa fa-check"></i></th>
+			<table class="tabl">
+				<thead>
+					<tr class="tabl__head">
+						<th width="65" class="cell-center">
+							<i class="fa fa-check"></i>
+							<!-- <div class="table-sort">
+								<button><i class="fa fa-arrow-up"></i></button>
+								<button><i class="fa fa-arrow-down"></i></button>	
+							</div> -->
+						</th>
 						<th width="200">Name</th>
 						<th width="122">Currency</th>
 						<th width="158">Contract Terms</th>
@@ -357,6 +351,8 @@
 						<th width="245">Notes</th>
 						<th width="90">&nbsp;</th>
 					</tr>
+				</thead>
+				<tbody>
 					<tr>
 						<td class="cell-center">
 							<div class="checkbox js-check">
@@ -562,8 +558,8 @@
 							<a href="#" class="tabl__action"><i class="fa fa-trash"></i></a>
 						</td>
 					</tr>
-				</table>
-			</div>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>

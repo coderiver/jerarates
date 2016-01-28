@@ -63,9 +63,28 @@
 
 	
 // table
+.scroll.is-horz > .tabl
+	padding-bottom: 20px 
 .tabl
 	table-layout: fixed
 	font-size: 14px
+	.cell-sort
+		position: relative
+	.table-sort
+		position: absolute
+		left: 3px
+		top: 2px
+		button
+			background: transparent
+			opacity: .6
+			+tr(opacity .3s)
+			.fa
+				color: #1e1e1e
+				font-size: 12px  
+			&:hover
+				opacity: .8
+			&.is-active
+				opacity: 1 
 	&__bl
 		display: inline-block
 		vertical-align: top
@@ -229,10 +248,8 @@
 	&__txt
 		display: block
 		overflow: hidden
-	&__ttl
+	h2
 		padding-left: 10px
-		font-size: 17px
-		color: #777
 	.close
 		position: absolute
 		top: 8px

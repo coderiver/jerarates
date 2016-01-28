@@ -48,17 +48,17 @@ $(document).ready(function() {
 	$('.js-scroll').perfectScrollbar();
 
 	// avoid double scroll in tables
-	$('.js-vert-scroll').perfectScrollbar({
-		suppressScrollX: true
-	});
+	// $('.js-vert-scroll').perfectScrollbar({
+	// 	suppressScrollX: true
+	// });
 
-	function measureTablWidth() {
-		$('.js-vert-scroll').each(function() {
-			var elParent = $(this).parent('.js-scroll');
-			$(this).width(elParent.find('.js-tabl-head').outerWidth());
-		});
-	}
-	measureTablWidth();
+	// function measureTablWidth() {
+	// 	$('.js-vert-scroll').each(function() {
+	// 		var elParent = $(this).parent('.js-scroll');
+	// 		$(this).width(elParent.find('.js-tabl-head').outerWidth());
+	// 	});
+	// }
+	// measureTablWidth();
 
 	// checkboxes in tabl
 	$('.js-check input').on('change', function() {

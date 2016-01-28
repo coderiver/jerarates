@@ -89,9 +89,17 @@ input
 		background: #f6f6f6 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
 	+light
+
 h1, .h1
 	padding: 13px 0 5px 10px
 	font-size: 22px
+	
+h2, .h2
+	font-size: 15px
+	color: #777 
+	margin-bottom: 7px 
+	+reg
+
 .close
 	color: #333
 	opacity: .15
@@ -284,14 +292,15 @@ label
 	li
 		padding: 3px 0
 		clear: both
+		+reg
 		> span
 			width: 130px
 			text-align: right
-			+reg
 			display: inline-block
 			float: left
 			margin-right: 7px 
 			font-size: 15px
+			+light
 			&.pad-t
 				padding-top: 4px
 			+r(1165)
@@ -304,10 +313,15 @@ label
 			padding: 7px 0 
 	&__box
 		overflow: hidden
+		+reg
 		> a
 			display: block
-		.radio, .checkbox
-			margin-bottom: 0
+	.radio, .checkbox
+		margin-bottom: 0
+		+reg
+		span
+			font-size: 14px 
+			+reg
 
 .row_sm
 	margin: 0 -10px
@@ -335,15 +349,14 @@ label
 	color: #333
 .input-group-addon
 	padding: 5px 6px
-dl
-	margin-bottom: 20px
-	dt
-		font-weight: 300
-	dd
-		margin-left: 15px
-		+r(767)
-			margin-left: 10px
-.title-h2
+
+.block-pl
+	padding-left: 15px
+	margin-bottom: 20px 
+	+r(767)
+		padding-left: 10px
+		
+h2, .h2
 	+ .right-aligned-list,
 	+ .tag-box,
 		margin-left: 15px 
@@ -353,4 +366,7 @@ dl
 		.tag-box__list a
 			padding-left: 0
 			padding-right: 0
+	+ .form
+		margin-top: 10px
+		
 		
