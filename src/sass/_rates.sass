@@ -1,4 +1,4 @@
-.rates
+.top
 	&-header
 		padding: 8px 10px 0
 		border-bottom: 1px solid #f0f0f0 
@@ -21,6 +21,7 @@
 	&-title
 		+clr
 		padding-bottom: 5px
+.rates
 	&-content
 		float: left
 		width: 100%
@@ -118,10 +119,14 @@
 	padding: 6px 15px 
 	position: relative
 	+reg
+	transition: border .3s, font .3s
 	&.is-active
 		color: #333
 		&:before
 			display: block
+		&:hover
+			&:before
+				border-color: #61ce00 
 	&:before
 		content: "" 
 		position: absolute
@@ -130,6 +135,18 @@
 		right: 0
 		border-bottom: 2px solid #61ce00 
 		display: none 
+	&:hover
+		+reg
+		color: #666
+		&:before
+			content: "" 
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			border-bottom: 2px solid #d8d8d8
+			 
+			display: block 
 
 .steps
 	&__list

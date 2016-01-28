@@ -530,12 +530,13 @@ label { margin-bottom: 3px; font-weight: normal; }
 .sideinfo .close { position: absolute; top: 8px; right: 10px; }
 .sideinfo .fa-table { margin-right: 4px; color: #666; }
 
-.rates-header { padding: 8px 10px 0; border-bottom: 1px solid #f0f0f0; position: relative; }
-.rates-header .button_prev { float: left; }
-.rates-header h1 { overflow: hidden; padding: 3px 80px 3px 10px; }
-.rates-header h1 small { color: #999; font-size: 16px; font-family: "opensans-regular", Arial, sans-serif; line-height: 1; }
-.rates-title { *zoom: 1; padding-bottom: 5px; }
-.rates-title:after { content: " "; display: table; clear: both; }
+.top-header { padding: 8px 10px 0; border-bottom: 1px solid #f0f0f0; position: relative; }
+.top-header .button_prev { float: left; }
+.top-header h1 { overflow: hidden; padding: 3px 80px 3px 10px; }
+.top-header h1 small { color: #999; font-size: 16px; font-family: "opensans-regular", Arial, sans-serif; line-height: 1; }
+.top-title { *zoom: 1; padding-bottom: 5px; }
+.top-title:after { content: " "; display: table; clear: both; }
+
 .rates-content { float: left; width: 100%; padding-right: 250px; }
 .rates-content .action { margin: 10px 7px 10px; }
 .rates-container .sidepanel { float: right; margin-left: -250px; }
@@ -564,10 +565,13 @@ label { margin-bottom: 3px; font-weight: normal; }
 .tabs { font-size: 0; white-space: nowrap; overflow-x: auto; }
 .tabs li { display: inline-block; vertical-align: top; margin-right: 15px; }
 
-.tab { color: #999; font-size: 14px; line-height: 1; display: inline-block; padding: 6px 15px; position: relative; font-family: "opensans-regular", Arial, sans-serif; }
+.tab { color: #999; font-size: 14px; line-height: 1; display: inline-block; padding: 6px 15px; position: relative; font-family: "opensans-regular", Arial, sans-serif; -webkit-transition: border 0.3s, font 0.3s; transition: border 0.3s, font 0.3s; }
 .tab.is-active { color: #333; }
 .tab.is-active:before { display: block; }
+.tab.is-active:hover:before { border-color: #61ce00; }
 .tab:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; border-bottom: 2px solid #61ce00; display: none; }
+.tab:hover { font-family: "opensans-regular", Arial, sans-serif; color: #666; }
+.tab:hover:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; border-bottom: 2px solid #d8d8d8; display: block; }
 
 .steps__list { *zoom: 1; padding: 0 15px; margin: 10px 0 0; background: #fbfbfb; font-size: 0; border-bottom: 1px solid #ebebeb; }
 .steps__list:after { content: " "; display: table; clear: both; }
@@ -619,12 +623,18 @@ label { margin-bottom: 3px; font-weight: normal; }
 .info__block { display: inline-block; vertical-align: top; width: 25%; padding: 10px; font-size: 13px; }
 .info__block .right-aligned-list { margin-bottom: 0; }
 .info__block .right-aligned-list__box.is-red { color: #c90000; }
+.content-action .top-title .btn-show-sidebar { display: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1313px){
  .info__block .right-aligned-list li > span{ width: auto; } }
 @media only screen and (max-width: 1255px){
  .info__block{ width: 50%; } }
+@media only screen and (max-width: 1199px){
+ .content-action .content-sidebar{ display: none; }
+ .content-action .content-sidebar.is-active{ display: block; }
+ .content-action .top-title .btn-show-sidebar{ display: block; }
+ .content-action .top-title .btn-show-sidebar.is-active .fa{ -webkit-transform: rotateY(-180deg); transform: rotateY(-180deg); margin-right: -2px; } }
 @media only screen and (max-width: 1165px){
  .right-aligned-list li > span{ width: 92px; }
  .data-block__col{ width: 100%; } }
@@ -653,10 +663,12 @@ label { margin-bottom: 3px; font-weight: normal; }
  .rates-container .sidepanel{ float: none; margin-left: 0; }
  .sidepanel{ width: 100%; }
  .sidebar-list{ width: 100%; border: 0; }
- .info{ display: block; } }
+ .info{ display: block; }
+ .content-action .content-sidebar{ display: block; }
+ .content-action .top-title .btn-show-sidebar{ display: none; } }
 @media only screen and (max-width: 650px){
- .rates-header .button_prev{ float: none; }
- .rates-header h1{ padding-right: 10px; padding-left: 0; } }
+ .top-header .button_prev{ float: none; }
+ .top-header h1{ padding-right: 10px; padding-left: 0; } }
 @media only screen and (max-width: 550px){
  .action .pagination{ display: block; margin-top: 10px; }
  .info__block{ width: 100%; } }

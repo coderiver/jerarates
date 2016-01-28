@@ -8,7 +8,7 @@
 		padding-right: 15px
 		+r(1165)
 			width: 100% 
-
+			
 	
 .sidebar-list
 	border-right: 1px solid $border
@@ -103,5 +103,39 @@
 			+r(1313)
 				li > span
 					width: auto 
-		
+
+.content-action
+	.content-sidebar
+		+r(1199)
+			display: none
+			&.is-active
+				display: block
+		+r(767)
+			display: block
+	.top-title
+		.btn-show-sidebar
+			display: none
+			+r(1199)
+				display: block
+				&.is-active
+					.fa
+						transform: rotateY(-180deg)
+						margin-right: -2px  
+			+r(767)
+				display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

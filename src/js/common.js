@@ -36,7 +36,7 @@ $(document).ready(function() {
 			}, 0);
 		}
 
-		measureTablWidth();
+		// measureTablWidth();
 	});
 	$('.js-sublink').on('mouseover', function() {
 		if($('.js-sidebar').hasClass('is-collapsed')) {
@@ -48,15 +48,15 @@ $(document).ready(function() {
 	$('.js-scroll').perfectScrollbar();
 
 	// avoid double scroll in tables
-	// $('.js-vert-scroll').perfectScrollbar({
-	// 	suppressScrollX: true
-	// });
+		$('.js-vert-scroll').perfectScrollbar({
+		suppressScrollX: true
+	});
 
 	// function measureTablWidth() {
-	// 	$('.js-vert-scroll').each(function() {
-	// 		var elParent = $(this).parent('.js-scroll');
-	// 		$(this).width(elParent.find('.js-tabl-head').outerWidth());
-	// 	});
+		// $('.js-vert-scroll').each(function() {
+		// 	var elParent = $(this).parent('.js-scroll');
+		// 	$(this).width(elParent.find('.js-tabl-head').outerWidth());
+		// });
 	// }
 	// measureTablWidth();
 
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
 		$('.js-sideinfo').addClass('is-active');
 
-		measureTablWidth();
+		// measureTablWidth();
 	});
 
 	$('.js-close').click(function() {
@@ -119,9 +119,14 @@ $(document).ready(function() {
 		$('.js-content .content-body').removeClass('is-sideinfo');
 		$('.js-sideinfo').removeClass('is-active');
 
-		measureTablWidth();
+		// measureTablWidth();
 	});
+	$('.js-show-sidebar').on('click', function () {
+		var $block = $('.' + $(this).data('sidebar'));
 
+		$block.toggleClass('is-active');
+		$(this).toggleClass('is-active');
+	});
 	// hide dropdown in collapsed in menu
 	$('body').on('click', function(e) {
 		if ( $('.js-sidebar').hasClass('is-collapsed') && $('.js-submenu').hasClass('is-active') && !$(e.target).parents('.js-collapse').length > 0) {
@@ -140,7 +145,7 @@ $(document).ready(function() {
 	collapseSidebar();
 
 	$(window).resize(function() {
-		measureTablWidth();
+		// measureTablWidth();
 		detectHeight();
 		collapseSidebar();
 		$('.js-scroll').perfectScrollbar('update');
