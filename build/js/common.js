@@ -99,6 +99,22 @@ $(document).ready(function() {
 			}
 
 		});
+		$('.js-height-auto').each(function() {
+			var _ = $(this),
+				position = _.offset().top,
+				height = $(window).height() - position;
+
+
+				_.outerHeight('auto')
+				  .css('max-height', height)
+			//
+			// if ( _.hasClass('js-vert-scroll') ) {
+			// 	_.css('max-height', height);
+			// } else {
+			// 	_.outerHeight(height);
+			// }
+
+		});
 	}
 
 	detectHeight();
@@ -167,22 +183,18 @@ $(document).ready(function() {
 	$('.js-btn-error').click(function() {
        // show when the button is clicked
        toastr.error('E-mail format is incorrect.','Please fill “Address” field.');
-
     });
 	$('.js-btn-success').click(function() {
        // show when the button is clicked
        toastr.success('E-mail format is incorrect.','Please fill “Address” field.');
-
     });
 	$('.js-btn-info').click(function() {
        // show when the button is clicked
        toastr.info('E-mail format is incorrect.','Please fill “Address” field.');
-
     });
 	$('.js-btn-warning').click(function() {
        // show when the button is clicked
        toastr.warning('E-mail format is incorrect.','Please fill “Address” field.');
-
     });
 
 

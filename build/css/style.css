@@ -474,9 +474,11 @@ label { margin-bottom: 3px; font-weight: normal; }
 .scroll-mod > .ps-scrollbar-y-rail, .scroll > .ps-scrollbar-y-rail { right: 0; width: 10px; background: none; -webkit-border-radius: 0; border-radius: 0; }
 .scroll-mod > .ps-scrollbar-y-rail > .ps-scrollbar-y, .scroll > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 10px; -webkit-border-radius: 0; border-radius: 0; background-color: #282D31; opacity: 0.5; }
 
+.scroll { padding-bottom: 10px; }
 .scroll > .ps-scrollbar-x-rail { height: 10px; -webkit-border-radius: 0; border-radius: 0; bottom: 0 !important; }
 .scroll > .ps-scrollbar-x-rail > .ps-scrollbar-x { height: 10px; -webkit-border-radius: 0; border-radius: 0; }
 
+.scroll-mod { padding-bottom: 13px; }
 .scroll-mod > .ps-scrollbar-x-rail { height: 10px; -webkit-border-radius: 0; border-radius: 0; }
 .scroll-mod > .ps-scrollbar-x-rail > .ps-scrollbar-x { height: 10px; -webkit-border-radius: 0; border-radius: 0; }
 
