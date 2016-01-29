@@ -1,5 +1,5 @@
 // styles for scroll
-.scroll
+.scroll-mod, .scroll
 	position: relative
 	overflow: hidden
 	&.is-horz
@@ -23,6 +23,7 @@
 			border-radius: 0
 			background-color: #282D31
 			opacity: 0.5
+.scroll
 	> .ps-scrollbar-x-rail
 		height: 10px
 		border-radius: 0
@@ -30,6 +31,14 @@
 		> .ps-scrollbar-x
 			height: 10px
 			border-radius: 0
+.scroll-mod
+	> .ps-scrollbar-x-rail
+		height: 10px
+		border-radius: 0
+		> .ps-scrollbar-x
+			height: 10px
+			border-radius: 0
+
 
 // content
 .content
@@ -47,7 +56,7 @@
 .content-body
 	&.is-sideinfo
 		padding-right: 290px
-		width: 100% 
+		width: 100%
 		float: left
 		+r(767)
 			margin-right: 0
@@ -61,30 +70,40 @@
 	&_reg
 		+reg
 
-	
+
 // table
 .scroll.is-horz > .tabl
-	padding-bottom: 20px 
+	padding-bottom: 20px
 .tabl
 	table-layout: fixed
 	font-size: 14px
 	.cell-sort
 		position: relative
-	.table-sort
-		position: absolute
-		left: 3px
-		top: 2px
-		button
-			background: transparent
-			opacity: .6
+	.sort
+		position: relative
+		display: inline-block
+		padding-right: 12px
+		color: #666
+		&:hover
+			color: inherit
+
+		&__up, &__down
+			color: #999
+			opacity: .4
+			font-size: 11px
+			position: absolute
+			right: 0
 			+tr(opacity .3s)
-			.fa
-				color: #1e1e1e
-				font-size: 12px  
-			&:hover
-				opacity: .8
-			&.is-active
-				opacity: 1 
+			line-height: .7
+			&:hover, &.is-active
+				opacity: 1
+		&__up
+			top: 3px
+		&__down
+			bottom: 2px
+
+
+
 	&__bl
 		display: inline-block
 		vertical-align: top
@@ -178,7 +197,7 @@
 			float: left
 		+r(767)
 			// & + .action__bl
-			// 	margin-top: 10px 
+			// 	margin-top: 10px
 	&__description
 		display: inline-block
 		margin-right: 10px
@@ -208,9 +227,9 @@
 				float: none
 			.button,
 			.pagination
-				margin-bottom: 10px 
+				margin-bottom: 10px
 			.pagination
-				margin-top: 0 
+				margin-top: 0
 // sideinfo
 .sideinfo
 	// display: none
@@ -223,8 +242,8 @@
 	padding-top: 10px
 	background: #fff
 	border-left: 1px solid #d8d8d8
-	z-index: 4 
-	margin-left: -290px 
+	z-index: 4
+	margin-left: -290px
 	float: right
 	+r(767)
 		width: 100%
@@ -239,7 +258,7 @@
 		margin-bottom: 10px
 		li
 			+clr
-			margin-bottom: 5px 
+			margin-bottom: 5px
 	&__label
 		float: left
 		width: 88px

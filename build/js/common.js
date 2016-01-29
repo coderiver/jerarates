@@ -45,7 +45,9 @@ $(document).ready(function() {
 		} else return;
 	});
 	// scroll
-	$('.js-scroll').perfectScrollbar();
+	$('.js-scroll').each(function(){
+	    $(this).perfectScrollbar();
+	});
 
 	// avoid double scroll in tables
 		$('.js-vert-scroll').perfectScrollbar({
@@ -84,7 +86,7 @@ $(document).ready(function() {
 				position = _.offset().top,
 				height = $(window).height() - position;
 
-			if($(window).width() < 767) {
+			if($(window).width() <= 767) {
 				_.outerHeight('auto')
 				  .css('max-height', 'auto');
 				return;
@@ -122,8 +124,10 @@ $(document).ready(function() {
 		// measureTablWidth();
 	});
 	$('.js-show-sidebar').on('click', function () {
-		var $block = $('.' + $(this).data('sidebar'));
+		var $block = $('.' + $(this).data('sidebar')),
+			$parent = $(this).parents('.js-content-action');
 
+		$parent.toggleClass('is-open-sbar');
 		$block.toggleClass('is-active');
 		$(this).toggleClass('is-active');
 	});
@@ -153,6 +157,6 @@ $(document).ready(function() {
 	$('.js-find').on('click', function() {
 
 		$('.js-find-block').toggleClass('is-open');
-	
+
 	});
 });

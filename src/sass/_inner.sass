@@ -7,14 +7,14 @@
 		width: 50%
 		padding-right: 15px
 		+r(1165)
-			width: 100% 
-			
-	
+			width: 100%
+
+
 .sidebar-list
 	border-right: 1px solid $border
-	width: 300px 
+	width: 300px
 	+r(767)
-		width: 100% 
+		width: 100%
 		border: 0
 	.action
 		margin: 0
@@ -36,32 +36,34 @@
 				.button,
 				.pagination
 					float: none
-					margin-bottom: 7px 
+					margin-bottom: 7px
 .sidebar-table
-	font-size: 13px 
+	font-size: 13px
 	tr
-		height: 47px 
+		height: 47px
 		cursor: pointer
 		&.is-chosen
-			background: #e3ffc8 
+			background: #e3ffc8
 	td
 		vertical-align: top
-		padding: 5px 4px  
+		padding: 5px 4px
 		a
 			display: block
-			font-size: 13px 
+			font-size: 13px
 			.fa
 				color: inherit
 				display: inline-block
 				margin-right: 6px
-				font-size: 12px 
+				font-size: 12px
 		.meta
 			font-size: 13px
-	
+
 .content-body
 	.right-aligned-list
-		margin-bottom: 20px 
+		margin-bottom: 20px
 
+.import-title
+	min-height: 53px
 .import-header
 	position: relative
 	padding-right: 125px
@@ -72,13 +74,14 @@
 	.meta
 		padding-left: 10px
 		font-size: 13px
+		margin-top: 3px
 		+light
 		span
-			+reg 
+			+reg
 
 .info
 	background: #fbfbfb
-	border: 1px solid #ccc 
+	border: 1px solid #ccc
 	margin-bottom: 20px
 	font-size: 0
 	+r(767)
@@ -88,13 +91,13 @@
 		display: inline-block
 		vertical-align: top
 		width: 25%
-		padding: 10px 
+		padding: 10px
 		font-size: 13px
-		+r(1255)
-			width: 50% 
+		+r(1270)
+			width: 50%
 		+r(550)
 			// display: block
-			width: 100% 
+			width: 100%
 		.right-aligned-list
 			margin-bottom: 0
 			&__box
@@ -102,9 +105,23 @@
 					color: #c90000
 			+r(1313)
 				li > span
-					width: auto 
+					width: 120px
+					font-size: 14px
+					.right-aligned-list__box
+						font-size: 14px
 
 .content-action
+	+r(1165)
+		.content-body
+			.data-block
+				&__col
+					width: 50%
+		&.is-open-sbar
+			.content-body
+				.data-block
+					&__col
+						width: 100%
+
 	.content-sidebar
 		+r(1199)
 			display: none
@@ -120,22 +137,6 @@
 				&.is-active
 					.fa
 						transform: rotateY(-180deg)
-						margin-right: -2px  
+						margin-right: -2px
 			+r(767)
 				display: none
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

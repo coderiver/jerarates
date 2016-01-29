@@ -354,21 +354,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="scroll is-horz js-scroll">
-					<table class="tabl js-tabl-head js-offset">
-						<tr class="tabl__head">
-							<th width="120">Code</th>
-							<th width="200">Destination Name</th>
-							<th width="150">Rate</th>
-							<th width="145">Effective Date</th>
-							<th width="100">Terms</th>
-							<th width="175">Close Date</th>
-							<th width="100"></th>
-						</tr>
-					</table>
-					<div class="scroll js-vert-scroll js-height">
-						<table class="tabl">
-							<tr class="tabl__head is-hidden">
+				<div class="scroll-mod js-scroll js-height">
+					<table class="tabl">
+						<thead>
+							<tr class="tabl__head">
 								<th width="120">Code</th>
 								<th width="200">Destination Name</th>
 								<th width="150">Rate</th>
@@ -377,6 +366,8 @@
 								<th width="175">Close Date</th>
 								<th width="100"></th>
 							</tr>
+						</thead>
+						<tbody>
 							<tr>
 								<td>38067</td>
 								<td>Ukraine Mobile - Kyivstar</td>
@@ -435,8 +426,8 @@
 								<td class="is-red"></td>
 								<td><small>cli</small></td>
 							</tr>
-						</table>
-					</div>
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<aside class="sidepanel scroll js-scroll js-height">
