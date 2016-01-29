@@ -147,6 +147,44 @@ $(document).ready(function() {
 		}
 	}
 	collapseSidebar();
+	// toastr
+	toastr.options = {
+	  "closeButton": true,
+	  "debug": false,
+	  "newestOnTop": false,
+	  "progressBar": false,
+	  "positionClass": "toast-top-right",
+	  "preventDuplicates": false,
+	  "showDuration": "300",
+	  "hideDuration": "1000",
+	  "timeOut": "5000",
+	  "extendedTimeOut": "1000",
+	  "showEasing": "swing",
+	  "hideEasing": "linear",
+	  "showMethod": "fadeIn",
+	  "hideMethod": "fadeOut"
+	}
+	$('.js-btn-error').click(function() {
+       // show when the button is clicked
+       toastr.error('E-mail format is incorrect.','Please fill “Address” field.');
+
+    });
+	$('.js-btn-success').click(function() {
+       // show when the button is clicked
+       toastr.success('E-mail format is incorrect.','Please fill “Address” field.');
+
+    });
+	$('.js-btn-info').click(function() {
+       // show when the button is clicked
+       toastr.info('E-mail format is incorrect.','Please fill “Address” field.');
+
+    });
+	$('.js-btn-warning').click(function() {
+       // show when the button is clicked
+       toastr.warning('E-mail format is incorrect.','Please fill “Address” field.');
+
+    });
+
 
 	$(window).resize(function() {
 		// measureTablWidth();

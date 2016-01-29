@@ -368,3 +368,53 @@ h2, .h2
 			padding-right: 0
 	+ .form
 		margin-top: 10px
+
+#toast-container
+	>.toast-success,
+	>.toast-error,
+	>.toast-info,
+	>.toast-warning,
+		background-image: none !important
+	.toast
+		font-size: 14px
+		color: #fff
+		line-height: 1
+		position: relative
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.75)
+		max-width: 330px
+		border-radius: 4px
+		padding: 3px 0
+		opacity: .85
+		// +tr(opacity .3s)
+		+reg
+		&:hover
+			opacity: 1
+		&-error
+			background: #e9291d
+		&-warning
+			background: #fab10d
+		&-info
+			background: #0da9ec
+		&-success
+			background: #6ad70d
+	.toast-title, .toast-message
+		padding: 10px 30px 10px 15px
+	.toast-message
+		border-top: 1px solid rgba(255, 255, 255, 0.2)
+	.toast-close-button
+		position: absolute
+		top: 7px
+		right: 10px
+		font-size: 17px
+		opacity: 0.5
+		line-height: 1
+		z-index: 10
+		background: none
+		color: #fff
+		+tr(opacity .3s)
+		&:focus, &:hover
+			color: #fff
+			opacity: .9
+
+.toast-top-right
+	top: 53px
