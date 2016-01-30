@@ -3,10 +3,27 @@ $(document).ready(function() {
 	// sidebar
 	$('.js-sublink').click(function(e) {
 		if($(this).parents('.is-collapsed').length > 0 && (!$(this).parents('.is-mobile').length > 0)) return;
-		$(this).toggleClass('is-expanded');
-		$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
-		$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
-		$(this).parent().find('.js-submenu').toggleClass('is-active');
+		e.stopPropagation();
+		var _ = $(this),
+			$parent = _.parents('.js-sidebar'),
+			$sublinks = $parent.find('.js-sublink'),
+			$submenu = _.siblings('.js-submenu'),
+			$submenus = $parent.find('.js-submenu');
+
+		if(_.hasClass('is-expanded')) {
+			_.removeClass('is-expanded');
+			$submenu.removeClass('is-active');
+			$submenu.slideUp();
+			return false;
+		}
+
+		$sublinks.removeClass('is-expanded');
+		$submenus.removeClass('is-active')
+		$submenus.slideUp('fast');
+		_.addClass('is-expanded');
+		$submenu.addClass('is-active');
+		$submenu.slideDown();
+
 		return false;
 	});
 
@@ -42,6 +59,7 @@ $(document).ready(function() {
 		if($('.js-sidebar').hasClass('is-collapsed')) {
 			$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
 			$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
+			$(this).parent().siblings().find('.js-submenu').hide();
 		} else return;
 	});
 	// scroll
@@ -163,6 +181,7 @@ $(document).ready(function() {
 		}
 	}
 	collapseSidebar();
+
 	// toastr
 	toastr.options = {
 	  "closeButton": true,

@@ -29,7 +29,7 @@
 				&:hover
 					background: #2f383f
 					.sidebar__sublist
-						display: block
+						display: block !important
 		.sidebar__collapse
 			span
 				display: none
@@ -48,7 +48,7 @@
 			display: none
 	&__list li
 		position: relative
-		
+
 	&__in
 		height: 100%
 		padding-top: 14px
@@ -67,10 +67,11 @@
 			right: 0
 			margin-top: -10px
 			+arr(10, 20, #fff, l)
-		&:hover,
-		&:focus
+		&:hover
 			color: #FFF
 			background: #2f383f
+		&:focus
+			color: #afb3b7
 		&.is-active
 			background: #78b641
 			color: #fff
@@ -89,16 +90,16 @@
 	&__sublist
 		display: none
 		background: #2f383f
-		+tr(0.3s ease)
-		&.is-active
-			display: block
+		// +tr(0.3s ease)
+		// &.is-active
+			// display: block
 		.sidebar__link
 			padding-left: 50px
 			&.is-active
 				opacity: 1
 				background: none
 				&:before
-					content: none 
+					content: none
 	&__collapse
 		position: absolute
 		display: block
