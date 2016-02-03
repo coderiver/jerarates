@@ -55,6 +55,7 @@ $(document).ready(function() {
 
 		// measureTablWidth();
 	});
+	
 	$('.js-sublink').on('mouseover', function() {
 		if($('.js-sidebar').hasClass('is-collapsed')) {
 			$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
