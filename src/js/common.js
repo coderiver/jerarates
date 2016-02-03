@@ -123,7 +123,7 @@ $(document).ready(function() {
 				height = $(window).height() - position;
 
 
-				_.outerHeight('auto')
+			_.outerHeight('auto')
 				  .css('max-height', height)
 			//
 			// if ( _.hasClass('js-vert-scroll') ) {
