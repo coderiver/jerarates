@@ -91,24 +91,26 @@
 		display: inline-block
 		vertical-align: top
 		width: 25%
-		padding: 10px
+		padding: 8px 10px
 		font-size: 13px
 		+r(1270)
 			width: 50%
 		+r(550)
 			// display: block
 			width: 100%
-		.right-aligned-list
-			margin-bottom: 0
-			&__box
-				&.is-red
-					color: #c90000
-			+r(1313)
-				li > span
-					width: 120px
-					font-size: 14px
-					.right-aligned-list__box
-						font-size: 14px
+		> li
+			font-size: 14px
+			padding: 3px 0
+			+reg
+			&.is-red
+				color: #c90000
+			span
+				display: inline-block
+				text-align: right
+				width: 113px
+				font-size: 14px
+				+light
+				color: #333
 
 .content-action
 	+r(1165)
