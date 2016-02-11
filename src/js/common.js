@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	// sidebar
 	$('.js-sublink').click(function(e) {
-		if($(this).parents('.is-collapsed').length > 0 && (!$(this).parents('.is-mobile').length > 0)) return;
+		if($(this).parents('.is-collapsed').length > 0 || ($(this).parents('.is-mobile').length > 0)) return;
 		e.stopPropagation();
 		var _ = $(this),
 			$parent = _.parents('.js-sidebar'),
@@ -26,6 +26,32 @@ $(document).ready(function() {
 
 		return false;
 	});
+	$('.js-sublink').on('mouseover', function() {
+		if($('.js-sidebar').hasClass('is-collapsed')) {
+			var _ = $(this),
+				$parent = _.parents('.js-sidebar'),
+				$sublinks = $parent.find('.js-sublink'),
+				$submenu = _.siblings('.js-submenu'),
+				$submenus = $parent.find('.js-submenu');
+
+			$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
+			$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
+			$(this).parent().siblings().find('.js-submenu').hide();
+			if(_.hasClass('is-expanded')) {
+				_.removeClass('is-expanded');
+				$submenu.removeClass('is-active');
+				$submenu.hide();
+				return false;
+			}
+
+			$sublinks.removeClass('is-expanded');
+			$submenus.removeClass('is-active')
+			$submenus.hide();
+			_.addClass('is-expanded');
+			$submenu.addClass('is-active');
+			$submenu.show();
+		} else return;
+	});
 
 	$('.dropdown-menu').on('click', function(e) {
 		e.stopPropagation();
@@ -35,6 +61,9 @@ $(document).ready(function() {
 	$('.js-collapse').click(function(e) {
 		e.preventDefault();
 
+		$('.js-sublink').removeClass('is-expanded');
+		$('.js-submenu').removeClass('is-active');
+		$('.js-submenu').hide();
 		$(this).toggleClass('is-collapsed');
 		$(this).parents('.js-sidebar').toggleClass('is-collapsed is-clicked');
 		$('.js-content').toggleClass('is-expanded');
@@ -56,13 +85,7 @@ $(document).ready(function() {
 		// measureTablWidth();
 	});
 	
-	$('.js-sublink').on('mouseover', function() {
-		if($('.js-sidebar').hasClass('is-collapsed')) {
-			$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
-			$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
-			$(this).parent().siblings().find('.js-submenu').hide();
-		} else return;
-	});
+
 	// scroll
 	$('.js-scroll').each(function(){
 	    $(this).perfectScrollbar();

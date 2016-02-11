@@ -10,7 +10,7 @@
 	//=include partials/header.html
 	//=include partials/sidebar.html
 	<div class="content content-action js-content js-content-action">
-		<div class="content-sidebar is-left sidebar-list js-height js-sidebar-main">
+		<div class="content-sidebar is-left sidebar-list sidebar-list_md  js-height js-sidebar-main">
 			<div class="action">
 				<div class="action__bl">
 					<button class="button">
@@ -27,9 +27,9 @@
 			</div>
 			<div class="js-height scroll js-scroll js-vert-scroll">
 				<div class="scroll is-horz js-scroll">
-					<table class="tabl sidebar-table js-toggle-rows">
+					<table class="list sidebar-table js-toggle-rows">
 						<tr>
-							<td width="45" class="cell-center">&nbsp;</td>
+							<td width="30" class="cell-center">&nbsp;</td>
 							<td width="180">
 								VoiceTec UK
 								<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
@@ -39,7 +39,7 @@
 							</td>
 						</tr>
 						<tr class="is-chosen">
-							<td width="45" class="cell-center">
+							<td width="30" class="cell-center">
 								<div class="checkbox js-check">
 									<label>
 										<input type="checkbox"><span></span>
@@ -55,7 +55,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="45" class="cell-center">
+							<td width="30" class="cell-center">
 								<div class="checkbox js-check">
 									<label>
 										<input type="checkbox"><span></span>
@@ -72,7 +72,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="45" class="cell-center">
+							<td width="30" class="cell-center">
 								<div class="checkbox js-check">
 									<label>
 										<input type="checkbox"><span></span>
@@ -89,7 +89,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="45" class="cell-center">&nbsp;</td>
+							<td width="30" class="cell-center">&nbsp;</td>
 							<td width="180">
 								VoiceTec UK
 								<a href="#"><i class="fa fa-table"></i>VoiceTec Premium</a>
@@ -99,7 +99,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="45" class="cell-center">
+							<td width="30" class="cell-center">
 								<div class="checkbox js-check">
 									<label>
 										<input type="checkbox"><span></span>
@@ -115,7 +115,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td width="45" class="cell-center">
+							<td width="30" class="cell-center">
 								<div class="checkbox js-check">
 									<label>
 										<input type="checkbox"><span></span>
@@ -231,41 +231,37 @@
 						</ul>
 					</div>
 					<h2>Test Horizontal Form</h2>
-					<div class="form">
+					<div class="form form_horizontal">
 						<form>
-							<ul class="right-aligned-list right-aligned-list_pad-t">
-								<li>
-									<span class="pad-t">Company Name:</span>
-									<div class="right-aligned-list__box">
-										<input type="text" class="form-control is-md" value="VoiceTec UK">
-									</div>
-								</li>
-								<li>
-									<span>Type:</span>
-									<div class="right-aligned-list__box">
-										<div class="form-inline">
-											<div class="field">
-												<div class="radio">
-													<label>
-														<input type="radio" name="name[type]"> <span>Customer</span>
-													</label>
-												</div>
-												<div class="radio">
-													<label>
-														<input type="radio" name="name[type]"> <span>Vendor</span>
-													</label>
-												</div>
+							<div class="field">
+								<label>Company Name:</label>
+								<div class="field__block">
+									<input type="text" class="form-control is-md" value="VoiceTec UK">
+								</div>
+							</div>
+							<div class="field">
+								<label>Type:</label>
+								<div class="field__block">
+									<div class="form-inline">
+										<div class="radio">
+												<label>
+													<input type="radio" name="name[type]"> <span>Customer</span>
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" name="name[type]" checked> <span>Vendor</span>
+												</label>
 											</div>
 										</div>
 									</div>
-								</li>
-								<li>
-									<span class="pad-t">Currency:</span>
-									<div class="right-aligned-list__box">
-										<input type="text" class="form-control is-sm" value="USD">
-									</div>
-								</li>
-							</ul>
+								</div>
+							<div class="field">
+								<label>Currency:</label>
+								<div class="field__block">
+									<input type="text" class="form-control is-sm" value="USD">
+								</div>
+							</div>
 						</form>
 					</div>
 

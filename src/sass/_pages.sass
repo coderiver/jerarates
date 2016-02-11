@@ -78,7 +78,7 @@
 // table
 .scroll.is-horz > .tabl
 	padding-bottom: 20px
-.tabl
+.list
 	table-layout: fixed
 	font-size: 14px
 	.cell-sort
@@ -105,9 +105,6 @@
 			top: 3px
 		&__down
 			bottom: 2px
-
-
-
 	&__bl
 		display: inline-block
 		vertical-align: top
@@ -116,7 +113,7 @@
 	&__action
 		display: inline-block
 		padding: 0 5px
-		color: #666
+		color: #777
 		font-size: 16px
 		&.is-edit
 			vertical-align: -1px
@@ -207,6 +204,7 @@
 		margin-right: 10px
 		font-size: 13px
 		vertical-align: middle
+		+reg
 		span
 			+light
 	.pagination,

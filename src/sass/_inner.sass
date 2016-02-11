@@ -8,11 +8,16 @@
 		padding-right: 15px
 		+r(1165)
 			width: 100%
+	.form
+		label
+			+light
 
 
 .sidebar-list
 	border-right: 1px solid $border
-	width: 300px
+	width: 250px
+	&_md
+		width: 290px
 	+r(767)
 		width: 100%
 		border: 0
@@ -38,7 +43,7 @@
 					float: none
 					margin-bottom: 7px
 .sidebar-table
-	font-size: 13px
+	font-size: 14px
 	tr
 		height: 47px
 		cursor: pointer
@@ -46,7 +51,9 @@
 			background: #e3ffc8
 	td
 		vertical-align: top
-		padding: 5px 10px
+		padding: 5px 5px
+		&:first-child
+			padding-left: 10px
 		a
 			display: block
 			font-size: 13px
@@ -84,20 +91,23 @@
 	border: 1px solid #ccc
 	margin-bottom: 20px
 	font-size: 0
-	+r(767)
+	display: flex
+	justify-content: space-between
+	+r(1250)
 		display: block
 
 	&__block
 		display: inline-block
 		vertical-align: top
-		width: 25%
-		padding: 8px 10px
+		//width: 25%
+		padding: 8px 50px 8px 0
 		font-size: 13px
-		+r(1270)
-			width: 50%
+		+r(1170)
+			//width: 50%
+			padding: 8px
 		+r(550)
 			// display: block
-			width: 100%
+			//width: 100%
 		> li
 			padding: 1px 0
 			+reg
@@ -106,7 +116,7 @@
 			span
 				display: inline-block
 				text-align: right
-				width: 113px
+				width: 106px
 				+light
 				color: #333
 
