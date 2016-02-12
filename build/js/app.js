@@ -22,91 +22,115 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 //# sourceMappingURL=toastr.js.map
 $(document).ready(function() {
 
-	// sidebar
-	$('.js-sublink').click(function(e) {
-		if($(this).parents('.is-collapsed').length > 0 || ($(this).parents('.is-mobile').length > 0)) return;
-		e.stopPropagation();
-		var _ = $(this),
-			$parent = _.parents('.js-sidebar'),
-			$sublinks = $parent.find('.js-sublink'),
-			$submenu = _.siblings('.js-submenu'),
-			$submenus = $parent.find('.js-submenu');
+	//sidebar functionality
+	(function() {
+		var sidebar = {
+			init: function() {
+				this.dom();
+				this.bindEvent();
+			},
+			dom: function() {
+				this.block			= $('.js-sidebar');
+				this.sublink 		= this.block.find('.js-sublink');
+				this.submenu 		= this.block.find('.js-submenu');
+				this.collapseBtn 	= this.block.find('.js-collapse');
+			},
+			bindEvent: function() {
+				this.collapseBtn.on('click', this.collapseMenu.bind(this));
+				this.sublink.on('click', this.openSubMenu.bind(this));
+				$(window).on('resize', this.collapseMenuOnMobile.bind(this));
+			},
+			collapseMenuOnMobile: function() {
+				if($(window).width() < 1023) {
+					this.block.addClass('is-collapsed is-mobile');
+					this.sublink.removeClass('is-expanded');
+					this.submenu.removeClass('is-active');
+					this.submenu.hide();
+					$('.js-content').addClass('is-expanded');
+					sidebar.shouldCheck = true;
+				} else if($(window).width() > 1023 && (!$('.js-sidebar').hasClass('is-clicked'))) {
+					this.block.removeClass('is-collapsed is-mobile');
+					$('.js-content').removeClass('is-expanded');
+					if(sidebar.shouldCheck) {
+						this.showLast();
+						sidebar.shouldCheck = false;
+					}
 
-		if(_.hasClass('is-expanded')) {
-			_.removeClass('is-expanded');
-			$submenu.removeClass('is-active');
-			$submenu.slideUp();
-			return false;
-		}
+				}
+			},
+			showLast: function() {
+				if(!this.block.hasClass('is-collapsed')) {
+					//console.log(sidebar.lastItem);
+					var blockToSHow = this.block.find('.sidebar__list > li').eq(sidebar.lastItem);
+					var blockToSHowLink = blockToSHow.find('.js-sublink');
+					var blockToSHowMenu = blockToSHow.find('.js-submenu');
+					blockToSHowLink.addClass('is-expanded');
+					blockToSHowMenu.addClass('is-active');
+					blockToSHowMenu.show();
+				}
+			},
+			collapseMenu: function() {
+				this.sublink.removeClass('is-expanded');
+				this.submenu.removeClass('is-active');
+				this.submenu.hide();
+				this.collapseBtn.toggleClass('is-collapsed');
+				this.block.toggleClass('is-collapsed is-clicked');
+				$('.js-content').toggleClass('is-expanded');
 
-		$sublinks.removeClass('is-expanded');
-		$submenus.removeClass('is-active')
-		$submenus.slideUp('fast');
-		_.addClass('is-expanded');
-		$submenu.addClass('is-active');
-		$submenu.slideDown();
+				this.showLast();
 
-		return false;
-	});
-	$('.js-sublink').on('mouseover', function() {
-		if($('.js-sidebar').hasClass('is-collapsed')) {
-			var _ = $(this),
-				$parent = _.parents('.js-sidebar'),
-				$sublinks = $parent.find('.js-sublink'),
-				$submenu = _.siblings('.js-submenu'),
-				$submenus = $parent.find('.js-submenu');
+				if ( $('.js-scroll').length > 0 ) {
+					$('.js-scroll').perfectScrollbar('update');
+				}
+				if ( this.block.hasClass('is-collapsed') ) {
+					setTimeout(function() {
+						$('.js-collapse').parent().perfectScrollbar('destroy');
+					}, 0);
+				} else {
+					setTimeout(function() {
+						$('.js-collapse').parent().perfectScrollbar({ wheelPropagation: true });
+					}, 0);
+				}
+			},
+			openSubMenu: function(e) {
+				if(this.block.hasClass('is-collapsed') ) return;
+				var _ = $(e.delegateTarget);
+				var currentSubmenu = _.siblings('.js-submenu');
+				var index = _.parent().index();
 
-			$(this).parent().siblings().find('.js-sublink').removeClass('is-expanded');
-			$(this).parent().siblings().find('.js-submenu').removeClass('is-active');
-			$(this).parent().siblings().find('.js-submenu').hide();
-			if(_.hasClass('is-expanded')) {
-				_.removeClass('is-expanded');
-				$submenu.removeClass('is-active');
-				$submenu.hide();
-				return false;
+				if(_.hasClass('is-expanded')) {
+					_.removeClass('is-expanded');
+					currentSubmenu.removeClass('is-active');
+					currentSubmenu.slideUp();
+					this.check(index);
+					return false;
+				}
+
+				this.sublink.removeClass('is-expanded');
+				this.submenu.removeClass('is-active')
+				this.submenu.slideUp('fast');
+				_.addClass('is-expanded');
+				currentSubmenu.addClass('is-active');
+				currentSubmenu.slideDown();
+				this.check(index);
+			},
+			check: function(n) {
+				if (this.sublink.hasClass('is-expanded')) {
+					sidebar.lastItem = n;
+				} else {
+					sidebar.lastItem = null;
+				}
 			}
-
-			$sublinks.removeClass('is-expanded');
-			$submenus.removeClass('is-active')
-			$submenus.hide();
-			_.addClass('is-expanded');
-			$submenu.addClass('is-active');
-			$submenu.show();
-		} else return;
-	});
+		};
+		sidebar.init();
+		sidebar.collapseMenuOnMobile();
+		sidebar.lastItem = null;
+		sidebar.shouldCheck = false;
+	})();
 
 	$('.dropdown-menu').on('click', function(e) {
 		e.stopPropagation();
 	});
-
-	// collapse sidebar
-	$('.js-collapse').click(function(e) {
-		e.preventDefault();
-
-		$('.js-sublink').removeClass('is-expanded');
-		$('.js-submenu').removeClass('is-active');
-		$('.js-submenu').hide();
-		$(this).toggleClass('is-collapsed');
-		$(this).parents('.js-sidebar').toggleClass('is-collapsed is-clicked');
-		$('.js-content').toggleClass('is-expanded');
-
-		if ( $('.js-scroll').length > 0 ) {
-			$('.js-scroll').perfectScrollbar('update');
-		}
-
-		if ( $(this).hasClass('is-collapsed') ) {
-			setTimeout(function() {
-				$('.js-collapse').parent().perfectScrollbar('destroy');
-			}, 0);
-		} else {
-			setTimeout(function() {
-				$('.js-collapse').parent().perfectScrollbar({ wheelPropagation: true });
-			}, 0);
-		}
-
-		// measureTablWidth();
-	});
-	
 
 	// scroll
 	$('.js-scroll').each(function(){
@@ -217,16 +241,6 @@ $(document).ready(function() {
 			$('.js-submenu').removeClass('is-active');
 		}
 	});
-	function collapseSidebar() {
-		if($(window).width() < 1023) {
-			$('.js-sidebar').addClass('is-collapsed is-mobile');
-			$('.js-content').addClass('is-expanded');
-		} else if($(window).width() > 1023 && (!$('.js-sidebar').hasClass('is-clicked'))) {
-			$('.js-sidebar').removeClass('is-collapsed is-mobile');
-			$('.js-content').removeClass('is-expanded');
-		}
-	}
-	collapseSidebar();
 
 	// toastr
 	toastr.options = {
@@ -266,7 +280,6 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		// measureTablWidth();
 		detectHeight();
-		collapseSidebar();
 		$('.js-scroll').perfectScrollbar('update');
 	});
 	$('.js-find').on('click', function() {

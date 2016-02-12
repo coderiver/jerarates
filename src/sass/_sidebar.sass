@@ -24,12 +24,12 @@
 				color: #afb3b7
 			&:hover
 				background: #2f383f
-		&:not([class*=" is-mobile"])
-			li
-				&:hover
-					background: #2f383f
-					.sidebar__sublist
-						display: block !important
+		//&:not([class*=" is-mobile"])
+		li
+			&:hover
+				background: #2f383f
+				.sidebar__sublist
+					display: block !important
 		.sidebar__collapse
 			span
 				display: none
@@ -107,13 +107,13 @@
 		bottom: 10px
 		padding-left: 18px
 		color: #afb3b7
+		&:focus
+			color: #afb3b7
 		&:hover
 			color: #FFF
 			span
 				opacity: 1
 				visibility: visible
-		&:focus
-			color: #FFF
 		span
 			padding-left: 14px
 			font-size: 15px
