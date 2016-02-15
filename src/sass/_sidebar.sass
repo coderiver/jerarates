@@ -14,6 +14,7 @@
 		&.is-mobile
 			.sidebar__in
 				overflow: visible !important
+
 		.sidebar__link
 			&.is-mobile
 				display: block
@@ -23,7 +24,14 @@
 				background: transparent
 				color: #afb3b7
 			&:hover
+				color: #fff
 				background: #2f383f
+			&.is-mobile
+				cursor: default
+				&:hover
+					color: #afb3b7
+					background: #293137
+
 		//&:not([class*=" is-mobile"])
 		li
 			&:hover
